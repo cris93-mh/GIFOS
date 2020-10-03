@@ -1,0 +1,125 @@
+
+.img-logo {
+    display: flex;
+#image-Gif {
+    height: 100%;
+}
+}
+.image-Back {
+    margin-left: -130px;
+    margin-top: 40px;
+
+}
+.GeneralCreate{
+    display: block;
+    margin-top: 50px;
+    margin-left: -120px;
+    .ContainerCreate {
+        width: 685px;
+        height: 364px;
+        padding: 4px;
+        margin-top: 32px;
+        margin-left: 330px;
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        background: #E1DCDC;
+        box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+        .Title {
+            padding-top: 10px;
+            padding-left: 6px;
+            margin: 3px;
+            margin-top: 1px;
+            background-image: linear-gradient(270deg, #F7C6F3 0%, #3B78EB 100%);
+            b {
+                margin-top: 2px;
+                font-family: 'ChakraPetch';
+                font-size: 15px;
+                color: #FAFAFA;
+                letter-spacing: 0;
+            }
+        }
+        .Organization {
+            padding-left: 34px;
+            padding-top: 17px;
+            img {
+                width: 33px;
+                height: 33px;
+            }
+            .CreateTitle p {
+                margin-left: 52px;
+                margin-top: -12px;
+                font-weight: bold;
+                height:17px;
+                margin-top: -7%;     
+        }
+        .GuifoCreate {
+            display: flex;
+            padding-top: 4%;
+            text-decoration: none;
+        }
+        .List {
+            list-style: none;
+            margin-left: -41px;
+            line-height: 160%;
+        }
+
+        }
+        .ButtonsClass {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-bottom: 30px;
+            button {
+                margin: 5px;
+                border: 1px solid;
+                font-size: 17px;
+            }
+            .cancel  {
+                width: 146px;
+                height: 38px;
+                font-family: 'ChakraPetch-Regular';
+            }
+            .start {
+                width: 146px;
+                height: 38px;
+                background: #F7C9F3;
+                font-family: 'ChakraPetch-Regular';
+
+            }
+        }
+    }
+}
+#video {
+    display: none;
+    margin-left: 25%;
+    width: 833px;
+    height: 434px;
+    video {
+      width: 100%;
+      height: 100%;
+    }
+    .Titlevideo {
+  
+        width: 854px;
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        margin-left: 4px;
+        .Stylparagraph {
+            background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+            font-family: 'ChakraPetch-Bold';
+            font-size: 14px;
+            color: #FAFAFA;
+            letter-spacing: 0;
+            margin-top: 1px;
+            margin-left: 5px;
+        }   
+    }
+    .Gifscreen {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 11px;
+    }
+}

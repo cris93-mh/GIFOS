@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Gifos</title>
+    <link rel="stylesheet" type="text/css" href="./sass/style/style.css">
+    <script src="./js/RecordRTC.js"></script>
+</head>
+
+<body>
+    <header class="light-initial">
+        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    </header>
+    <div class="main">
+        <div class="content">
+            <section class="menu-section">
+                <div class="img-logo">
+                    <img src="./images/gifOF_logo.png" onclick="location.reload()" id="image-Gif" alt="Gifos"
+                        style="cursor: cell;">
+                </div>
+                <div class="image-Back">
+                    <a href="index.html" id="backImage">
+                    <img src="./images/arrow.svg" id="image-Back" alt="back-button">
+                    </a>
+                </div>
+
+
+                <div class="Principalvideo" id="video">      
+                    <div class="Titlevideo">
+                        <p class="Stylparagraph">Un Chequeo Antes de Empezar</p>
+                    </div>
+                    <video autoplay playsinline></video>
+                    <div class="Gifscreen">
+                        <img src="images/camera.svg">
+                        <button class="Capturegifs" id="Capturegifs">Capturar</button>
+                    </div>
+                </div>
+
+
+                <div class="GeneralCreate">
+                    <div class="ContainerCreate" id="ContainerCreate">
+                        <div>
+                            <p class="Title">
+                                <b>Crear Guifos</b>
+                            </p>
+                        </div>
+                        <div class="Organization">
+                            <div>
+                                <img class="windowsImage" src="./images/window img.png">
+                            </div>
+                            <div>
+                                <span class="CreateTitle">
+                                    <p>Aquí podrás crear tus propios Gifos</p>
+                                </span>
+                            </div>
+                            <div>
+                                <p class="GuifoCreate">
+                                    <span>Crear tu <b>guifo</b> es muy fácil, graba cualquier imagen con tu cámara y obtén giufos,
+                                    <br>personalizados. Los pasos para crear tu guifo son:</br></span>
+                                </p>
+                            </div>
+                            <div>
+                                <ol class="List">
+                                    <li><b>1)</b> Dar permisos de acceso a la cámara(sólo por el tiempo de uso)</li>
+
+                                    <li><b>2)</b> Capturar tu momento guifo</li>
+
+                                    <li><b>3)</b> Revisar el momento</li>
+                                    
+                                    <li><b>4)</b> Listo para subir y compartir!</li>
+                                </ol>
+                                <p class="Finish-list">
+                                    <span>¿Quieres comenzar a crear tu <b>guifo</b> ahora?</span>
+                                </p>
+                            </div>
+                            <div class="ButtonsClass">
+                                <button class="cancel">Cancelar</button>
+                                <button class="start" id="start" >Comenzar</button>
+                                <!--<button id="start">Start Recording</button> -->
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+</body>
+
+</html>
+<script src="./js/creatGifs.js"></script>

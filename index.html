@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto-Gifos</title>
+    <link rel="stylesheet" type="text/css" href="./sass/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="" href="indexCreate.html">
+    
+    
+</head>
+<body>
+
+    <header class="light-initial">
+        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    </header>
+    
+    <!--Secciòn de Crear Gifos, elegir tèmas y mis gifos-->
+    <div class="main">
+        <div class="content">
+            <section class="menu-section">
+                <div class="img-logo">
+                    <img src="./images/gifOF_logo.png" onclick="location.reload()" id="imageGif" alt="Gifos" style="cursor: cell;">
+                </div>
+                <div class="createGifs">
+                        <a href="indexCreate.html" id="create" class="create blackBotones wTxt">Crear Gifos</a>
+                    
+                        <div class="Menucontainer" id="main-section">
+                            <div class="Menucontainerunfolded">
+                                <button id="choosetopic" class="choosetopic blackBotones">Elegir tema</button>
+                                <div id="choosetopicagain" class="choosetopicagain_arrow blackBotones"><img src="./images/dropdown.svg"></div>
+                            </div>
+        
+                            <div class="containerdrop">
+                                <ul class="droplist">
+                                    <li class="list" id="sayDay"><span>S</span>aylor day</li>
+                                    <li class="list" id="sayNight">Saylor night</li>   
+                                </ul>
+                                
+                            </div>
+                        </div>            
+                        <a id="MyGuifos" class="MyGuifos witheTxt"><span>M</span>is guifos</a>
+                                                
+                </div>
+            </section>
+            <section>
+                <div class="search" id="containersearch">
+                    <div class="principalsearch" id="prinsearch">
+                    <p>Buscar</p>
+                </div>
+        
+                <form action="hastag" class="lightform">
+                    <div class="form">
+                        <input autocomplete="yes" type="text" onkeyup="activeButton()" onfocus="showHastag()" name="search" id="input-search" placeholder="Busca gifs, hashtags, temas, busca lo que quieras… ">
+                        <button class="buttonsearch" disabled="true"> <img src="./images/lupa_inactive.svg" alt="lupa" id="lens">Buscar</button>
+                    </div>
+                </form>
+                <div class="allied" id="alliedbtn">
+                    <button class="alliedbutton" onclick='filter(this.value)' value='cats' id="alliedbutton">#cats</button>
+                    <button class="alliedbutton" onclick='filter(this.value)' value= 'naruto'id="alliedbutton2">#naruto</button>
+                    <button class="alliedbutton" onclick='filter(this.value)' value= 'pokemon' id="alliedbutton3">#pokemon</button>
+                </div>
+                <div class="alliedTags" id="alliedTags">
+                </div>
+            </section>
+        
+            <!--Seccion Sugerencias de hoy-->
+        <section class="MainContainer" id="MainContainer">
+            <section>
+                <div class="suggestions" id="suggestions">
+                    <div class="principalsug" id="principalsug">
+                        <p>Hoy te sugerimos:</p>
+                    </div>
+                    <div class="containersugge">
+                    </div>
+                </div>  
+            </section>
+        
+            <!--Seccion Tendencias-->
+            <section>
+                <div class="trends" id="main-trends">
+                    <div class="trends-principaltrends">
+                        <p id="principaltrends">Tendencias:</p>
+                    </div>
+        
+                    <div class="trends-container" id="trends-container">
+                    </div>
+        
+                    <div class="search-container" id="search-container">
+                    </div>
+        
+                    <div class="search-related" id="search-related">
+        
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+            <!--Seccion Mis Guifos-->
+            <section>
+        
+                <div class="containermyGuifos">
+                    <p class="MyGuifos">Mis Guifos</p>
+                </div>
+        
+                <div class="Myguifoscontainer">
+                    <div class="myguifoscreates"></div>
+                </div>
+        
+            </section>
+
+
+            
+        </div>
+</div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

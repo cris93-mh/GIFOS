@@ -1,0 +1,790 @@
+@import "./_trends.scss";
+@import "./_createGifs.scss";
+
+//Vamos a dar estilos a nuestro proyecto!//
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; border:solid;
+    transition: .5s ease all;
+    background-color:#FAFAFA ;
+}
+header {
+    display: flex;
+    width: 100%;
+    height: 25px;
+    box-shadow: 0 1.5px 0 0 #100134;
+
+    p {
+        font-family: 'Chakra Petch';
+        font-size: 14px;
+        color: #FCFCFC;
+        margin: 0;                                      
+    }
+}
+.light-initial {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+.obscure-initial {
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+#arrowReturn {
+    margin-right: -105px;
+    margin-left: 80px;
+}
+#imageGif {
+    width: 100%;
+    height: 100%;
+}
+.main   {
+    margin: 0px 110px;
+    .content    {
+        margin:50px 0px;
+        .menu-section {
+            margin-bottom: 7%;
+            display: flex;
+            .img-logo {
+                width: 102.6px;
+                height: 64px;
+            }
+        }
+        .createGifs     {
+            width: 440px;
+            height: 40px;
+            top:75px;
+            display: flex;
+            margin-left: 55%;
+            .create {
+                width:125px;
+                background: #F7C9F3;
+                cursor:pointer;
+                font-family: 'Chakra Petch', sans-serif;
+                font-size: 17px;
+                color: #100134;
+                text-align: center;
+                letter-spacing:0 ;
+                padding-top: 10px;
+                line-height: 20px;
+                text-decoration: none;
+                border: 1.5px solid #100134 ;
+                box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
+            }
+            .create:hover {
+                border: 1.5px dotted #100134;
+            }
+            button {
+                width: 125px;
+                height: 40px;
+                box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
+                background: #F7C9F3;
+                cursor: pointer;
+                border: 1.5px solid #100134 ;
+                font-family: 'Chakra Petch', sans-serif;
+                font-size: 17px;
+            }
+            button:hover    {
+                    border: 1.5px dotted #100134;
+                            }
+            .Menucontainer  {
+              margin: 0px 15px;
+              display: flex;
+              flex-direction: column;
+              .Menucontainerunfolded    {
+                display: flex;
+                button  {
+                    font-family: 'Chakra Petch', sans-serif;
+                    font-size: 16px;
+                    color: #100134;
+                    letter-spacing: 0;
+                    text-align: center;
+                    line-height: 20px;
+                    margin: 0;
+                        }
+                        div {
+                            width:40px;
+                            border: 1.5px solid #100134;
+                            background:#F7C9F3 ;
+                            display: flex;
+                            box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
+                            border: 1.5px solid black;
+                            img {
+                                margin: auto;
+                            }
+                            }
+                            div:hover   {
+                                border: 1.5px dotted #100134 ;
+                                        }
+                                        
+                                        }
+                                        .containerdrop  {
+                                            display: none;
+                                            flex-direction: column;
+                                            margin: 0px 15px;
+                                            background: #977C95;
+                                            width: 180px;
+                                            background: #DFDBDB;
+                                            box-shadow: inset -2.5px -2.5px 0 0 #E0D1DD, inset 2.5px 2.5px 0 0 #FAFAFA;
+                                            padding-bottom: 12px;   
+                                            top: 60px;
+                                            right: 100px;
+                                            z-index: 1;
+                                            overflow: auto;
+                                            position: absolute;
+                                            .droplist   {
+                                                width: 100%;
+                                                margin: 0;
+                                                padding: 0;
+                                                        }
+                                                        li  {
+                                                            cursor:pointer;
+                                                            list-style: none;
+                                                            width: 160px;
+                                                            height: 40px;
+                                                            border: 1.5 px solid;
+                                                            box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
+                                                            font-family: 'Chakra Petch', sans-serif;
+                                                            text-align: center;
+                                                            color: #100134;
+                                                            display: block;
+                                                            padding-top: 8px;
+                                                            margin-left: 12px;
+                                                            margin-top: 10px;   
+                                                            }
+                                                            .list {
+                                                                background:#FAFAFA ;
+                                                                span {
+                                                                    text-decoration: underline;
+                                                                }
+                                                            }
+                                                            .list:hover {
+                                                                background: #FFEDFC;
+                                                                border: 1.5px solid #B78DB4;
+                                                                box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
+                                                                        }
+                                                            .listObscure {
+                                                                background: #CECECE;
+
+                                                            }
+                                                            .listObscure:hover {
+                                                                background: #2126F5;
+                                                                color: #FAFAFA;
+                                                            }
+                                                        }
+                            }
+                            .MyGuifos   {
+                                text-decoration: none;
+                                cursor: pointer;
+                                width: 80px;
+                                left: 1300px;
+                                top: 78px;
+                                font-family: 'Chakra Petch', sans-serif;
+                                font-size: 17px;
+                                color: #100134;
+                                line-height: 40px;
+                                letter-spacing: 0;
+                                    span    {
+                                        text-decoration: underline;
+                                            }
+                                        }
+                                        .MyGuifos:hover {
+                                            border: 1.5px dotted #100134;
+                                                        }
+                        }   
+                }
+        }
+        .search {
+            background: #E1DEDE;
+                }
+        .searchObscure  {
+            background: #E1DCDC;
+                        }
+        #containersearch    {
+            .allied {
+                position: absolute;
+                margin-top: -1px;
+                width: 1211px;
+            }
+            width: 1210px;
+            margin-top: -60px;
+            box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            #prinsearch {
+                width: 1200px;
+                height: 30px;
+                margin-left: 5px;
+                margin-top: 5px;
+                font-size: 16px;
+                color:#FAFAFA;
+                box-shadow: 0 1.5px 0 0 #100134;
+                p   {
+                    margin: auto;
+                    width: 98%;
+                    height: 50px;
+                    }
+                        }
+                        .principalsearch {
+                            background-image: linear-gradient(270deg, #F7C6F3 0%, #3B78EB 100%);
+                        }
+                        .outline {
+                            background-image: linear-gradient(270deg, #EA3FF9 0%, #262AEE 100%);
+                        }
+                        .lightform {
+                            box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+                        }
+                        .obscureform {
+                            box-shadow: inset -2.5px -2.5px 0 0 #908686, inset 2.5px 2.5px 0 0 #FAFAFA;
+                        }
+                        form {
+                            height: 100%;
+                            .form {
+                                width:98.4%;
+                                height: 72px;
+                                display: flex;
+                                margin: auto;
+                            }
+                            input {
+                                align-self: center;
+                                width: 1100px;
+                                font-size: 14px;
+                                padding-left: 11px;
+                                font-size: 15px;
+                                color: #A09C9C;
+                                letter-spacing: 0;
+                                line-height: 50px;
+                                box-shadow: inset -2.5px -2.5px 0 0 #FAFAFA, inset 2.5px 2.5px 0 0 #100134;
+
+                            }
+                            input:focus {
+                                .contalliedbutton {
+                                    display: block;
+                                }
+                            }
+                            input::placeholder {
+                                letter-spacing: 0;
+                                line-height: 25px;
+                                padding: 18px;
+                                
+                            }
+                        }
+                        .buttonsearch {
+                            width: 100px;
+                            height: 38px;
+                            margin: auto 5px;
+                            box-shadow: inset -1px -1px 0 0 #A09C9C, inset 1px 1px 0 0 #FAFAFA;
+                            font-size: 17px;
+                            line-height: 16px;
+                            height: 36px;
+                            border: 1.5px solid #908686;
+                            align-self: flex-end;
+                        }
+                        .buttonsearch:active {
+                            background: #F7C9F3;
+                            color:#100134;
+                            border: 1.5px solid #100134;
+                            box-shadow: inset -1px -1px 0 0 #A09C9C, inset 1px 1px 0 0 #FAFAFA;
+                        }
+                        div button  {
+                                border: 1px solid #48289B;
+                                box-shadow: inset -2.5px -2.5px 0 0 #1E4796, inset 2.5px 2.5px 0 0 #FAFAFA;
+                                }
+                                .alliedbutton {
+                                    display: flex;
+                                }
+                                .contalliedbutton {
+                                    background: #DFDBDB;
+                                    box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+                                    .lightform:focus {
+                                        #alliedbtn {
+                                            display: block
+                                        }
+                                    }
+                                }
+                            }
+
+                            .contalliedbuttonobsc{
+                                background: #908686;
+                                box-shadow: inset -2.5px -2.5px 0 0 #908686, inset 2.5px 2.5px 0 0 #FAFAFA;
+                            }
+                            #alliedbtn {
+                                padding-top: 12px;
+                                display: none;
+                                flex-wrap: wrap;
+                                top: 275px;
+                                z-index: 2;
+                                background: #E6E6E6;
+                                
+                                button {
+                                    width: 1060px;
+                                    height: 38px;
+                                    margin-left: 17px;
+                                    margin-bottom: 14px;
+                                    color: #110038;
+                                    line-height: 34px;
+                                    border: 1.5px solid #716B6B;
+                                    box-shadow: inset -1.5px -1.5px 0 0 #A09C9C, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                    text-align: start;
+                                    letter-spacing: 0;
+                                    display: flex;
+                                    a {
+                                        width: 250px;
+                                        height: 25px;
+                                        padding-left: 16px;
+                                        text-align: left;
+                                        display: flex;    
+                                        font-family: 'Chakra Petch', sans-serif;
+                                        font-size: 16px;
+                                        color: #100134;;
+                                        letter-spacing: 0;
+                                        line-height: 23px;
+                                        align-items: center;
+                                    }
+                                }
+                                button:hover {
+                                    border: 1px dotted #100134;
+                                    background: #E6E6E6;
+                                    
+                                }
+                                .alliedbutton {
+                                    background: #FAFAFA;
+                                }
+                                .alliedbtnobscure{
+                                    background: #CFCDCD;
+                                }
+                            }
+                            .alliedTags {
+                                width: 1410px;
+                                padding-top: 12px;
+                                top: 280px;
+                                position: absolute;
+                                z-index: 2;
+                                .lookTags {
+                                    width: auto;
+                                    height: 36px;
+                                    margin-right: 10px;
+                                    padding: 9px;
+                                    line-height: 20px;	
+                                    background: #3873E3;
+                                    border: 1.5px solid #48289B;
+                                    box-shadow: inset -2.5px -2.5px 0 0 #3873E3, inset 2.5px 2.5px 0 0 #FAFAFA;
+                                    font-family: 'Chakra Petch', sans-serif;
+                                    font-size: 16px;
+                                    color: #FAFAFA;
+                                    letter-spacing: 0;
+                                }
+                            }
+                            .butobscure{
+                                background: #908686;
+                            }
+                                            .suggestions .principalsug  {
+                                                width: 1210px;
+                                                height: 36px;
+                                                margin-top: 105px;
+                                                margin-bottom: 25px;
+                                                background: #FAFAFA;
+                                                box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #F7C9F3;
+                                                border: 1.5px solid #100134;
+                                                p   {
+                                                    font-family: 'Chakra Petch', sans-serif;
+                                                    font-size: 16px;
+                                                    color: #100134;
+                                                    margin: 0;
+                                                    padding: 8px;
+                                                    letter-spacing: 0;
+                                                    }
+                                            }
+                                                                        //TRENDS//
+
+                                                                                .create-gifs .container-create  {
+                                                                                    width: 687px;
+                                                                                    margin-top: 32px;
+                                                                                    margin-left: 331px;
+                                                                                    margin-bottom: 32px;
+                                                                                    padding: 4px;
+                                                                                    height: 390px;     
+                                                                                    display: flex;
+                                                                                    flex-direction: column;
+                                                                                    background: #E1DCDC;
+                                                                                    box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+                                                                                    .title-create {
+                                                                                        height: 27px;
+                                                                                        padding-top: 7px;
+                                                                                        padding-left: 6px;
+                                                                                        margin: 6px;
+                                                                                        background-image: linear-gradient(270deg, #F7C6F3 0%, #3B78EB 100%);
+                                                                                        p {
+                                                                                            margin-top: 2px;
+                                                                                            font-family: 'ChakraPetch-Bold';
+                                                                                            font-size: 16px;
+                                                                                            color: #FAFAFA;
+                                                                                            letter-spacing: 0;
+                                                                                        }
+                                                                                    }
+                                                                                    .containerInstructions {
+                                                                                        padding-top: 24px;
+                                                                                        padding-left: 32px;
+                                                                                        .instructions {
+                                                                                            height: 195px;
+                                                                                            .inst {
+                                                                                                display: flex;
+                                                                                                align-items: flex-start;
+                                                                                                img {
+                                                                                                    width: 34px;
+                                                                                                    height: 34px;
+                                                                                                }
+                                                                                                p {
+                                                                                                    margin-top: -12px;
+                                                                                                    margin-left: 52px;
+                                                                                                    b {
+                                                                                                        margin-left: -32px;
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                    .container-buttons {
+                                                                                        padding-top: 82px;
+                                                                                        padding-bottom: 32px;
+                                                                                        display: flex;
+                                                                                        justify-content: flex-end;
+                                                                                        align-items: flex-end;
+                                                                                        button {
+                                                                                            width: 146px;
+                                                                                            height: 38px;
+                                                                                            margin-right: 16px;
+                                                                                            font-family: 'ChakraPetch-Regular';
+                                                                                            font-size: 16px;
+                                                                                            color: #100134;
+                                                                                            background: #FAFAFA;
+                                                                                            border: 1.5px solid #100134;
+                                                                                            box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                            letter-spacing: 0;
+                                                                                            text-align: center;
+                                                                                            cursor: pointer;
+                                                                                            line-height: 20px;
+                                                                                        }
+                                                                                        a {
+                                                                                            width: 146px;
+                                                                                            height: 38px;
+                                                                                            margin-right: 18px;
+                                                                                            font-family: 'ChakraPetch-Regular';
+                                                                                            font-size: 17px;
+                                                                                            color: #100134;
+                                                                                            cursor: pointer;
+                                                                                            text-align: center;
+                                                                                            line-height: 38px;
+                                                                                            background: #FFEDFC;
+                                                                                            border: 1.5px solid #100134;
+                                                                                            box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                            text-decoration: none;
+                                                                                            letter-spacing: 0;
+                                                                                        }
+                                                                                        #buttoninitial {
+                                                                                            background: #F1BBEC;
+                                                                                        }
+                                                                                    }
+                                                                                                                }
+                                                                                                                .create-gifs .container-record  {
+                                                                                                                    width: 862px;
+                                                                                                                    height: 550px;
+                                                                                                                    margin-top: 32px;
+                                                                                                                    margin-left: 291px;
+                                                                                                                    margin-bottom: 31px;
+                                                                                                                    display: none;
+                                                                                                                    flex-direction: column;
+                                                                                                                    background: #E6E6E6;
+                                                                                                                    box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+                                                                                                                    .checking .checkingInitial  {
+                                                                                                                        width: 856px;
+                                                                                                                        height: 26px;
+                                                                                                                        margin-top: 6px;
+                                                                                                                        margin-left: 5px;
+                                                                                                                        display: flex;
+                                                                                                                        flex-direction: column;
+                                                                                                                        background-image: linear-gradient(270deg, #F1BBEC 0%, #3873E3 100%);
+                                                                                                                        .checkingInitial-text {
+                                                                                                                            margin-top: 2px;
+                                                                                                                            margin-left: 6px;
+                                                                                                                            font-family: 'ChakraPetch-Bold';
+                                                                                                                            font-size: 16px;
+                                                                                                                            color: #FAFAFA;
+                                                                                                                            letter-spacing: 0;
+                                                                                                                        }
+                                                                                                                        img {
+                                                                                                                            margin-top: -32px;
+                                                                                                                            margin-left: 832px;
+                                                                                                                        }
+                                                                                                                                                }
+                                                                                                                    .checking .containerVideo   {
+                                                                                                                        width: 834px;
+                                                                                                                        margin: 13px;
+                                                                                                                        height: 436px;
+                                                                                                                        border: 1.5px solid #977C95;
+                                                                                                                        box-shadow: inset -2.5px -2.5px 0 0 #CECECE, inset 2.5px 2.5px 0 0 #100134;
+                                                                                                                        background: #FAFAFA;
+                                                                                                                        .Gifscontainervideo {
+                                                                                                                            width: 834px;
+                                                                                                                            height: 436px;
+                                                                                                                                            }
+                                                                                                                        #img-global {
+                                                                                                                            margin-top: 100px;
+                                                                                                                            margin-left: 392px;
+                                                                                                                                    }
+                                                                                                                        h2  {
+                                                                                                                            margin-left: 292px;
+                                                                                                                            line-height: 24px;
+                                                                                                                            font-family: 'ChakraPetch-Bold';
+                                                                                                                            font-size: 18px;
+                                                                                                                            color: #100134;
+                                                                                                                            letter-spacing: 0;
+                                                                                                                            }
+                                                                                                                        #pLoadTime  {
+                                                                                                                            line-height: 24px;
+                                                                                                                            margin-left: 252px;
+                                                                                                                            font-family: 'ChakraPetch-Bold';
+                                                                                                                            font-size: 18px;
+                                                                                                                            color: #100134;
+                                                                                                                            text-align: center;
+                                                                                                                            letter-spacing: 0;
+                                                                                                                            span    {
+                                                                                                                                text-decoration: line-through;
+                                                                                                                                    }
+                                                                                                                                    }
+                                                                                                                                    .advance-bar2   {
+                                                                                                                                        width: 52px;
+                                                                                                                                        height: 22px;
+                                                                                                                                        margin-left: 202px;
+                                                                                                                                        background: #F7C9F3;
+                                                                                                                                        transition: all 8s ease;
+                                                                                                                                        transition-timing-function: linear;
+                                                                                                                                                    }
+                                                                                                                                                    #buttonCancel2  {
+                                                                                                                                                        width: 106px;
+                                                                                                                                                        line-height: 35px;
+                                                                                                                                                        margin-top: 202px;
+                                                                                                                                                        margin-left: 690px;
+                                                                                                                                                        padding-left: 39px;
+                                                                                                                                                        background: #FFFAFE;
+                                                                                                                                                        border: 1.5px solid #100134;
+                                                                                                                                                        box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                                                                                        text-decoration: none;
+                                                                                                                                                        font-family: 'ChakraPetch-Regular';
+                                                                                                                                                        font-size: 18px;
+                                                                                                                                                        color: #100134;
+                                                                                                                                                        letter-spacing: 0;
+                                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                .checking .containerRecordButtons .containerButtonCapture {
+                                                                                                                                                    margin-right: 10px;
+                                                                                                                                                    display: flex;
+                                                                                                                                                    justify-content: flex-end;
+                                                                                                                                                    .button-camera  {
+                                                                                                                                                        width: 38px;
+                                                                                                                                                        height: 35px;       
+                                                                                                                                                        border: 1.5px solid #100134;
+                                                                                                                                                        background: #F7C9F3;
+                                                                                                                                                        box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                                                                                                    }
+                                                                                                                                                    .button-capture {
+                                                                                                                                                        width: 146px;
+                                                                                                                                                        height: 38px;
+                                                                                                                                                        background: #F7C9F3;
+                                                                                                                                                        border: 1.5px solid #100134;
+                                                                                                                                                        box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                .checking .containerReady {
+                                                                                                                                                    display: flex;
+                                                                                                                                                    #time   {
+                                                                                                                                                        width: 126px;
+                                                                                                                                                        height: 38px;
+                                                                                                                                                        margin-top: 2px;
+                                                                                                                                                        border: 1.5px solid #908686;
+                                                                                                                                                        box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #100134;
+                                                                                                                                                        background: #FFFFFF;
+                                                                                                                                                        span    {
+                                                                                                                                                            margin-left: 22px;
+                                                                                                                                                            line-height: 31px;
+                                                                                                                                                            font-family: 'ChakraPetch-Regular';
+                                                                                                                                                            font-size: 18px;
+                                                                                                                                                            color: #100134;
+                                                                                                                                                            letter-spacing: 0;
+                                                                                                                                                                }
+                                                                                                                                                            }
+                                                                                                                                                            .buttonRecord   {
+                                                                                                                                                                width: 38px;
+                                                                                                                                                                height: 37px;
+                                                                                                                                                                margin-top: 7px;
+                                                                                                                                                                margin-left: 463px;
+                                                                                                                                                                border: 1.5px solid #100134;
+                                                                                                                                                                box-shadow: inset -1.5px -1.5px 0 0 #922C2C, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                                                                                                background: #F74C4C;
+                                                                                                                                                                            }
+                                                                                                                                                            .button-ready   {
+                                                                                                                                                                width: 146px;
+                                                                                                                                                                height: 37px;
+                                                                                                                                                                margin-top: 6px;
+                                                                                                                                                                background: #F74C4C;
+                                                                                                                                                                border: 1.5px solid #100134;
+                                                                                                                                                                box-shadow: inset -1.5px -1.5px 0 0 #922C2C, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                                                                                                            }
+                                                                                                                                                }
+                                                                                                                                                .checking .load-bar {
+                                                                                                                                                    display:flex;
+                                                                                                                                                    justify-content: space-between;
+                                                                                                                                                    .proceed    {
+                                                                                                                                                        width: 21px;
+                                                                                                                                                        height: 22px;
+                                                                                                                                                        margin-top: 11px;
+                                                                                                                                                        background: #F7C9F3;
+                                                                                                                                                        border: 1.5px solid #100134;
+                                                                                                                                                        box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                                                                                        #img-proceed    {
+                                                                                                                                                            width: 8px;
+                                                                                                                                                            height: 11px;
+                                                                                                                                                            margin-left: 9px;
+                                                                                                                                                            align-self: center;
+                                                                                                                                                                        }
+                                                                                                                                                                }
+                                                                                                                                                                .bar-bar {
+                                                                                                                                                                    width: 242px;
+                                                                                                                                                                    height: 26px;
+                                                                                                                                                                    margin-top: 11px;
+                                                                                                                                                                    display: flex;
+                                                                                                                                                                    box-shadow: inset 2.5px 2.5px 0 0 #FCFCFC, inset -2.5px -2.5px 0 0 #100134;
+                                                                                                                                                                    background: #CECECE;
+                                                                                                                                                                    .progress-bar {
+                                                                                                                                                                        width: 0%;
+                                                                                                                                                                        height: 18px;
+                                                                                                                                                                        background: #F7C6F3;
+                                                                                                                                                                        transition: all 2.5s ease;
+                                                                                                                                                                        transition-timing-function: linear;
+                                                                                                                                                                    }
+                                                                                                                                                                }
+                                                                                                                                                }
+                                                                                                                                                .checking   {
+                                                                                                                                                button  {
+                                                                                                                                                    width: 146px;
+                                                                                                                                                    height: 38px;
+                                                                                                                                                    font-family: 'ChakraPetch-Regular';
+                                                                                                                                                    font-size: 16px;
+                                                                                                                                                    color: #100134;
+                                                                                                                                                    text-align: center;
+                                                                                                                                                    line-height: 17px;
+                                                                                                                                                    letter-spacing: 0;
+                                                                                                                                                        }
+                                                                                                                                                        .button-repeat  {
+                                                                                                                                                            margin-right: 11px;
+                                                                                                                                                            margin-left: 82px;
+                                                                                                                                                            background: #FCFCFC;
+                                                                                                                                                            border: 1.5px solid #100134;
+                                                                                                                                                            box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                                                                                            a   {
+                                                                                                                                                                font-family: 'ChakraPetch-Regular';
+                                                                                                                                                                text-decoration: none;
+                                                                                                                                                                font-size: 18px;
+                                                                                                                                                                color: #100134;
+                                                                                                                                                                text-align: center;
+                                                                                                                                                                line-height: 18px;
+                                                                                                                                                                letter-spacing: 0;
+                                                                                                                                                                }
+                                                                                                                                                                        }
+                                                                                                                                                                        .button-repeat:hover    {
+                                                                                                                                                                            background: #FDFCFC;
+                                                                                                                                                                            border: 1.5px dotted #100134;
+                                                                                                                                                                                                }
+                                                                                                                                                                        .button-upload  {
+                                                                                                                                                                            border: 1.5px solid #100134;
+                                                                                                                                                                            box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
+                                                                                                                                                                            background: #F1BBEC;
+                                                                                                                                                                                        }
+                                                                                                                                                            }
+                                                                                                                                                }
+.containersugge {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    .container_Gif {
+        display: flex;
+        flex-direction: column;
+        width: 295px;
+        height: 320px;      
+        background: #E9DFDF;
+        box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+        position: relative;
+    }
+.container-conteGif{
+    width: 277px;
+    height: fit-content;
+    padding: 5px;
+    background: #E6E6E6;
+    img:hover {
+        border: 1.5px dotted #100134;
+    }
+    img.dismiss-button {
+        width: 20px;
+        height: 20px;
+        right: -90%;
+        bottom: 31px;
+        align-self: center;
+        position: relative;
+    }
+    img {
+        width: 277px;
+        height: 277px;
+        background: #E1DDDD;
+        box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+    }
+.gif_img {
+    margin-top: -18px;
+}
+p {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    border: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 10px;
+    color: #FAFAFA;
+    align-self: center;
+    letter-spacing: 0;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    border: 3px outset;
+    }
+}
+
+#seeMore    {
+    cursor: pointer;
+    bottom: 22px;
+    padding: 12px;
+    left: 21px;
+    line-height: 22px;
+    text-align: center;
+    border: 1.5px solid #48289B;
+    box-shadow: inset -2.5px -2.5px 0 0 #3B78EB, inset 2px 2px 0 0 #FAFAFA;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    background: #3873E3;
+    border-radius: px;
+    letter-spacing: 0;
+    position: relative;
+    bottom: 78px;
+            }
+#seeMore:hover {
+    border: 1.2px dotted #100134;                                }
+.seeMore {
+    background: #4284FF;
+}
+.seeMoreobsc {
+    background: #0D12FC;
+}
+}
+
+
+
+
+                                                                            
+
+                                                                                
+
+                                            
