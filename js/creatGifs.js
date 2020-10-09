@@ -1,11 +1,19 @@
-var video = document.querySelector('video');
+var video = document.querySelector('#video');
 
-function captureCamera(callback) {
-    navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(camera) {
-        callback(camera);
-    }).catch(function(error) {
+function captureCamera(stream) {
+
+    console.log('Entro en capture camara')
+    
+    navigator.mediaDevices.getUserMedia({ audio: false, video: true })
+    .then(stream => {
+        video.srcObject = stream;
+      })
+      .catch(error => {
         console.error(error);
-    });
+      });
+
+    console.log('Vamos a imp el video',video.srcObject)
+
 }
 
 function stopRecordingCallback() {
@@ -22,32 +30,21 @@ function stopRecordingCallback() {
 var recorder; // globally accessible
 
 document.getElementById('start').onclick = function() {
-    var startVideo = document.getElementById('video');
-    startVideo.style.display='block'; 
+    
+    video.style.display='block'; 
     var hideContCreateGifs = document.getElementById('ContainerCreate');
     hideContCreateGifs.style.display='none';
     this.disabled = true;
-    captureCamera(function(camera) {
-        video.muted = true;
-        video.volume = 0;
-        video.srcObject = camera;
-
-        recorder = RecordRTC(camera, {
-            type: 'video'
-        });
-
-        recorder.startRecording();
-
-        // release camera on stopRecording
-        recorder.camera = camera;
-
-        document.getElementById('stop').disabled = false;
-    });
+    captureCamera(video.srcObject);
+    //document.getElementById('stop').disabled = false;
 };
 
 
-function RecordingGif() {
+// CON ESTA FUNCIÒN COMENZAMOS LA CAPTURA DE GIF
+document.getElementById("Capturegifs").addEventListener('click',()=>{
+  console.log('Se ingreó en recordinGifs()');
     recording = true;
+    console.log("%%%%%%%",video.srcObject);
     recorder = RecordRTC(video.srcObject, { //Almacenamos en la variable
       type: "gif",
       frameRate: 1,
@@ -56,15 +53,12 @@ function RecordingGif() {
         console.log("begined");
       }
     });
-  
     recorder.startRecording();
-    getDuration();
+    console.log('video.srcObject===================================================  ', video.srcObject)
+    //getDuration();
   
     /*document.getElementById("titleBox").innerHTML = "Capturando Tu Guifo";
     document.getElementById("startRecording").style.display = "none";
     document.querySelector(".stop").style.display = "block";*/
-  }
-
-
-document.getElementById("Capturegifs").addEventListener('click',RecordingGif());
+});
 
