@@ -1,9 +1,9 @@
 
 .img-logo {
     display: flex;
-#image-Gif {
-    height: 100%;
-}
+    #image-Gif {
+        height: 100%;
+    }
 }
 .image-Back {
     margin-left: -130px;
@@ -13,10 +13,10 @@
 .GeneralCreate{
     display: block;
     margin-top: 50px;
-    margin-left: -120px;
+    margin-left: -10px;
     .ContainerCreate {
         width: 685px;
-        height: 364px;
+        height: 338px;
         padding: 4px;
         margin-top: 32px;
         margin-left: 330px;
@@ -63,12 +63,16 @@
             margin-left: -41px;
             line-height: 160%;
         }
+        .Finish-list {
+            height: 15px;
+        }
 
         }
         .ButtonsClass {
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
+            margin-top: -3%;
             padding-bottom: 30px;
             button {
                 margin: 5px;
@@ -90,36 +94,199 @@
         }
     }
 }
-#video {
+.Principalvideo {
+    width: 805px;
+    height: 525px;
+    margin-top: -3%;
+    margin-left: 19%;
     display: none;
-    margin-left: 25%;
-    width: 833px;
-    height: 434px;
-    video {
-      width: 100%;
-      height: 100%;
+    background: #E1DCDC;
+    .videoContainer{
+        width: 772px;
+        height: 434px;
+        background: #FAFAFA;
+        border: 1px solid #908686;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110034;
+        margin: 13px;
+        #video  {
+            height: 434px;
+        }
     }
     .Titlevideo {
-  
-        width: 854px;
-        height: 35px;
+        width: 800px;
+        height: 22px;
         display: flex;
         flex-direction: column;
-        margin-top: 5px;
+        margin-top: 9px;
         margin-left: 4px;
-        .Stylparagraph {
-            background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-            font-family: 'ChakraPetch-Bold';
-            font-size: 14px;
-            color: #FAFAFA;
-            letter-spacing: 0;
-            margin-top: 1px;
-            margin-left: 5px;
+        .Stylparagraph, .Stylcapture {
+                height: 24px;
+                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                font-family: 'ChakraPetch';
+                font-weight: bold;
+                font-size: 14px;
+                color: #FAFAFA;
+                letter-spacing: 0;
+                margin-top: 5px;
+                margin-left: 5px;
+        }
+        .closeGif {
+            margin-left: 779px;
+            margin-top: -35px;
         }   
-    }
+        }
     .Gifscreen {
         display: flex;
         justify-content: flex-end;
-        margin-right: 11px;
+        margin-top: 11px;
+        margin-right: 18px;
+        .Capturegifs {
+            background: #F7C9F3;
+            border: 1.5px solid #100134;
+            width: 142px;
+            height: 34px;
+            font-size: 15px;
+            font-family: 'ChakraPetch-Regular';
+            line-height: 17px;
+            letter-spacing: 0;
+            text-align: center;
+        }
+        .cameraCapture{
+            background: #F7C9F3;
+            border: 1.5px solid #100134;
+            width: 37px;
+            height: 31px;
+            font-size: 15px;
+            font-family: 'ChakraPetch-Regular';
+            line-height: 17px;
+            letter-spacing: 0;
+            text-align: center;
+            .camera {
+                margin-top: 6px;
+                width: 18px;
+                height: 17px;
+            }
+        }
+    }
+    .containerReady {
+        display: none;
+    .gifReady {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -10px;
+        margin-right: 18px;
+        .recordGif {
+            width: 144px;
+            height: 36px;
+            font-family: 'ChakraPetch-Regular';
+            font-size: 16px;
+            background: #FF6161;
+            border: 1.5px solid #100134;
+            margin-top: 5px;
+            span {
+                color: #FAFAFA;
+            }
+        }
+        .recordButton {
+            width: 37px;
+            height: 36px;
+            background: #FF6161;
+            border: 1px solid #110034;
+            margin-left: 460px;
+            margin-top: 5px;
+        }
+    }
+    #time {
+        width: 124px;
+        height: 36px;
+        background: #FFFFFF;
+        margin-top: -34px;
+        margin-left: 38px;
+        border: 1px solid #979797;
+        line-height: 32px;
+        text-align: center;
+        box-shadow: inset 2px 2px 0 0;
+    }
+}
+
+#previewGif{
+    display: none;
+    .readyButton {
+        display: flex;
+        justify-content: flex-end;
+        .upGif {
+            width: 144px;
+            height: 36px;
+            margin-right: 15px;
+            background: #F7C9F3;
+            line-height: 18px;
+            font-family: 'ChakraPetch-Regular';
+            font-size: 16px;
+            color: #110034;
+            letter-spacing: 0;
+            text-align: center;
+        }
+        .repeatGif {
+            width: 144px;
+            height: 36px;
+            margin-right: 12px;
+            margin-left: 82px;
+            line-height: 18px;
+            border-style: solid;
+            font-family: 'ChakraPetch-Regular';
+            font-size: 16px;
+            color: #110034;
+            letter-spacing: 0;
+            text-align: center; 
+        }
+        .frontBar {
+            width: 240px;
+            height: 24px;
+            background: #F7C9F3;
+            box-shadow: inset 0.5px 2px 0 0 #FAFAFA, inset -0.5px -2px 0 0 #110034;
+            margin-top: 10px;
+            display: flex;
+            .forward {
+                display: flex;
+                width: 20px;
+                height: 20px;
+                background: #F7C9F3;
+                border: 1px solid #110034;
+                box-shadow: inset -1px -1px 0 0 #A0899F, inset 1px 1px 0 0 #FAFAFA;
+                margin-top: 1px;
+                .forwardContainer {
+                    width: 6px;
+                    height: 10px;
+                    align-self: center;
+                    margin-left: 8px;
+                }
+            }
+        }
+        #time2 {
+            width: 124px;
+            height: 36px;
+            background: #FFFFFF;
+            margin-top: -3px;
+            margin-right: 5px;
+            border: 1px solid #979797;
+            line-height: 32px;
+            text-align: center;
+            box-shadow: inset 2px 2px 0 0;
+        }
+    }
+}
+
+    #gifContainer {
+        display: none;
+        width: 772px;
+        height: 434px;
+        background: #FAFAFA;
+        border: 1px solid #908686;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110034;
+        margin: 13px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 }

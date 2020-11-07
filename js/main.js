@@ -85,10 +85,12 @@ function busqueda(query,cantidad) {
            //console.log(data.data[i].title);      
             
             document.getElementById('trends-container').innerHTML += `
+            <div class="container-search">
             <div class="trends-contain-Gif">
             <img class="img-gif" src="${data.data[i].images.original.url}" alt="">
             <p class="text-finish">#${data.data[i].title}</p>
-            </div>`                 
+            </div>
+            </div>`                
         }
     
     })
@@ -202,16 +204,14 @@ let searchvermas = document.getElementById("explore")
 
 let queryBusqueda = document.getElementById("input-search").value;
 console.log(queryBusqueda)
-
-botonBuscar.click = busqueda(queryBusqueda,20);
+botonBuscar.click = busqueda(queryBusqueda,22);
 function showHastag() {
-    console.log('Entro en la funciòn');
     let showHastag = document.getElementById('alliedbtn')
     showHastag.style.display='block';
 }
 //Funcion para los Gifos en el Botòn de Bùsqueda//
 function filter(query) {
-    fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${query}&limit=10&offset=2&rating=G&lang=en`)
+    fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${query}&limit=16&offset=2&rating=G&lang=en`)
     
     .then((response) => {
         return response.json()
@@ -225,17 +225,23 @@ function filter(query) {
         for(let i = 0; i< data.data.length; i++){
             //console.log('titulos'); 
            //console.log(data.data[i].title);
-            let hide = document.getElementById('suggestions');   
+            let hide = document.getElementById('suggestions');  
             hide.style.display='none';
             let conceal = document.getElementById('main-trends');
             conceal.style.display='none';
-            document.getElementById('MainContainer').innerHTML += `
+            let search = document.getElementById('search-container');
+            search.style.display="block";
+            document.getElementById('containsearch').innerHTML += `
+            <div class="container-search">
             <div class="trends-contain-Gif">
             <img class="img-gif" src="${data.data[i].images.original.url}" alt="">
             <p class="text-finish">#${data.data[i].title}</p>
+            </div>
             </div>`                 
         }
-    
     }) 
 }
+
+
+
 

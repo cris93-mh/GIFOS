@@ -9,7 +9,7 @@
     <script src="./js/RecordRTC.js"></script>
 </head>
 
-<body>
+<body class="create">
     <header class="light-initial">
         <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
     </header>
@@ -25,19 +25,59 @@
                     <img src="./images/arrow.svg" id="image-Back" alt="back-button">
                     </a>
                 </div>
+            </section>
+        </div>
+        </div>
 
-
-                <div class="Principalvideo"  id="video-container">      
-                    <div class="Titlevideo">
-                        <p class="Stylparagraph">Un Chequeo Antes de Empezar</p>
+            <div class="Principalvideo"  id="video-container">      
+                   
+                    <div class="Titlevideo" id="Titlevideo">
+                        <p class="Stylcapture">Un Chequeo Antes de Empezar</p>
+                        <img class="closeGif" src="./images/button3.svg">
                     </div>
-                    <video id="video" autoplay playsinline></video>
-                    <div class="Gifscreen">
-                        <img src="images/camera.svg">
+                    <div class="videoContainer" id="videoContainer">
+                     <video class="videoPrinc" id="video" autoplay playsinline></video>
+                    </div>
+                    <div id="gifContainer">
+                        <img id="gifPreview" src="" alt="">
+                    </div>
+                    <div class="Gifscreen" id="Gifscreen">
+                        <div class="cameraCapture">
+                        <img class="camera" src="images/camera.svg" >
+                       </div>
                         <button class="Capturegifs" id="Capturegifs">Capturar</button>
                     </div>
-                </div>
+                    <div class="containerReady" id="containerReady">
+                        <div class="gifReady">
+                            <button class="recordButton">
+                            <img src="./images/recording.svg">
+                            </button>
+                            <button class="recordGif" id="recordGif">
+                            <span>Listo</span>
+                            </button>
+                        </div>
+                        <div class="time" id="time">
+                        </div>
+                    </div>
+                    <!--Este div contiene los botones de subir el gifo y repetir la captura-->
+                <div class="previewGif" id="previewGif">
 
+                    <img  alt="">
+
+                    <div class="readyButton" id="readyButton">
+                        <div class="time" id="time2">
+                            
+                        </div>
+                        <div class="frontBar">
+                            <span class="forward">
+                                <img  class ="forwardContainer"  src="./images/forward.svg">
+                            </span>
+                        </div>
+                        <button class="repeatGif">Repetir Captura</button>
+                        <button class="upGif" id="upGif">Subir Guifo</button>
+                    </div>
+                </div>
+                </div>
 
                 <div class="GeneralCreate">
                     <div class="ContainerCreate" id="ContainerCreate">
