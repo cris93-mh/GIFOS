@@ -27,12 +27,12 @@
                         <a href="indexCreate.html" id="create" class="create blackBotones wTxt">Crear Gifos</a>
                     
                         <div class="Menucontainer" id="main-section">
-                            <div class="Menucontainerunfolded">
+                            <div class="Menucontainerunfolded" id="Menucontainerunfolded">
                                 <button id="choosetopic" class="choosestyle">Elegir tema</button>
                                 <div id="choosetopicagain" class="choosetopicagain_arrow blackBotones"><img src="./images/dropdown.svg"></div>
                             </div>
         
-                            <div class="containerdrop">
+                            <div class="containerdrop" id="containerdrop">
                                 <ul class="droplist">
                                     <li class="list" id="sayDay"><span>S</span>aylor day</li>
                                     <li class="list" id="sayNight">Saylor night</li>   
@@ -48,20 +48,21 @@
                 <div class="search" id="containersearch">
                     <div class="principalsearch" id="prinsearch">
                     <p>Buscar</p>
-                </div>
+                    </div>
         
-                <form action="hastag" class="lightform">
+                <form class="lightform">
                     <div class="form">
                         <input autocomplete="yes" type="text" onkeyup="activeButton()" onfocus="showHastag()" name="search" id="input-search" placeholder="Busca gifs, hashtags, temas, busca lo que quieras… ">
-                        <button class="buttonsearch" disabled="true"> <img src="./images/lupa_inactive.svg" alt="lupa" id="lens">Buscar</button>
+                        <button class="buttonsearch" id="buttonsearch" disabled="true"> <img src="./images/lupa_inactive.svg" alt="lupa" id="lens">Buscar</button>
                     </div>
                 </form>
-                <div class="allied" id="alliedbtn">
-                    <button class="alliedbutton" onclick='filter(this.value)' value='cats' id="alliedbutton">#cats</button>
-                    <button class="alliedbutton" onclick='filter(this.value)' value= 'naruto'id="alliedbutton2">#naruto</button>
-                    <button class="alliedbutton" onclick='filter(this.value)' value= 'pokemon' id="alliedbutton3">#pokemon</button>
-                </div>
-                <div class="alliedTags" id="alliedTags">
+                    <div class="allied" id="alliedbtn">
+                        <button class="alliedbutton" onclick='filter(this.value)' value='Animales salvajes' id="alliedbutton">#animales salvajes</button>
+                        <button class="alliedbutton" onclick='filter(this.value)' value= 'Dragon Ball Z'id="alliedbutton2">#Dragon Ball Z</button>
+                        <button class="alliedbutton" onclick='filter(this.value)' value= 'Divertido' id="alliedbutton3">#Divertido</button>
+                    </div>
+                    <div class="containerbtn" id="containerbtn">
+                    </div>
                 </div>
             </section>
         
@@ -77,19 +78,19 @@
                 </div>  
             </section>
         
-            <!--Seccion Tendencias-->
+            <!--Seccion Tendencias y ver màs segùn las bùsquedas ya sea en el botòn buscar o en los tres botones de la bùsqueda-->
             <section>
+                <div class="search-related" id="search-related">
+                    <p id="randomHeader">Resultados para: </p>
+                </div>
                 <div class="trends" id="main-trends">
                     <div class="trends-principaltrends">
-                        <p id="principaltrends">Tendencias:</p>
+                        <p class="principaltrends" id="principaltrends">Tendencias:</p>
                     </div>
         
                     <div class="trends-container" id="trends-container">
                     </div>
-        
-                    <div class="search-related" id="search-related">
-        
-                    </div>
+    
                 </div>
             </section>
         </section>

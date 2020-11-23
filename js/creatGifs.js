@@ -56,6 +56,8 @@ document.getElementById("Capturegifs").addEventListener('click',()=>{
     getTime();  
     document.getElementById("Gifscreen").style.display = "none";
     document.getElementById("containerReady").style.display = "block";
+    document.getElementById("Stylcheck").style.display = "none";
+    document.getElementById("stylcapture").style.display = "block";
 });
 
 
@@ -101,19 +103,14 @@ document.getElementById('recordGif').addEventListener("click",()=> {
     preview.src = URL.createObjectURL(recorder.getBlob());
     console.log("preview establecido");
     document.getElementById("videoContainer").style.display = "none";
-    console.log("Vìdeo ocultado");
-    
     document.getElementById("gifContainer").style.display = "block";
-    console.log("Mostrando contenedor de gif");
-    document.getElementById("Titlevideo").innerHTML = "Vista Previa";
-    console.log("Tìtulo cambiado");
-
+    document.getElementById("containerReady").style.display = "none";
+    document.getElementById("Titlevideo").innerHTML = `
+    <p class='Stylcheck' id='Stylcheck'>Vista Previa</p>
+    <img class='closeGif' src='./images/button3.svg'> `
     document.getElementById("previewGif").style.display = "block";
-    console.log("Mostrando menù para subir o repetir git");
-
 
     // Creamos el formulario para enviarlo por el body a giphy
-   
 
     document.getElementById("Gifscreen").addEventListener("click", () => {
       uploadGif(form);
@@ -121,12 +118,12 @@ document.getElementById('recordGif').addEventListener("click",()=> {
   });
 });
 
-//Ahora vamos a definir la funciòn para subir el GIF
+//Ahora vamos a definir la funciòn para subir el GIF y luego para descargarlo
 function uploadGif(gif) {
   document.getElementById('gifContainer').innerHTML = `
-  <div class='uploading-gif'>
-    <img src="./images/globe_img.png" width = '50px' height = '50'>
-    <p class='uploading-gif-title'>Estamos subiendo tu guifo...<p>
+  <div class='upGifos'>
+    <img src="./images/globe_img.png">
+    <p class='upGifosTitle'>Estamos subiendo tu guifo...<p>
     <div class="progressGif" id="progressGif">
       <ul>
         <li></li>
@@ -198,15 +195,16 @@ function uploadGif(gif) {
           document.querySelector('.content').style.filter = 'grayscale(70%) blur(2px)';
           document.querySelector('.top-bar').style.filter = 'grayscale(70%) blur(2px)';
           document.body.append(alertGif);
-          document.getElementById('closeModal').addEventListener('click', () => {
-            document.querySelector('.alert-gif').style.display = 'none';
-            window.location.href = "./my-gifos.html";
-          });
+          //document.getElementById('closeModal').addEventListener('click', () => {
+            
+           // window.location.href = "./my-gifos.html";
+         // });
         });
     });
 }
 
 document.getElementById('upGif').onclick = function() {
+  document.getElementById('previewGif').style.display = 'none';
   let form = new FormData();
   form.append("file", recorder.getBlob(), "myGif.gif");
   uploadGif(form);
@@ -216,3 +214,7 @@ document.getElementById('upGif').onclick = function() {
   this.disabled = true;
   captureCamera(video.srcObject);
 };
+
+
+
+

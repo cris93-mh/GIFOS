@@ -29,10 +29,11 @@
         </div>
         </div>
 
-            <div class="Principalvideo"  id="video-container">      
+                <div class="Principalvideo"  id="video-container">      
                    
                     <div class="Titlevideo" id="Titlevideo">
-                        <p class="Stylcapture">Un Chequeo Antes de Empezar</p>
+                        <p class="Stylcheck" id="Stylcheck">Un Chequeo Antes de Empezar</p>
+                        <p class="stylecapture" id="stylcapture">Capturando Tu Guifo</p>
                         <img class="closeGif" src="./images/button3.svg">
                     </div>
                     <div class="videoContainer" id="videoContainer">
@@ -48,7 +49,7 @@
                         <button class="Capturegifs" id="Capturegifs">Capturar</button>
                     </div>
                     <div class="containerReady" id="containerReady">
-                        <div class="gifReady">
+                        <div class="gifReady" id="gifReady">
                             <button class="recordButton">
                             <img src="./images/recording.svg">
                             </button>
@@ -60,23 +61,23 @@
                         </div>
                     </div>
                     <!--Este div contiene los botones de subir el gifo y repetir la captura-->
-                <div class="previewGif" id="previewGif">
+                    <div class="previewGif" id="previewGif">
+                        <img  alt="">
 
-                    <img  alt="">
-
-                    <div class="readyButton" id="readyButton">
-                        <div class="time" id="time2">
-                            
+                        <div class="readyButton" id="readyButton">
+                            <div class="time" id="time2">
+                            </div>
+                            <div class="frontBar">
+                                <span class="forward">
+                                    <img  class ="forwardContainer"  src="./images/forward.svg">
+                                </span>
+                            </div>
+                            <button class="repeatGif">
+                                <a href="indexCreate.html">Repetir Captura</a>  
+                            </button>
+                            <button class="upGif" id="upGif">Subir Guifo</button>
                         </div>
-                        <div class="frontBar">
-                            <span class="forward">
-                                <img  class ="forwardContainer"  src="./images/forward.svg">
-                            </span>
-                        </div>
-                        <button class="repeatGif">Repetir Captura</button>
-                        <button class="upGif" id="upGif">Subir Guifo</button>
                     </div>
-                </div>
                 </div>
 
                 <div class="GeneralCreate">
@@ -116,7 +117,7 @@
                                 </p>
                             </div>
                             <div class="ButtonsClass">
-                                <button class="cancel">Cancelar</button>
+                                <a class="cancel" href="index.html">Cancelar</a>
                                 <button class="start" id="start" >Comenzar</button>
                                 <!--<button id="start">Start Recording</button> -->
 

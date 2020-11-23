@@ -1,12 +1,11 @@
 .trends .trends-principaltrends {
-  width: 1329px;
+  width: 1216px;
   margin-top: 115px;
   margin-bottom: 25px;
   height: 35px;
   background: #FFFAFE;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #F7C9F3;
-          box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #F7C9F3;
+  -webkit-box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #E6BBE2;
+          box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #E6BBE2;
 }
 
 .trends .trends-principaltrends p {
@@ -18,48 +17,43 @@
   letter-spacing: 0;
 }
 
-.trends .trends-container {
+.trends-container {
   width: 100%;
   height: 500px;
   display: -ms-grid;
   display: grid;
+  row-gap: 18px;
+  -webkit-column-gap: 1px;
+          column-gap: 1px;
   -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
 }
 
-.trends .trends-contain-Gif {
+.trends-contain-Gif {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 300px;
-  width: 300px;
+  width: 290px;
   position: relative;
-  margin-bottom: 33px;
 }
 
-.trends .trends-contain-Gif img.img-gif {
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #908686, inset 2.5px 2.5px 0 0 #FAFAFA;
-          box-shadow: inset -2.5px -2.5px 0 0 #908686, inset 2.5px 2.5px 0 0 #FAFAFA;
+.trends-contain-Gif img {
+  width: 290px;
+  height: 300px;
+  margin: 1px;
   background: #E1DDDD;
+  -webkit-box-shadow: inset -2px -2px 0 0 #BABABA, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #BABABA, inset 2px 2px 0 0 #FFFFFF;
 }
 
-.trends .trends-contain-Gif img.img-gif:hover {
+.text-finish {
   width: 100%;
-  height: 305px;
-}
-
-.trends .text-finish {
-  width: 100%;
-  height: 33px;
+  height: 16px;
   display: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
   font-family: 'ChakraPetch-Bold';
-  font-size: 18px;
+  font-size: 12px;
   color: #FAFAFA;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -68,24 +62,19 @@
   background-image: -webkit-gradient(linear, right top, left top, from(#F1BBEC), to(#3873E3));
   background-image: linear-gradient(270deg, #F1BBEC 0%, #3873E3 100%);
   margin-top: -5px;
+  border: 1px solid #B4B4B4;
 }
 
-.trends .trends-contain-Gif:hover {
-  border: 3px solid #908686;
-  width: 305px;
+.trends-contain-Gif:hover {
+  border: 2px solid #B4B4B4;
+  width: 294px;
   height: 315px;
-  -webkit-box-shadow: inset -9.5px 0 0 #908686, inset 2.5px 2.5px 0 0 #FAFAFA;
-          box-shadow: inset -9.5px 0 0 #908686, inset 2.5px 2.5px 0 0 #FAFAFA;
-  background: #E1DDDD;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+  background: #E6E6E6;
 }
 
-.trends .trends-contain-Gif:hover .text-finish {
-  width: 100%;
-  display: block;
-  border: 3px solid #908686;
-}
-
-.trends-containGif-finish {
+.trends-contain-Gif:hover .text-finish {
   display: block;
 }
 
@@ -202,22 +191,31 @@
   font-size: 17px;
 }
 
-.GeneralCreate .ContainerCreate .ButtonsClass .cancel {
+.GeneralCreate .ContainerCreate .ButtonsClass a {
+  margin: 5px;
+  border: 1px solid #100134;
+  font-size: 17px;
+  background: #FAFAFA;
+  color: #100134;
   width: 146px;
-  height: 38px;
-  font-family: 'ChakraPetch-Regular';
+  height: 36px;
+  font-family: 'ChakraPetch';
+  text-decoration: none;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 36px;
 }
 
 .GeneralCreate .ContainerCreate .ButtonsClass .start {
   width: 146px;
   height: 38px;
   background: #F7C9F3;
-  font-family: 'ChakraPetch-Regular';
+  font-family: 'ChakraPetch';
 }
 
 .Principalvideo {
   width: 805px;
-  height: 525px;
+  height: 535px;
   margin-top: -3%;
   margin-left: 19%;
   display: none;
@@ -252,7 +250,21 @@
   margin-left: 4px;
 }
 
-.Principalvideo .Titlevideo .Stylparagraph, .Principalvideo .Titlevideo .Stylcapture {
+.Principalvideo .Titlevideo #Stylcheck {
+  height: 24px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  font-size: 14px;
+  color: #FAFAFA;
+  letter-spacing: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.Principalvideo .Titlevideo #stylcapture {
+  display: none;
   height: 24px;
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
@@ -373,6 +385,7 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin-top: -13px;
 }
 
 .Principalvideo #previewGif .readyButton .upGif {
@@ -384,6 +397,7 @@
   font-family: 'ChakraPetch-Regular';
   font-size: 16px;
   color: #110034;
+  border: 1px solid #100134;
   letter-spacing: 0;
   text-align: center;
 }
@@ -395,11 +409,21 @@
   margin-left: 82px;
   line-height: 18px;
   border-style: solid;
+  border: 1px solid #100134;
   font-family: 'ChakraPetch-Regular';
   font-size: 16px;
-  color: #110034;
   letter-spacing: 0;
   text-align: center;
+}
+
+.Principalvideo #previewGif .readyButton .repeatGif a {
+  text-decoration: none;
+  color: #110034;
+}
+
+.Principalvideo #previewGif .readyButton .repeatGif:hover {
+  border: 1px dotted #100134;
+  background: #F0E5EE;
 }
 
 .Principalvideo #previewGif .readyButton .frontBar {
@@ -463,6 +487,26 @@
 .Principalvideo #gifContainer img {
   width: 100%;
   height: 100%;
+}
+
+.Principalvideo #gifContainer .upGifos img {
+  width: 36px;
+  height: 48px;
+  margin-left: 391px;
+  margin-top: 101px;
+}
+
+.Principalvideo #gifContainer .upGifos .upGifosTitle {
+  margin-left: 291px;
+  font-family: 'ChakraPetch-Bold';
+  font-size: 19px;
+  color: #110034;
+  line-height: 23px;
+  letter-spacing: 0;
+}
+
+.containermyGuifos .MyGuifos {
+  display: none;
 }
 
 body {
@@ -529,8 +573,8 @@ header p {
 }
 
 .main .content .menu-section .img-logo {
-  width: 102.6px;
-  height: 64px;
+  width: 104.6px;
+  height: 66px;
 }
 
 .main .content .createGifs {
@@ -540,7 +584,7 @@ header p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 52%;
+  margin-left: 55%;
 }
 
 .main .content .createGifs .create {
@@ -633,10 +677,9 @@ header p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0px 15px;
-  background: #977C95;
-  width: 180px;
-  background: #DFDBDB;
+  margin: 55px 147px;
+  width: 170px;
+  background: #E6E6E6;
   -webkit-box-shadow: inset -2.5px -2.5px 0 0 #E0D1DD, inset 2.5px 2.5px 0 0 #FAFAFA;
           box-shadow: inset -2.5px -2.5px 0 0 #E0D1DD, inset 2.5px 2.5px 0 0 #FAFAFA;
   padding-bottom: 12px;
@@ -656,9 +699,8 @@ header p {
 .main .content .createGifs .Menucontainer .containerdrop li {
   cursor: pointer;
   list-style: none;
-  width: 160px;
-  height: 40px;
-  border: 1.5 px solid;
+  width: 144px;
+  height: 36px;
   -webkit-box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
           box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
   font-family: 'Chakra Petch', sans-serif;
@@ -671,7 +713,8 @@ header p {
 }
 
 .main .content .createGifs .Menucontainer .containerdrop .list {
-  background: #FAFAFA;
+  background: #E6E6E6;
+  border: 1px solid #808080;
 }
 
 .main .content .createGifs .Menucontainer .containerdrop .list span {
@@ -942,18 +985,22 @@ header p {
   letter-spacing: 0;
 }
 
+.search-container {
+  margin-top: -25px;
+}
+
 .containsearch {
   width: 100%;
   display: -ms-grid;
   display: grid;
   row-gap: 18px;
-  -webkit-column-gap: 18px;
-          column-gap: 18px;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
   -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
 }
 
-.containsearch .trends-contain-Gif {
+.containsearch .trends-container-Gif {
   width: 290px;
   height: 300px;
   display: -webkit-box;
@@ -966,13 +1013,44 @@ header p {
   position: relative;
 }
 
-.containsearch .trends-contain-Gif img {
+.containsearch .trends-container-Gif img {
   width: 290px;
   height: 300px;
-  margin: 4px;
+  margin: 1px;
+  background: #E1DDDD;
+  -webkit-box-shadow: inset 3px 3px 0 0 #B4B4B4, inset 3px 3px 0 0 #FFFFFF;
+          box-shadow: inset 3px 3px 0 0 #B4B4B4, inset 3px 3px 0 0 #FFFFFF;
+}
+
+.containsearch .text-end {
+  width: 100%;
+  height: 28px;
+  display: none;
+  font-family: 'ChakraPetch-Bold';
+  font-size: 13px;
+  color: #fafafa;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 0px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#f1bbec), to(#3873e3));
+  background-image: linear-gradient(270deg, #f1bbec 0%, #3873e3 100%);
+  margin: -5px 0px 0px;
+  padding: 0px;
+}
+
+.containsearch .trends-container-Gif:hover {
+  border: 2px solid #B4B4B4;
+  width: 294px;
+  height: 315px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
   background: #E6E6E6;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.containsearch .trends-container-Gif:hover .text-end {
+  display: block;
+  border: 1px solid #B4B4B4;
 }
 
 .suggestions .principalsug {
@@ -981,9 +1059,8 @@ header p {
   margin-top: 105px;
   margin-bottom: 25px;
   background: #FAFAFA;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #F7C9F3;
-          box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #F7C9F3;
-  border: 1.5px solid #100134;
+  -webkit-box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #F7C9F3;
+          box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #F7C9F3;
 }
 
 .suggestions .principalsug p {
@@ -995,416 +1072,13 @@ header p {
   letter-spacing: 0;
 }
 
-.create-gifs .container-create {
-  width: 687px;
-  margin-top: 32px;
-  margin-left: 331px;
-  margin-bottom: 32px;
-  padding: 4px;
-  height: 390px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #E1DCDC;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
-          box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
-}
-
-.create-gifs .container-create .title-create {
-  height: 27px;
-  padding-top: 7px;
-  padding-left: 6px;
-  margin: 6px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C6F3), to(#3B78EB));
-  background-image: linear-gradient(270deg, #F7C6F3 0%, #3B78EB 100%);
-}
-
-.create-gifs .container-create .title-create p {
-  margin-top: 2px;
-  font-family: 'ChakraPetch-Bold';
-  font-size: 16px;
-  color: #FAFAFA;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-create .containerInstructions {
-  padding-top: 24px;
-  padding-left: 32px;
-}
-
-.create-gifs .container-create .containerInstructions .instructions {
-  height: 195px;
-}
-
-.create-gifs .container-create .containerInstructions .instructions .inst {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.create-gifs .container-create .containerInstructions .instructions .inst img {
-  width: 34px;
-  height: 34px;
-}
-
-.create-gifs .container-create .containerInstructions .instructions .inst p {
-  margin-top: -12px;
-  margin-left: 52px;
-}
-
-.create-gifs .container-create .containerInstructions .instructions .inst p b {
-  margin-left: -32px;
-}
-
-.create-gifs .container-create .container-buttons {
-  padding-top: 82px;
-  padding-bottom: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.create-gifs .container-create .container-buttons button {
-  width: 146px;
-  height: 38px;
-  margin-right: 16px;
-  font-family: 'ChakraPetch-Regular';
-  font-size: 16px;
-  color: #100134;
-  background: #FAFAFA;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-  letter-spacing: 0;
-  text-align: center;
-  cursor: pointer;
-  line-height: 20px;
-}
-
-.create-gifs .container-create .container-buttons a {
-  width: 146px;
-  height: 38px;
-  margin-right: 18px;
-  font-family: 'ChakraPetch-Regular';
-  font-size: 17px;
-  color: #100134;
-  cursor: pointer;
-  text-align: center;
-  line-height: 38px;
-  background: #FFEDFC;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-  text-decoration: none;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-create .container-buttons #buttoninitial {
-  background: #F1BBEC;
-}
-
-.create-gifs .container-record {
-  width: 862px;
-  height: 550px;
-  margin-top: 32px;
-  margin-left: 291px;
-  margin-bottom: 31px;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #E6E6E6;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
-          box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
-}
-
-.create-gifs .container-record .checking .checkingInitial {
-  width: 856px;
-  height: 26px;
-  margin-top: 6px;
-  margin-left: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F1BBEC), to(#3873E3));
-  background-image: linear-gradient(270deg, #F1BBEC 0%, #3873E3 100%);
-}
-
-.create-gifs .container-record .checking .checkingInitial .checkingInitial-text {
-  margin-top: 2px;
-  margin-left: 6px;
-  font-family: 'ChakraPetch-Bold';
-  font-size: 16px;
-  color: #FAFAFA;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-record .checking .checkingInitial img {
-  margin-top: -32px;
-  margin-left: 832px;
-}
-
-.create-gifs .container-record .checking .containerVideo {
-  width: 834px;
-  margin: 13px;
-  height: 436px;
-  border: 1.5px solid #977C95;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #CECECE, inset 2.5px 2.5px 0 0 #100134;
-          box-shadow: inset -2.5px -2.5px 0 0 #CECECE, inset 2.5px 2.5px 0 0 #100134;
-  background: #FAFAFA;
-}
-
-.create-gifs .container-record .checking .containerVideo .Gifscontainervideo {
-  width: 834px;
-  height: 436px;
-}
-
-.create-gifs .container-record .checking .containerVideo #img-global {
-  margin-top: 100px;
-  margin-left: 392px;
-}
-
-.create-gifs .container-record .checking .containerVideo h2 {
-  margin-left: 292px;
-  line-height: 24px;
-  font-family: 'ChakraPetch-Bold';
-  font-size: 18px;
-  color: #100134;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-record .checking .containerVideo #pLoadTime {
-  line-height: 24px;
-  margin-left: 252px;
-  font-family: 'ChakraPetch-Bold';
-  font-size: 18px;
-  color: #100134;
-  text-align: center;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-record .checking .containerVideo #pLoadTime span {
-  text-decoration: line-through;
-}
-
-.create-gifs .container-record .checking .containerVideo .advance-bar2 {
-  width: 52px;
-  height: 22px;
-  margin-left: 202px;
-  background: #F7C9F3;
-  -webkit-transition: all 8s ease;
-  transition: all 8s ease;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-}
-
-.create-gifs .container-record .checking .containerVideo #buttonCancel2 {
-  width: 106px;
-  line-height: 35px;
-  margin-top: 202px;
-  margin-left: 690px;
-  padding-left: 39px;
-  background: #FFFAFE;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-  text-decoration: none;
-  font-family: 'ChakraPetch-Regular';
-  font-size: 18px;
-  color: #100134;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-record .checking .containerRecordButtons .containerButtonCapture {
-  margin-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.create-gifs .container-record .checking .containerRecordButtons .containerButtonCapture .button-camera {
-  width: 38px;
-  height: 35px;
-  border: 1.5px solid #100134;
-  background: #F7C9F3;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-}
-
-.create-gifs .container-record .checking .containerRecordButtons .containerButtonCapture .button-capture {
-  width: 146px;
-  height: 38px;
-  background: #F7C9F3;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-}
-
-.create-gifs .container-record .checking .containerReady {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.create-gifs .container-record .checking .containerReady #time {
-  width: 126px;
-  height: 38px;
-  margin-top: 2px;
-  border: 1.5px solid #908686;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #100134;
-          box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #100134;
-  background: #FFFFFF;
-}
-
-.create-gifs .container-record .checking .containerReady #time span {
-  margin-left: 22px;
-  line-height: 31px;
-  font-family: 'ChakraPetch-Regular';
-  font-size: 18px;
-  color: #100134;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-record .checking .containerReady .buttonRecord {
-  width: 38px;
-  height: 37px;
-  margin-top: 7px;
-  margin-left: 463px;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #922C2C, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #922C2C, inset 1.5px 1.5px 0 0 #FAFAFA;
-  background: #F74C4C;
-}
-
-.create-gifs .container-record .checking .containerReady .button-ready {
-  width: 146px;
-  height: 37px;
-  margin-top: 6px;
-  background: #F74C4C;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #922C2C, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #922C2C, inset 1.5px 1.5px 0 0 #FAFAFA;
-}
-
-.create-gifs .container-record .checking .load-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.create-gifs .container-record .checking .load-bar .proceed {
-  width: 21px;
-  height: 22px;
-  margin-top: 11px;
-  background: #F7C9F3;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-}
-
-.create-gifs .container-record .checking .load-bar .proceed #img-proceed {
-  width: 8px;
-  height: 11px;
-  margin-left: 9px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.create-gifs .container-record .checking .load-bar .bar-bar {
-  width: 242px;
-  height: 26px;
-  margin-top: 11px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-shadow: inset 2.5px 2.5px 0 0 #FCFCFC, inset -2.5px -2.5px 0 0 #100134;
-          box-shadow: inset 2.5px 2.5px 0 0 #FCFCFC, inset -2.5px -2.5px 0 0 #100134;
-  background: #CECECE;
-}
-
-.create-gifs .container-record .checking .load-bar .bar-bar .progress-bar {
-  width: 0%;
-  height: 18px;
-  background: #F7C6F3;
-  -webkit-transition: all 2.5s ease;
-  transition: all 2.5s ease;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-}
-
-.create-gifs .container-record .checking button {
-  width: 146px;
-  height: 38px;
-  font-family: 'ChakraPetch-Regular';
-  font-size: 16px;
-  color: #100134;
-  text-align: center;
-  line-height: 17px;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-record .checking .button-repeat {
-  margin-right: 11px;
-  margin-left: 82px;
-  background: #FCFCFC;
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-}
-
-.create-gifs .container-record .checking .button-repeat a {
-  font-family: 'ChakraPetch-Regular';
-  text-decoration: none;
-  font-size: 18px;
-  color: #100134;
-  text-align: center;
-  line-height: 18px;
-  letter-spacing: 0;
-}
-
-.create-gifs .container-record .checking .button-repeat:hover {
-  background: #FDFCFC;
-  border: 1.5px dotted #100134;
-}
-
-.create-gifs .container-record .checking .button-upload {
-  border: 1.5px solid #100134;
-  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-          box-shadow: inset -1.5px -1.5px 0 0 #977C95, inset 1.5px 1.5px 0 0 #FAFAFA;
-  background: #F1BBEC;
-}
-
 .containersugge {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
   margin-bottom: -8px;
+  width: 1230px;
 }
 
 .containersugge .container_Gif {
@@ -1476,7 +1150,7 @@ header p {
   border: 3px outset;
 }
 
-.containersugge #seeMore {
+.containersugge .container-conteGif .seeMore {
   cursor: pointer;
   bottom: 22px;
   padding: 12px;
@@ -1495,7 +1169,7 @@ header p {
   bottom: 78px;
 }
 
-.containersugge #seeMore:hover {
+.containersugge .seeMore:hover {
   border: 1.2px dotted #100134;
 }
 
@@ -1505,5 +1179,55 @@ header p {
 
 .containersugge .tenden_conteGif_BtnverMas {
   margin-bottom: -52px;
+}
+
+.containerbtn {
+  width: 1400px;
+  padding-top: 10px;
+  position: absolute;
+  top: 278px;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.containerbtn .containerMore {
+  width: auto;
+  height: 49px;
+  padding: 9px;
+  margin-right: 10px;
+  background: #4180F6;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #294F98, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #294F98, inset 2px 2px 0 0 #FAFAFA;
+  font-family: 'ChakraPetch-Regular';
+  font-size: 15px;
+  color: #FAFAFA;
+  line-height: 0px;
+}
+
+.search-related {
+  display: none;
+  width: 1216px;
+  height: 35px;
+  margin-top: 113px;
+  margin-bottom: 22px;
+  -webkit-box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #E6BBE2;
+          box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #E6BBE2;
+  background: #FAFAFA;
+}
+
+.search-related #randomHeader {
+  margin: 0;
+  padding: 8px;
+  letter-spacing: 0;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 14px;
+  color: #100134;
 }
 /*# sourceMappingURL=style.css.map */

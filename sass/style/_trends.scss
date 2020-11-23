@@ -1,12 +1,11 @@
 .trends {
     .trends-principaltrends {
-        width: 1329px;
+        width: 1216px;
         margin-top: 115px;
         margin-bottom: 25px;
         height: 35px;
         background: #FFFAFE;
-        border: 1.5px solid #100134;
-        box-shadow: inset -2.5px -2.5px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #F7C9F3;
+        box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #E6BBE2;
 
         p {
             font-family: 'Chakra Petch', sans-serif;
@@ -17,66 +16,51 @@
             letter-spacing: 0;
         }
     }
+}
 
     .trends-container {
         width: 100%;
         height: 500px;
         display: grid;
+        row-gap: 18px;
+        column-gap: 1px;
         grid-template-columns: repeat(4, 25%);
     }
 
     .trends-contain-Gif {
         flex-direction: column;
         height: 300px;
-        width: 300px;
+        width: 290px;
         position: relative;
-        margin-bottom: 33px;
+        img {
+            width: 290px;
+            height: 300px;
+            margin: 1px;
+            background: #E1DDDD;
+            box-shadow: inset -2px -2px 0 0 #BABABA, inset 2px 2px 0 0 #FFFFFF;	
+        }
     }
-
-    .trends-contain-Gif img.img-gif {
-        width: 100%;
-        height: 100%;
-        box-shadow: inset -2.5px -2.5px 0 0 #908686, inset 2.5px 2.5px 0 0 #FAFAFA;
-        background: #E1DDDD;
-    }
-
-    .trends-contain-Gif img.img-gif:hover {
-        width: 100%;
-        height: 305px;
-    }
-
     .text-finish {
         width: 100%;
-        height: 33px;
+        height: 16px;
         display: none;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        //padding-left: 6px;
         font-family: 'ChakraPetch-Bold';
-        font-size: 18px;
+        font-size: 12px;
         color: #FAFAFA;
         align-self: center;
         letter-spacing: 0;
         background-image: linear-gradient(270deg, #F1BBEC 0%, #3873E3 100%);
         margin-top: -5px;
+        border: 1px solid #B4B4B4;
     }
-
     .trends-contain-Gif:hover {
-        border: 3px solid #908686;
-        width: 305px;
+        border: 2px solid #B4B4B4;
+        width: 294px;
         height: 315px;
-        box-shadow: inset -2-5px -2.5px 0 0 #908686, inset 2.5px 2.5px 0 0 #FAFAFA;
-        background: #E1DDDD;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+        background: #E6E6E6;
 
         .text-finish {
-            width: 100%;
             display: block;
-            border: 3px solid #908686;
         }
     }
-}
-
-.trends-containGif-finish {
-    display: block;
-}

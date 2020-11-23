@@ -81,21 +81,30 @@
   border: 1px solid;
   font-size: 17px;
 }
-.GeneralCreate .ContainerCreate .ButtonsClass .cancel {
+.GeneralCreate .ContainerCreate .ButtonsClass a {
+  margin: 5px;
+  border: 1px solid #100134;
+  font-size: 17px;
+  background: #FAFAFA;
+  color: #100134;
   width: 146px;
-  height: 38px;
-  font-family: "ChakraPetch-Regular";
+  height: 36px;
+  font-family: "ChakraPetch";
+  text-decoration: none;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 36px;
 }
 .GeneralCreate .ContainerCreate .ButtonsClass .start {
   width: 146px;
   height: 38px;
   background: #F7C9F3;
-  font-family: "ChakraPetch-Regular";
+  font-family: "ChakraPetch";
 }
 
 .Principalvideo {
   width: 805px;
-  height: 525px;
+  height: 535px;
   margin-top: -3%;
   margin-left: 19%;
   display: none;
@@ -120,7 +129,19 @@
   margin-top: 9px;
   margin-left: 4px;
 }
-.Principalvideo .Titlevideo .Stylparagraph, .Principalvideo .Titlevideo .Stylcapture {
+.Principalvideo .Titlevideo #Stylcheck {
+  height: 24px;
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: "ChakraPetch";
+  font-weight: bold;
+  font-size: 14px;
+  color: #FAFAFA;
+  letter-spacing: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.Principalvideo .Titlevideo #stylcapture {
+  display: none;
   height: 24px;
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   font-family: "ChakraPetch";
@@ -214,6 +235,7 @@
 .Principalvideo #previewGif .readyButton {
   display: flex;
   justify-content: flex-end;
+  margin-top: -13px;
 }
 .Principalvideo #previewGif .readyButton .upGif {
   width: 144px;
@@ -224,6 +246,7 @@
   font-family: "ChakraPetch-Regular";
   font-size: 16px;
   color: #110034;
+  border: 1px solid #100134;
   letter-spacing: 0;
   text-align: center;
 }
@@ -234,11 +257,19 @@
   margin-left: 82px;
   line-height: 18px;
   border-style: solid;
+  border: 1px solid #100134;
   font-family: "ChakraPetch-Regular";
   font-size: 16px;
-  color: #110034;
   letter-spacing: 0;
   text-align: center;
+}
+.Principalvideo #previewGif .readyButton .repeatGif a {
+  text-decoration: none;
+  color: #110034;
+}
+.Principalvideo #previewGif .readyButton .repeatGif:hover {
+  border: 1px dotted #100134;
+  background: #F0E5EE;
 }
 .Principalvideo #previewGif .readyButton .frontBar {
   width: 240px;
@@ -286,4 +317,22 @@
 .Principalvideo #gifContainer img {
   width: 100%;
   height: 100%;
+}
+.Principalvideo #gifContainer .upGifos img {
+  width: 36px;
+  height: 48px;
+  margin-left: 391px;
+  margin-top: 101px;
+}
+.Principalvideo #gifContainer .upGifos .upGifosTitle {
+  margin-left: 291px;
+  font-family: "ChakraPetch-Bold";
+  font-size: 19px;
+  color: #110034;
+  line-height: 23px;
+  letter-spacing: 0;
+}
+
+.containermyGuifos .MyGuifos {
+  display: none;
 }

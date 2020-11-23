@@ -5,8 +5,7 @@ var buttonsearch = document.getElementById("buttonsearch");
 var divcontainersugge = document.getElementsByClassName('divcontainersugge')[0];
 var gif_img = document.getElementsByClassName('gif_img');
 var tenden_conte_Gif = document.getElementsByClassName('trends-contain-Gif');
-var divGif = document.getElementsByClassName('containersugge')[0];
-console.log("se tomò el JS"); //SUGGESTION//
+var divGif = document.getElementsByClassName('containersugge')[0]; //SUGGESTION//
 
 var arraySuggestion = [];
 
@@ -42,26 +41,32 @@ function suggestion(query, cantidad) {
       }
     }
   }, null, null, [[0, 12]]);
-} //creacion de gifos dinamicamente
+} //Creacion de Gifos en la secciòn de sugerencias//
 
 
-suggestion('randon', 4).then(function (data) {
-  for (var i = 0; i < data.length; i++) {
+suggestion('random', 4).then(function (data) {
+  var _loop = function _loop(i) {
     var GiftTitle = document.createElement('p');
     GiftTitle.textContent = data[i].title; //Se llama la variable que contiene un pàrrafo(p), para que luego en el p me traiga del data aleatorio en dicho pàrrafo para el tìtulo del GIFT en sugerencias.
 
     var BtnverMas = document.createElement('button');
     var textBtnverMas = document.createTextNode('Ver màs...');
-    BtnverMas.id = 'seeMore';
+    var query = data[i].title;
+    BtnverMas.className = 'seeMore';
+
+    BtnverMas.onclick = function () {
+      document.getElementById('trends-container').innerHTML = "";
+      document.getElementById('principaltrends').innerHTML = "Resultados para: ".concat(query);
+      busqueda(query, 12);
+    };
+
     BtnverMas.appendChild(textBtnverMas);
     var divBtnverMas = document.createElement('div');
     divBtnverMas.className = 'tenden_conteGif_BtnverMas headerDark';
     divBtnverMas.appendChild(BtnverMas);
-
-    var _gif_img = document.createElement('img');
-
-    _gif_img.className = 'gif_img';
-    _gif_img.src = data[i].images.original.url;
+    var gif_img = document.createElement('img');
+    gif_img.className = 'gif_img';
+    gif_img.src = data[i].images.original.url;
     var dismiss_button = document.createElement('img');
     dismiss_button.src = '../images/button3.svg';
     dismiss_button.className = 'dismiss-button';
@@ -71,9 +76,13 @@ suggestion('randon', 4).then(function (data) {
     divTittleGif.appendChild(GiftTitle);
     divTittleGif.appendChild(dismiss_button);
     divConteGif.appendChild(divTittleGif);
-    divConteGif.appendChild(_gif_img);
+    divConteGif.appendChild(gif_img);
     divConteGif.appendChild(divBtnverMas);
     divGif.appendChild(divConteGif);
+  };
+
+  for (var i = 0; i < data.length; i++) {
+    _loop(i);
   }
 })["catch"](function (e) {
   return console.log(e);
@@ -88,8 +97,6 @@ function busqueda(query, cantidad) {
     console.log(data); // imprimimos el Json completo
 
     for (var i = 0; i < data.data.length; i++) {
-      //console.log('titulos'); 
-      //console.log(data.data[i].title);      
       document.getElementById('trends-container').innerHTML += "\n            <div class=\"container-search\">\n            <div class=\"trends-contain-Gif\">\n            <img class=\"img-gif\" src=\"".concat(data.data[i].images.original.url, "\" alt=\"\">\n            <p class=\"text-finish\">#").concat(data.data[i].title, "</p>\n            </div>\n            </div>");
     }
   });
@@ -100,7 +107,36 @@ busqueda("random", 4);
 busqueda("calamardo", 4);
 busqueda("dance", 4);
 busqueda("girls", 4);
-busqueda("onepiece", 4); //---
+busqueda("rabbits", 4); //Definimos la funciòn para habilitar el botòn de bùsqueda cuando se va a buscar//
+
+function activeButton() {
+  document.getElementById('buttonsearch').disabled = false;
+  document.getElementById('buttonsearch').style.background = '#F7C9F3';
+  console.log("botón de búsqueda habilitado");
+} //Definimos la funciòn que nos va a permitir realizar las bùsquedas y va a realizar las bùsquedas de lo que sea que busquemos//
+
+
+document.getElementById('buttonsearch').addEventListener('click', function (event) {
+  event.preventDefault();
+  document.getElementById('trends-container').innerHTML = "";
+  var querySearch = document.getElementById('input-search').value;
+  document.getElementById('main-trends').style.display = "block";
+  document.getElementById('suggestions').style.display = "none";
+  document.getElementById('search-container').style.display = "none";
+  busqueda(querySearch, 16);
+}); //Definimos la funciòn que nos va a ocultar los botones que filtran luego de hacer click en alguno y luego de ello nos va a mostrar los GIFS en el elemento search-container//
+
+document.getElementsByClassName('alliedbutton').addEventListener('click', function () {
+  document.getElementById('alliedbtn').style.display = "none";
+  document.getElementById('search-container').style.display = "block";
+}); //Ahora vamos a crear la Funciòn que va a permitir ver màs elementos al darle click en el ver màs de las sugerencias//
+
+function verMas(query) {
+  busqueda(query, 16);
+}
+
+var seeMore = document.getElementById('seeMore');
+seeMore.addEventListener('click', function () {}); //---
 
 function showResults() {
   var search = document.getElementById("search").value.trim();
@@ -137,13 +173,13 @@ function showResults() {
       divBtnverMas.className = 'tenden_conteGif_BtnverMas headerDark';
       divBtnverMas.appendChild(BtnverMas);
 
-      var _gif_img2 = document.createElement('img');
+      var _gif_img = document.createElement('img');
 
-      _gif_img2.className = 'gif_img';
-      _gif_img2.src = data[_i].images.original.url;
+      _gif_img.className = 'gif_img';
+      _gif_img.src = data[_i].images.original.url;
       var divConteGif = document.createElement('div');
       divConteGif.className = 'tenden_conte_Gif';
-      divConteGif.appendChild(_gif_img2);
+      divConteGif.appendChild(_gif_img);
       divConteGif.appendChild(divBtnverMas);
       divSearch.appendChild(divConteGif);
     } //local storage para los element nuevos producto de la query
@@ -171,38 +207,35 @@ function showResults() {
   })["catch"](function (e) {
     return console.log(e);
   });
-} //botones Ver Mas
+} //Se define la funciòn de busqueda para el botòn buscar//
 
-
-var _conteGif_HeaderText = document.getElementsByClassName('_conteGif_HeaderText');
-
-function loadVerMas(random) {
-  var searchvermas = document.getElementById("explore");
-  searchvermas.value = random;
-  console.log(searchvermas);
-  results(searchvermas);
-  showResults();
-} //busqueda para el botòn buscar
-
-
-var queryBusqueda = document.getElementById("input-search").value;
-console.log(queryBusqueda);
-botonBuscar.click = busqueda(queryBusqueda, 22);
 
 function showHastag() {
   var showHastag = document.getElementById('alliedbtn');
   showHastag.style.display = 'block';
-} //Funcion para los Gifos en el Botòn de Bùsqueda//
+} //Creamos la funciòn que va a ocultar los botones de showHastag y va a mostrar los botones de la bùsqueda segùn a lo que se de click
+//Funcion para los Gifos en el Botòn de Bùsqueda//
 
 
 function filter(query) {
+  document.getElementById('alliedbtn').style.display = "none";
+  document.getElementById('search-related').style.display = "block";
   fetch("https://api.giphy.com/v1/gifs/search?api_key=".concat(API_KEY, "&q=").concat(query, "&limit=16&offset=2&rating=G&lang=en")).then(function (response) {
     return response.json();
   }).then(function (data) {
-    //console.log(json.data); // imprimimos solo el atributo data del Json 
+    var containerGif = document.getElementById('containsearch');
+    var seeMore = document.getElementById('containerbtn'); //console.log(json.data); // imprimimos solo el atributo data del Json 
+
     console.log(data); // imprimimos el Json completo
 
-    for (var i = 0; i < data.data.length; i++) {
+    seeMore.innerHTML = "";
+    containerGif.innerHTML = "";
+
+    for (var i = 0; i < 3; i++) {
+      seeMore.innerHTML += "\n            <button class=\"containerMore\">\n                <p class=\"textContainer\">#".concat(data.data[i].title, "</p>\n            </button>");
+    }
+
+    for (var _i6 = 0; _i6 < data.data.length; _i6++) {
       //console.log('titulos'); 
       //console.log(data.data[i].title);
       var hide = document.getElementById('suggestions');
@@ -211,7 +244,25 @@ function filter(query) {
       conceal.style.display = 'none';
       var search = document.getElementById('search-container');
       search.style.display = "block";
-      document.getElementById('containsearch').innerHTML += "\n            <div class=\"container-search\">\n            <div class=\"trends-contain-Gif\">\n            <img class=\"img-gif\" src=\"".concat(data.data[i].images.original.url, "\" alt=\"\">\n            <p class=\"text-finish\">#").concat(data.data[i].title, "</p>\n            </div>\n            </div>");
+      containerGif.innerHTML += "\n            <div class=\"container-search\">\n            <div class=\"trends-container-Gif\">\n            <img class=\"img-gif\" src=\"".concat(data.data[_i6].images.original.url, "\" alt=\"\">\n            <p class=\"text-end\">#").concat(data.data[_i6].title, "</p>\n            </div>\n            </div>");
     }
   });
-}
+  document.getElementById('input-search').value = query;
+  document.getElementById('randomHeader').innerHTML = "Resultados para: ".concat(query);
+} //Se definen los eventos que van a limpiar la barra de bùsquedas para consultar de nuevo cualquiera de los tres botones//
+
+
+document.getElementsByClassName('alliedbutton').addEventListener = function () {
+  document.getElementById('randomHeader').innerHTML = "";
+  document.getElementById('input-search').value = "";
+  console.log(query);
+}; //Se define la funciòn para cambiar el estilo de dìa y de noche//
+
+
+document.getElementById('Menucontainerunfolded').addEventListener('click', function () {
+  if (document.getElementById('containerdrop').style.display == "block") {
+    document.getElementById('containerdrop').style.display = "none";
+  } else {
+    document.getElementById('containerdrop').style.display = "block";
+  }
+});

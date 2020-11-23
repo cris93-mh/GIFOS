@@ -79,16 +79,25 @@
                 border: 1px solid;
                 font-size: 17px;
             }
-            .cancel  {
+            a {
+                margin: 5px;
+                border: 1px solid #100134;
+                font-size: 17px;
+                background: #FAFAFA;
+                color: #100134;
                 width: 146px;
-                height: 38px;
-                font-family: 'ChakraPetch-Regular';
+                height: 36px;
+                font-family: 'ChakraPetch';
+                text-decoration: none;
+                letter-spacing: 0;
+                text-align: center;
+                line-height: 36px;
             }
             .start {
                 width: 146px;
                 height: 38px;
                 background: #F7C9F3;
-                font-family: 'ChakraPetch-Regular';
+                font-family: 'ChakraPetch';
 
             }
         }
@@ -96,7 +105,7 @@
 }
 .Principalvideo {
     width: 805px;
-    height: 525px;
+    height: 535px;
     margin-top: -3%;
     margin-left: 19%;
     display: none;
@@ -119,7 +128,19 @@
         flex-direction: column;
         margin-top: 9px;
         margin-left: 4px;
-        .Stylparagraph, .Stylcapture {
+        #Stylcheck {
+                height: 24px;
+                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                font-family: 'ChakraPetch';
+                font-weight: bold;
+                font-size: 14px;
+                color: #FAFAFA;
+                letter-spacing: 0;
+                margin-top: 5px;
+                margin-left: 5px;
+        }
+        #stylcapture {
+                display:none;
                 height: 24px;
                 background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
                 font-family: 'ChakraPetch';
@@ -214,6 +235,7 @@
     .readyButton {
         display: flex;
         justify-content: flex-end;
+        margin-top: -13px;
         .upGif {
             width: 144px;
             height: 36px;
@@ -223,6 +245,7 @@
             font-family: 'ChakraPetch-Regular';
             font-size: 16px;
             color: #110034;
+            border: 1px solid #100134;
             letter-spacing: 0;
             text-align: center;
         }
@@ -233,11 +256,20 @@
             margin-left: 82px;
             line-height: 18px;
             border-style: solid;
+            border: 1px solid #100134;
             font-family: 'ChakraPetch-Regular';
             font-size: 16px;
-            color: #110034;
             letter-spacing: 0;
-            text-align: center; 
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: #110034;
+                
+            }
+        }
+        .repeatGif:hover {
+            border: 1px dotted #100134;
+            background: #F0E5EE;
         }
         .frontBar {
             width: 240px;
@@ -288,5 +320,26 @@
             width: 100%;
             height: 100%;
         }
+        .upGifos {
+            img {
+                width: 36px;
+                height: 48px;
+                margin-left: 391px;
+                margin-top: 101px;
+            }
+            .upGifosTitle {
+                margin-left: 291px;
+                font-family: 'ChakraPetch-Bold';
+                font-size: 19px;
+                color: #110034;
+                line-height: 23px;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+.containermyGuifos {
+    .MyGuifos {
+        display: none;
     }
 }

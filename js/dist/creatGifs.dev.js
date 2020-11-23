@@ -53,6 +53,8 @@ document.getElementById("Capturegifs").addEventListener('click', function () {
   getTime();
   document.getElementById("Gifscreen").style.display = "none";
   document.getElementById("containerReady").style.display = "block";
+  document.getElementById("Stylcheck").style.display = "none";
+  document.getElementById("stylcapture").style.display = "block";
 });
 
 function getTime() {
@@ -94,22 +96,19 @@ document.getElementById('recordGif').addEventListener("click", function () {
     preview.src = URL.createObjectURL(recorder.getBlob());
     console.log("preview establecido");
     document.getElementById("videoContainer").style.display = "none";
-    console.log("Vìdeo ocultado");
     document.getElementById("gifContainer").style.display = "block";
-    console.log("Mostrando contenedor de gif");
-    document.getElementById("Titlevideo").innerHTML = "Vista Previa";
-    console.log("Tìtulo cambiado");
-    document.getElementById("previewGif").style.display = "block";
-    console.log("Mostrando menù para subir o repetir git"); // Creamos el formulario para enviarlo por el body a giphy
+    document.getElementById("containerReady").style.display = "none";
+    document.getElementById("Titlevideo").innerHTML = "\n    <p class='Stylcheck' id='Stylcheck'>Vista Previa</p>\n    <img class='closeGif' src='./images/button3.svg'> ";
+    document.getElementById("previewGif").style.display = "block"; // Creamos el formulario para enviarlo por el body a giphy
 
     document.getElementById("Gifscreen").addEventListener("click", function () {
       uploadGif(form);
     });
   });
-}); //Ahora vamos a definir la funciòn para subir el GIF
+}); //Ahora vamos a definir la funciòn para subir el GIF y luego para descargarlo
 
 function uploadGif(gif) {
-  document.getElementById('gifContainer').innerHTML = "\n  <div class='uploading-gif'>\n    <img src=\"./images/globe_img.png\" width = '50px' height = '50'>\n    <p class='uploading-gif-title'>Estamos subiendo tu guifo...<p>\n    <div class=\"progressGif\" id=\"progressGif\">\n      <ul>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n      </ul>\n    </div>\n    <p class='time-left'>Tiempo restante: <span style='text-decoration: line-through'>38 a\xF1os</span> algunos segundos</p>\n  </div>\n  ";
+  document.getElementById('gifContainer').innerHTML = "\n  <div class='upGifos'>\n    <img src=\"./images/globe_img.png\">\n    <p class='upGifosTitle'>Estamos subiendo tu guifo...<p>\n    <div class=\"progressGif\" id=\"progressGif\">\n      <ul>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n      </ul>\n    </div>\n    <p class='time-left'>Tiempo restante: <span style='text-decoration: line-through'>38 a\xF1os</span> algunos segundos</p>\n  </div>\n  ";
   animateProgressBar();
   document.querySelector('.btns-upload-gif').innerHTML = "\n  <button class=\"btn-create-gif repeat push\" onclick=\"location.href='upload.html'\"><span>Cancelar</span></button>\n  ";
   fetch("https://upload.giphy.com/v1/gifs?api_key=5c44dQP47Sp08444UvPPyAnTcqoReYrf", {
@@ -133,16 +132,15 @@ function uploadGif(gif) {
       alertGif.innerHTML = "\n          <p class='title-modal'> Guifo subido con \xE9xito! <span style='float: right'><img id='closeModal' src=\"./images/close.svg\"></span></p>\n          <div class='content-modal'>\n            <img class='gif-modal' src='".concat(data.data.images.original.url, "'>\n            <div class='gif-modal-btns'>\n              <button>Copiar Enlace Guifo</button>\n              <button>Descargar Guifo</button>\n            </div>\n          <div>\n          ");
       document.querySelector('.content').style.filter = 'grayscale(70%) blur(2px)';
       document.querySelector('.top-bar').style.filter = 'grayscale(70%) blur(2px)';
-      document.body.append(alertGif);
-      document.getElementById('closeModal').addEventListener('click', function () {
-        document.querySelector('.alert-gif').style.display = 'none';
-        window.location.href = "./my-gifos.html";
-      });
+      document.body.append(alertGif); //document.getElementById('closeModal').addEventListener('click', () => {
+      // window.location.href = "./my-gifos.html";
+      // });
     });
   });
 }
 
 document.getElementById('upGif').onclick = function () {
+  document.getElementById('previewGif').style.display = 'none';
   var form = new FormData();
   form.append("file", recorder.getBlob(), "myGif.gif");
   uploadGif(form);
