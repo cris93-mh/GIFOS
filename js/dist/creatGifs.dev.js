@@ -4,6 +4,19 @@ var video = document.querySelector('#video');
 var videoContainer = document.querySelector('#video-container');
 var recorder; // globally accessible
 
+var dayTheme = "./sass/style/dist/style.css";
+var nightTheme = "./sass/style/dist/themenight.css";
+
+function imagenDiaNoche() {
+  if (localStorage.getItem("theme") == 2) {
+    document.getElementById('imageGifNight').style.display = "block";
+    document.getElementById('imageGif').style.display = "none";
+  } else {
+    document.getElementById('imageGifNight').style.display = "none";
+    document.getElementById('imageGif').style.display = "block";
+  }
+}
+
 function captureCamera(stream) {
   console.log('Entro en capture camara');
   navigator.mediaDevices.getUserMedia({
@@ -108,45 +121,96 @@ document.getElementById('recordGif').addEventListener("click", function () {
 }); //Ahora vamos a definir la funciòn para subir el GIF y luego para descargarlo
 
 function uploadGif(gif) {
-  document.getElementById('gifContainer').innerHTML = "\n  <div class='upGifos'>\n    <img src=\"./images/globe_img.png\">\n    <p class='upGifosTitle'>Estamos subiendo tu guifo...<p>\n    <div class=\"progressGif\" id=\"progressGif\">\n      <ul>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n      </ul>\n    </div>\n    <p class='time-left'>Tiempo restante: <span style='text-decoration: line-through'>38 a\xF1os</span> algunos segundos</p>\n  </div>\n  ";
-  animateProgressBar();
-  document.querySelector('.btns-upload-gif').innerHTML = "\n  <button class=\"btn-create-gif repeat push\" onclick=\"location.href='upload.html'\"><span>Cancelar</span></button>\n  ";
-  fetch("https://upload.giphy.com/v1/gifs?api_key=5c44dQP47Sp08444UvPPyAnTcqoReYrf", {
-    method: "POST",
-    body: gif
-  }).then(function (response) {
-    if (response.status === 200) {
-      console.log('Gif subido!');
-      return response.json();
+  document.getElementById('gifContainer').innerHTML = "\n  <div class='upGifos'>\n    <img src=\"./images/globe_img.png\">\n    <p class='upGifosTitle'>Estamos subiendo tu guifo...<p>\n    <div class=\"progressGif\" id=\"progressGif\">\n      <div class=\"GifLoading\" id=\"GifLoading\" style=\"width:0;\"></div>\n    </div>\n    <p class='time-left'>Tiempo restante: <span style='text-decoration: line-through'>38 a\xF1os</span> algunos segundos</p>\n  </div>\n  ";
+
+  function ProgressLoad() {
+    var progressBar = document.getElementById('GifLoading');
+    setTimeout(function () {
+      progressBar.style.cssText = 'transition: all 2s ease;width:100%;';
+    }, 1000);
+  }
+
+  ;
+  ProgressLoad();
+
+  function stopGif() {
+    var btnStop = document.getElementById('StopGifo');
+    btnStop.style.cssText = 'background: #FAFAFA;border: 1.5px solid #100134;width: 142px;height: 34px;font-size: 18px;font-family: "ChakraPetch-Regular";line-height: 17px;letter-spacing: 0;text-align: center;margin-top: 158px;margin-left: 631px;';
+    console.log("Boton de parado del gif", btnStop);
+
+    if (localStorage.getItem("theme") == 2) {
+      document.getElementById('changeTheme').href = nightTheme;
     } else {
-      console.log('error.');
+      document.getElementById('changeTheme').href = dayTheme;
     }
-  }).then(function (data) {
-    console.log(data);
-    fetch("https://api.giphy.com/v1/gifs/".concat(data.data.id, "?&api_key=5c44dQP47Sp08444UvPPyAnTcqoReYrf")).then(function (response) {
-      return response.json();
-    }).then(function (data) {
-      localStorage.setItem("mygif-".concat(data.data.id), JSON.stringify(data.data));
-      var alertGif = document.createElement('div');
-      alertGif.className = 'alert-gif';
-      alertGif.innerHTML = "\n          <p class='title-modal'> Guifo subido con \xE9xito! <span style='float: right'><img id='closeModal' src=\"./images/close.svg\"></span></p>\n          <div class='content-modal'>\n            <img class='gif-modal' src='".concat(data.data.images.original.url, "'>\n            <div class='gif-modal-btns'>\n              <button>Copiar Enlace Guifo</button>\n              <button>Descargar Guifo</button>\n            </div>\n          <div>\n          ");
-      document.querySelector('.content').style.filter = 'grayscale(70%) blur(2px)';
-      document.querySelector('.top-bar').style.filter = 'grayscale(70%) blur(2px)';
-      document.body.append(alertGif); //document.getElementById('closeModal').addEventListener('click', () => {
-      // window.location.href = "./my-gifos.html";
-      // });
+  }
+
+  stopGif();
+  /*
+  fetch(
+    "https://upload.giphy.com/v1/gifs?api_key=5c44dQP47Sp08444UvPPyAnTcqoReYrf",
+    {
+      method: "POST",
+      body: gif
+    }
+  )
+    .then(response => {
+      if (response.status === 200) {
+        console.log('Gif subido!');
+        return response.json();
+      } else {
+        console.log('error.');
+      }
+    })
+    .then(data => {
+      console.log(data);
+      fetch(
+        `https://api.giphy.com/v1/gifs/${data.data.id}?&api_key=5c44dQP47Sp08444UvPPyAnTcqoReYrf`
+      )
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          localStorage.setItem(
+            `mygif-${data.data.id}`,
+            JSON.stringify(data.data)
+          );
+          let alertGif = document.createElement('div');
+          alertGif.className = 'alert-gif';
+          alertGif.innerHTML = `
+          <p class='title-modal'> Guifo subido con éxito! <span style='float: right'><img id='closeModal' src="./images/close.svg"></span></p>
+          <div class='content-modal'>
+            <img class='gif-modal' src='${data.data.images.original.url}'>
+            <div class='gif-modal-btns'>
+              <button>Copiar Enlace Guifo</button>
+              <button>Descargar Guifo</button>
+            </div>
+          <div>
+          `;
+          document.body.append(alertGif);
+          //document.getElementById('closeModal').addEventListener('click', () => {
+            
+           // window.location.href = "./my-gifos.html";
+         // });
+        });
     });
-  });
+    */
 }
 
-document.getElementById('upGif').onclick = function () {
-  document.getElementById('previewGif').style.display = 'none';
-  var form = new FormData();
-  form.append("file", recorder.getBlob(), "myGif.gif");
-  uploadGif(form);
-  videoContainer.style.display = 'block';
-  var hideContCreateGifs = document.getElementById('ContainerCreate');
-  hideContCreateGifs.style.display = 'none';
-  this.disabled = true;
-  captureCamera(video.srcObject);
+window.onload = function () {
+  document.getElementById('upGif').onclick = function () {
+    document.getElementById('previewGif').style.display = 'none';
+    document.getElementById('Stylcheck').style.display = 'none';
+    document.getElementById("Titlevideo").innerHTML = "\n    <p class='UpGifo' id='UpGifo'>Subiendo Guifo</p>\n    <img class='closeGif' src='./images/button3.svg'> ";
+    var form = new FormData();
+    form.append("file", recorder.getBlob(), "myGif.gif");
+    uploadGif(form);
+    videoContainer.style.display = 'block';
+    var hideContCreateGifs = document.getElementById('ContainerCreate');
+    hideContCreateGifs.style.display = 'none';
+    this.disabled = true;
+    captureCamera(video.srcObject);
+  };
+
+  imagenDiaNoche();
 };

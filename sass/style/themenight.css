@@ -1,0 +1,1191 @@
+body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  background-color: #110034;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 25px;
+  -webkit-box-shadow: 0 1.5px 0 0 #100134;
+          box-shadow: 0 1.5px 0 0 #100134;
+}
+
+header p {
+  font-family: 'Chakra Petch';
+  font-size: 13px;
+  color: #FAFAFA;
+  margin: 0;
+}
+
+.light-initial {
+  width: 105%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#EA3FF9), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EA3FF9 0%, #2E32FB 100%);
+}
+
+#imageGifNight {
+  width: 102px;
+  height: 64px;
+}
+
+.main {
+  margin: 0px 110px;
+}
+
+.main .content {
+  margin: 50px 0px;
+}
+
+.main .content .menu-section {
+  margin-bottom: 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .content .createGifs {
+  width: 440px;
+  height: 40px;
+  top: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 54.7%;
+}
+
+.main .content .createGifs .create {
+  width: 125px;
+  background: #EA3FF9;
+  cursor: pointer;
+  font-family: 'ChakraPetch-Regular';
+  font-size: 17px;
+  color: #FAFAFA;
+  text-align: center;
+  letter-spacing: 0;
+  padding-top: 10px;
+  line-height: 20px;
+  text-decoration: none;
+  border: 1.5px solid #100134;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+}
+
+.main .content .createGifs .create:hover {
+  border: 1.5px dotted #100134;
+}
+
+.main .content .createGifs button {
+  width: 125px;
+  height: 40px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+  cursor: pointer;
+  border: 1.5px solid #100134;
+}
+
+.main .content .createGifs button:hover {
+  border: 1.5px dotted #100134;
+}
+
+.main .content .createGifs .Menucontainer {
+  margin: 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .content .createGifs .Menucontainer .Menucontainerunfolded {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .content .createGifs .Menucontainer .Menucontainerunfolded button {
+  font-family: 'ChakraPetch-Regular';
+  font-size: 16px;
+  background: #EA3FF9;
+  color: #FAFAFA;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 20px;
+  margin: 0;
+}
+
+.main .content .createGifs .Menucontainer .Menucontainerunfolded div {
+  width: 44px;
+  background: #EA3FF9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+  border: 1.5px solid #100134;
+}
+
+.main .content .createGifs .Menucontainer .Menucontainerunfolded div img {
+  margin: auto;
+}
+
+.main .content .createGifs .Menucontainer .Menucontainerunfolded div:hover {
+  border: 1.5px dotted #100134;
+}
+
+.main .content .createGifs .Menucontainer .containerdrop {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 55px 151px;
+  width: 170px;
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+  padding-bottom: 12px;
+  top: 60px;
+  right: 100px;
+  z-index: 1;
+  overflow: auto;
+  position: absolute;
+}
+
+.main .content .createGifs .Menucontainer .containerdrop .droplist {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main .content .createGifs .Menucontainer .containerdrop li {
+  cursor: pointer;
+  list-style: none;
+  width: 144px;
+  height: 36px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #100134;
+  display: block;
+  padding-top: 8px;
+  margin-left: 12px;
+  margin-top: 10px;
+}
+
+.main .content .createGifs .Menucontainer .containerdrop .list {
+  background: #CCCCCC;
+  border: 1px solid #808080;
+}
+
+.main .content .createGifs .Menucontainer .containerdrop .list:hover {
+  background: #2E32FB;
+  color: #FAFAFA;
+}
+
+.main .content .createGifs .MyGuifos {
+  text-decoration: none;
+  cursor: pointer;
+  width: 80px;
+  left: 1300px;
+  top: 78px;
+  font-family: 'Chakra Petch-Regular';
+  font-size: 17px;
+  color: #FAFAFA;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+
+.main .content .createGifs .MyGuifos span {
+  text-decoration: underline;
+}
+
+.main .content .createGifs .MyGuifos:hover {
+  border: 1.5px dotted #100134;
+}
+
+.search {
+  background: #B4B4B4;
+}
+
+#containersearch {
+  width: 1210px;
+  margin-top: -60px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#containersearch .allied {
+  position: absolute;
+  margin-top: -1px;
+  width: 1211px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+}
+
+#containersearch #prinsearch {
+  width: 1200px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #FAFAFA;
+  -webkit-box-shadow: 0 1.5px 0 0 #100134;
+          box-shadow: 0 1.5px 0 0 #100134;
+}
+
+#containersearch #prinsearch p {
+  margin: auto;
+  width: 98%;
+  height: 50px;
+}
+
+#containersearch .principalsearch {
+  background-image: -webkit-gradient(linear, right top, left top, from(#EA3FF9), to(#262AEE));
+  background-image: linear-gradient(270deg, #EA3FF9 0%, #262AEE 100%);
+}
+
+#containersearch .lightform {
+  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #B4B4B4, inset 2.5px 2.5px 0 0 #FAFAFA;
+          box-shadow: inset -2.5px -2.5px 0 0 #B4B4B4, inset 2.5px 2.5px 0 0 #FAFAFA;
+}
+
+#containersearch form {
+  height: 100%;
+}
+
+#containersearch form .form {
+  width: 96.4%;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+#containersearch form input {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 1100px;
+  font-size: 14px;
+  padding-left: 11px;
+  font-size: 15px;
+  color: #B4B4B4;
+  letter-spacing: 0;
+  line-height: 50px;
+  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #FAFAFA, inset 2.5px 2.5px 0 0 #100134;
+          box-shadow: inset -2.5px -2.5px 0 0 #FAFAFA, inset 2.5px 2.5px 0 0 #100134;
+}
+
+#containersearch form input:focus .contalliedbutton {
+  display: block;
+}
+
+#containersearch form input::-webkit-input-placeholder {
+  letter-spacing: 0;
+  line-height: 25px;
+  padding: 18px;
+}
+
+#containersearch form input:-ms-input-placeholder {
+  letter-spacing: 0;
+  line-height: 25px;
+  padding: 18px;
+}
+
+#containersearch form input::-ms-input-placeholder {
+  letter-spacing: 0;
+  line-height: 25px;
+  padding: 18px;
+}
+
+#containersearch form input::placeholder {
+  letter-spacing: 0;
+  line-height: 25px;
+  padding: 18px;
+}
+
+#containersearch .buttonsearch {
+  width: 100px;
+  height: 38px;
+  margin: auto 5px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+  font-size: 19px;
+  line-height: 18px;
+  letter-spacing: 0;
+  background-color: #B4B4B4;
+  height: 36px;
+  border: 1px solid #808080;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#containersearch .buttonsearch:active {
+  background: #EE3EFE;
+  color: #100134;
+  border: 1.5px solid #100134;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+}
+
+#containersearch div button {
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FAFAFA;
+}
+
+#containersearch .alliedbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#containersearch .lightform:focus #alliedbtn {
+  display: block;
+}
+
+#alliedbtn {
+  padding-top: 12px;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  top: 275px;
+  z-index: 2;
+  background: #B4B4B4;
+}
+
+#alliedbtn button {
+  width: 1060px;
+  height: 38px;
+  margin-left: 17px;
+  margin-bottom: 14px;
+  color: #110038;
+  line-height: 34px;
+  border: 1.5px solid #808080;
+  -webkit-box-shadow: inset -1.5px -1.5px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1.5px -1.5px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+  text-align: start;
+  letter-spacing: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#alliedbtn button a {
+  width: 250px;
+  height: 25px;
+  padding-left: 16px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #100134;
+  letter-spacing: 0;
+  line-height: 23px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#alliedbtn button:hover {
+  border: 1px dotted #100134;
+  background: #E6E6E6;
+}
+
+#alliedbtn .alliedbutton {
+  background: #CCCCCC;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+  border: 1px solid #808080;
+}
+
+.search-container {
+  margin-top: -25px;
+}
+
+.containsearch {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 18px;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+}
+
+.containsearch .trends-container-Gif {
+  width: 290px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.containsearch .trends-container-Gif img {
+  width: 290px;
+  height: 300px;
+  margin: 1px;
+  background: #E1DDDD;
+  -webkit-box-shadow: inset 3px 3px 0 0 #B4B4B4, inset 3px 3px 0 0 #FFFFFF;
+          box-shadow: inset 3px 3px 0 0 #B4B4B4, inset 3px 3px 0 0 #FFFFFF;
+}
+
+.containsearch .text-end {
+  width: 100%;
+  height: 28px;
+  display: none;
+  font-family: 'ChakraPetch-Bold';
+  font-size: 13px;
+  color: #fafafa;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 0px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#f1bbec), to(#3873e3));
+  background-image: linear-gradient(270deg, #f1bbec 0%, #3873e3 100%);
+  margin: -5px 0px 0px;
+  padding: 0px;
+}
+
+.containsearch .trends-container-Gif:hover {
+  border: 2px solid #B4B4B4;
+  width: 294px;
+  height: 315px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+  background: #E6E6E6;
+}
+
+.containsearch .trends-container-Gif:hover .text-end {
+  display: block;
+  border: 1px solid #B4B4B4;
+}
+
+.suggestions .principalsug {
+  width: 1210px;
+  height: 36px;
+  margin-top: 105px;
+  margin-bottom: 25px;
+  background: #FAFAFA;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+.suggestions .principalsug p {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #100134;
+  margin: 0;
+  padding: 8px;
+  letter-spacing: 0;
+}
+
+.containersugge {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  margin-bottom: -8px;
+  width: 1230px;
+}
+
+.containersugge .container_Gif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 295px;
+  height: 320px;
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+          box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+  position: relative;
+}
+
+.containersugge .container-conteGif {
+  width: 277px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
+  background: #B4B4B4;
+}
+
+.containersugge .container-conteGif img:hover {
+  border: 1.5px dotted #100134;
+}
+
+.containersugge .container-conteGif img.dismiss-button {
+  width: 16px;
+  height: 14px;
+  right: -92%;
+  bottom: 22px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+}
+
+.containersugge .container-conteGif img {
+  width: 277px;
+  height: 277px;
+  background: #E1DDDD;
+  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+          box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+}
+
+.containersugge .container-conteGif .gif_img {
+  margin-top: -10px;
+}
+
+.containersugge .container-conteGif p {
+  margin: 0;
+  padding: 0;
+  height: 24px;
+  border: 0;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 11px;
+  color: #FAFAFA;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  border: 3px outset;
+}
+
+.containersugge .container-conteGif .seeMore {
+  cursor: pointer;
+  bottom: 22px;
+  padding: 12px;
+  left: 21px;
+  line-height: 22px;
+  text-align: center;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FAFAFA;
+  font-family: 'Chakra Petch-regular';
+  color: #FAFAFA;
+  font-size: 16px;
+  background: #2E32FB;
+  border-radius: px;
+  letter-spacing: 0;
+  position: relative;
+  bottom: 78px;
+}
+
+.containersugge .seeMore:hover {
+  border: 1.2px dotted #100134;
+}
+
+.containersugge .seeMore {
+  background: #4284FF;
+}
+
+.containersugge .tenden_conteGif_BtnverMas {
+  margin-bottom: -52px;
+}
+
+.containerbtn {
+  width: 1400px;
+  padding-top: 10px;
+  position: absolute;
+  top: 278px;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.containerbtn .containerMore {
+  width: auto;
+  height: 49px;
+  padding: 9px;
+  margin-right: 10px;
+  background-color: #2E32FB;
+  border: 1px solid #4C2F99;
+  font-family: 'ChakraPetch-Regular';
+  font-size: 17px;
+  color: #FAFAFA;
+  line-height: 0px;
+}
+
+.search-related {
+  display: none;
+  width: 1216px;
+  height: 35px;
+  margin-top: 113px;
+  margin-bottom: 22px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  border: 1px solid #E6BBE2;
+  background: #FAFAFA;
+}
+
+.search-related #randomHeader {
+  margin: 0;
+  padding: 8px;
+  letter-spacing: 0;
+  font-family: 'Chakra Petch-regular';
+  font-size: 14px;
+  color: #100134;
+}
+
+.trends .trends-principaltrends {
+  width: 1216px;
+  margin-top: 115px;
+  margin-bottom: 25px;
+  height: 35px;
+  background: #FAFAFA;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+.trends .trends-principaltrends p {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #100134;
+  margin: 0;
+  padding: 6px;
+  letter-spacing: 0;
+}
+
+.trends-container {
+  width: 100%;
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 18px;
+  -webkit-column-gap: 1px;
+          column-gap: 1px;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+}
+
+.trends-contain-Gif {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
+  width: 290px;
+  position: relative;
+}
+
+.trends-contain-Gif img {
+  width: 288px;
+  height: 300px;
+  margin: 1px;
+  background: #E1DDDD;
+}
+
+.text-finish {
+  width: 289.5px;
+  height: 16px;
+  display: none;
+  font-family: 'ChakraPetch-Bold';
+  font-size: 12px;
+  color: #FAFAFA;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+  margin-top: -5px;
+}
+
+.trends-contain-Gif:hover {
+  width: 292px;
+  height: 318px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+  background: #B4B4B4;
+}
+
+.trends-contain-Gif:hover .text-finish {
+  display: block;
+}
+
+.create {
+  background-color: #110038;
+}
+
+.img-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-logo #image-Gif {
+  height: 100%;
+}
+
+.image-Back {
+  margin-left: -130px;
+  margin-top: 40px;
+}
+
+.GeneralCreate {
+  display: block;
+  margin-top: 50px;
+  margin-left: -10px;
+}
+
+.GeneralCreate .ContainerCreate {
+  width: 685px;
+  height: 338px;
+  padding: 4px;
+  margin-top: 32px;
+  margin-left: 330px;
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #E1DCDC;
+  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+          box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+}
+
+.GeneralCreate .ContainerCreate .Title {
+  padding-top: 10px;
+  padding-left: 6px;
+  margin: 3px;
+  margin-top: 1px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C6F3), to(#3B78EB));
+  background-image: linear-gradient(270deg, #F7C6F3 0%, #3B78EB 100%);
+}
+
+.GeneralCreate .ContainerCreate .Title b {
+  margin-top: 2px;
+  font-family: 'ChakraPetch';
+  font-size: 15px;
+  color: #FAFAFA;
+  letter-spacing: 0;
+}
+
+.GeneralCreate .ContainerCreate .Organization {
+  padding-left: 34px;
+  padding-top: 17px;
+}
+
+.GeneralCreate .ContainerCreate .Organization img {
+  width: 33px;
+  height: 33px;
+}
+
+.GeneralCreate .ContainerCreate .Organization .CreateTitle p {
+  margin-left: 52px;
+  margin-top: -12px;
+  font-weight: bold;
+  height: 17px;
+  margin-top: -7%;
+}
+
+.GeneralCreate .ContainerCreate .Organization .GuifoCreate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4%;
+  text-decoration: none;
+}
+
+.GeneralCreate .ContainerCreate .Organization .List {
+  list-style: none;
+  margin-left: -41px;
+  line-height: 160%;
+}
+
+.GeneralCreate .ContainerCreate .Organization .Finish-list {
+  height: 15px;
+}
+
+.GeneralCreate .ContainerCreate .ButtonsClass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: -3%;
+  padding-bottom: 30px;
+}
+
+.GeneralCreate .ContainerCreate .ButtonsClass button {
+  margin: 5px;
+  border: 1px solid;
+  font-size: 17px;
+}
+
+.GeneralCreate .ContainerCreate .ButtonsClass a {
+  margin: 5px;
+  border: 1px solid #100134;
+  font-size: 17px;
+  background: #FAFAFA;
+  color: #100134;
+  width: 146px;
+  height: 36px;
+  font-family: 'ChakraPetch';
+  text-decoration: none;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 36px;
+}
+
+.GeneralCreate .ContainerCreate .ButtonsClass .start {
+  width: 146px;
+  height: 38px;
+  background: #F7C9F3;
+  font-family: 'ChakraPetch';
+}
+
+.Principalvideo {
+  width: 805px;
+  height: 535px;
+  margin-top: -3%;
+  margin-left: 19%;
+  display: none;
+  background: #E1DCDC;
+}
+
+.Principalvideo .videoContainer {
+  width: 772px;
+  height: 434px;
+  background: #FAFAFA;
+  border: 1px solid #908686;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110034;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110034;
+  margin: 13px;
+}
+
+.Principalvideo .videoContainer #video {
+  height: 434px;
+}
+
+.Principalvideo .Titlevideo {
+  width: 800px;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 9px;
+  margin-left: 4px;
+}
+
+.Principalvideo .Titlevideo #Stylcheck {
+  height: 24px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  font-size: 14px;
+  color: #FAFAFA;
+  letter-spacing: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.Principalvideo .Titlevideo #stylcapture {
+  display: none;
+  height: 24px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  font-size: 14px;
+  color: #FAFAFA;
+  letter-spacing: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.Principalvideo .Titlevideo .closeGif {
+  margin-left: 779px;
+  margin-top: -35px;
+}
+
+.Principalvideo .Gifscreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 11px;
+  margin-right: 18px;
+}
+
+.Principalvideo .Gifscreen .Capturegifs {
+  background: #F7C9F3;
+  border: 1.5px solid #100134;
+  width: 142px;
+  height: 34px;
+  font-size: 15px;
+  font-family: 'ChakraPetch-Regular';
+  line-height: 17px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.Principalvideo .Gifscreen .cameraCapture {
+  background: #F7C9F3;
+  border: 1.5px solid #100134;
+  width: 37px;
+  height: 31px;
+  font-size: 15px;
+  font-family: 'ChakraPetch-Regular';
+  line-height: 17px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.Principalvideo .Gifscreen .cameraCapture .camera {
+  margin-top: 6px;
+  width: 18px;
+  height: 17px;
+}
+
+.Principalvideo .containerReady {
+  display: none;
+}
+
+.Principalvideo .containerReady .gifReady {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -10px;
+  margin-right: 18px;
+}
+
+.Principalvideo .containerReady .gifReady .recordGif {
+  width: 144px;
+  height: 36px;
+  font-family: 'ChakraPetch-Regular';
+  font-size: 16px;
+  background: #FF6161;
+  border: 1.5px solid #100134;
+  margin-top: 5px;
+}
+
+.Principalvideo .containerReady .gifReady .recordGif span {
+  color: #FAFAFA;
+}
+
+.Principalvideo .containerReady .gifReady .recordButton {
+  width: 37px;
+  height: 36px;
+  background: #FF6161;
+  border: 1px solid #110034;
+  margin-left: 460px;
+  margin-top: 5px;
+}
+
+.Principalvideo .containerReady #time {
+  width: 124px;
+  height: 36px;
+  background: #FFFFFF;
+  margin-top: -34px;
+  margin-left: 38px;
+  border: 1px solid #979797;
+  line-height: 32px;
+  text-align: center;
+  -webkit-box-shadow: inset 2px 2px 0 0;
+          box-shadow: inset 2px 2px 0 0;
+}
+
+.Principalvideo #previewGif {
+  display: none;
+}
+
+.Principalvideo #previewGif .readyButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -13px;
+}
+
+.Principalvideo #previewGif .readyButton .upGif {
+  width: 144px;
+  height: 36px;
+  margin-right: 15px;
+  background: #F7C9F3;
+  line-height: 18px;
+  font-family: 'ChakraPetch-Regular';
+  font-size: 16px;
+  color: #110034;
+  border: 1px solid #100134;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.Principalvideo #previewGif .readyButton .repeatGif {
+  width: 144px;
+  height: 36px;
+  margin-right: 12px;
+  margin-left: 82px;
+  line-height: 18px;
+  border-style: solid;
+  border: 1px solid #100134;
+  font-family: 'ChakraPetch-Regular';
+  font-size: 16px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.Principalvideo #previewGif .readyButton .repeatGif a {
+  text-decoration: none;
+  color: #110034;
+}
+
+.Principalvideo #previewGif .readyButton .repeatGif:hover {
+  border: 1px dotted #100134;
+  background: #F0E5EE;
+}
+
+.Principalvideo #previewGif .readyButton .frontBar {
+  width: 240px;
+  height: 24px;
+  background: #F7C9F3;
+  -webkit-box-shadow: inset 0.5px 2px 0 0 #FAFAFA, inset -0.5px -2px 0 0 #110034;
+          box-shadow: inset 0.5px 2px 0 0 #FAFAFA, inset -0.5px -2px 0 0 #110034;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Principalvideo #previewGif .readyButton .frontBar .forward {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background: #F7C9F3;
+  border: 1px solid #110034;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A0899F, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #A0899F, inset 1px 1px 0 0 #FAFAFA;
+  margin-top: 1px;
+}
+
+.Principalvideo #previewGif .readyButton .frontBar .forward .forwardContainer {
+  width: 6px;
+  height: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 8px;
+}
+
+.Principalvideo #previewGif .readyButton #time2 {
+  width: 124px;
+  height: 36px;
+  background: #FFFFFF;
+  margin-top: -3px;
+  margin-right: 5px;
+  border: 1px solid #979797;
+  line-height: 32px;
+  text-align: center;
+  -webkit-box-shadow: inset 2px 2px 0 0;
+          box-shadow: inset 2px 2px 0 0;
+}
+
+.Principalvideo #gifContainer {
+  display: none;
+  width: 772px;
+  height: 434px;
+  background: #FAFAFA;
+  border: 1px solid #908686;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110034;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #110034;
+  margin: 13px;
+}
+
+.Principalvideo #gifContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.Principalvideo #gifContainer .upGifos img {
+  width: 36px;
+  height: 48px;
+  margin-left: 391px;
+  margin-top: 101px;
+}
+
+.Principalvideo #gifContainer .upGifos .upGifosTitle {
+  margin-left: 291px;
+  font-family: 'ChakraPetch-Bold';
+  font-size: 19px;
+  color: #110034;
+  line-height: 23px;
+  letter-spacing: 0;
+}
+
+.containermyGuifos .MyGuifos {
+  display: none;
+}
+
+.create {
+  background: #110038;
+}
+/*# sourceMappingURL=themenight.css.map */

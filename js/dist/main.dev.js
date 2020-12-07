@@ -41,14 +41,25 @@ function suggestion(query, cantidad) {
       }
     }
   }, null, null, [[0, 12]]);
-} //Creacion de Gifos en la secciòn de sugerencias//
+}
 
+;
+document.getElementById('Menucontainerunfolded').addEventListener('click', function () {
+  console.log('se ejecuto la funcion expandir botones');
+
+  if (document.getElementById('containerdrop').style.display == "block") {
+    document.getElementById('containerdrop').style.display = "none";
+  } else {
+    document.getElementById('containerdrop').style.display = "block";
+  }
+}); //Creacion de Gifos en la secciòn de sugerencias//
 
 suggestion('random', 4).then(function (data) {
   var _loop = function _loop(i) {
     var GiftTitle = document.createElement('p');
     GiftTitle.textContent = data[i].title; //Se llama la variable que contiene un pàrrafo(p), para que luego en el p me traiga del data aleatorio en dicho pàrrafo para el tìtulo del GIFT en sugerencias.
 
+    GiftTitle.innerHTML = '#' + data[i].title;
     var BtnverMas = document.createElement('button');
     var textBtnverMas = document.createTextNode('Ver màs...');
     var query = data[i].title;
@@ -57,7 +68,8 @@ suggestion('random', 4).then(function (data) {
     BtnverMas.onclick = function () {
       document.getElementById('trends-container').innerHTML = "";
       document.getElementById('principaltrends').innerHTML = "Resultados para: ".concat(query);
-      busqueda(query, 12);
+      document.getElementById('suggestions').style.display = "none";
+      filter(query, 16);
     };
 
     BtnverMas.appendChild(textBtnverMas);
@@ -119,24 +131,14 @@ function activeButton() {
 document.getElementById('buttonsearch').addEventListener('click', function (event) {
   event.preventDefault();
   document.getElementById('trends-container').innerHTML = "";
-  var querySearch = document.getElementById('input-search').value;
+  var query = document.getElementById('input-search').value;
   document.getElementById('main-trends').style.display = "block";
   document.getElementById('suggestions').style.display = "none";
   document.getElementById('search-container').style.display = "none";
-  busqueda(querySearch, 16);
-}); //Definimos la funciòn que nos va a ocultar los botones que filtran luego de hacer click en alguno y luego de ello nos va a mostrar los GIFS en el elemento search-container//
-
-document.getElementsByClassName('alliedbutton').addEventListener('click', function () {
   document.getElementById('alliedbtn').style.display = "none";
-  document.getElementById('search-container').style.display = "block";
+  document.getElementById('principaltrends').innerHTML = "Resultados para: ".concat(query);
+  filter(query, 16);
 }); //Ahora vamos a crear la Funciòn que va a permitir ver màs elementos al darle click en el ver màs de las sugerencias//
-
-function verMas(query) {
-  busqueda(query, 16);
-}
-
-var seeMore = document.getElementById('seeMore');
-seeMore.addEventListener('click', function () {}); //---
 
 function showResults() {
   var search = document.getElementById("search").value.trim();
@@ -224,8 +226,7 @@ function filter(query) {
     return response.json();
   }).then(function (data) {
     var containerGif = document.getElementById('containsearch');
-    var seeMore = document.getElementById('containerbtn'); //console.log(json.data); // imprimimos solo el atributo data del Json 
-
+    var seeMore = document.getElementById('containerbtn');
     console.log(data); // imprimimos el Json completo
 
     seeMore.innerHTML = "";
@@ -256,13 +257,52 @@ document.getElementsByClassName('alliedbutton').addEventListener = function () {
   document.getElementById('randomHeader').innerHTML = "";
   document.getElementById('input-search').value = "";
   console.log(query);
-}; //Se define la funciòn para cambiar el estilo de dìa y de noche//
+}; //Ahora se define las funciones que van a permitir cambiar los estilos o temas de la página, de día y de noche//
+//se define el tema de dia y de noche//
 
 
-document.getElementById('Menucontainerunfolded').addEventListener('click', function () {
-  if (document.getElementById('containerdrop').style.display == "block") {
-    document.getElementById('containerdrop').style.display = "none";
-  } else {
-    document.getElementById('containerdrop').style.display = "block";
-  }
+var changeNight = document.getElementById('sayNight');
+var changeDay = document.getElementById('sayDay');
+var dayTheme = "./sass/style/dist/style.css";
+var nightTheme = "./sass/style/dist/themenight.css";
+changeNight.addEventListener('click', function () {
+  document.getElementById('changeTheme').href = nightTheme;
+  saveCurrentThemeLS();
+  imagenDiaNoche();
 });
+changeDay.addEventListener('click', function () {
+  document.getElementById('changeTheme').href = dayTheme;
+  saveCurrentThemeLS();
+  imagenDiaNoche();
+}); //Se define la funciòn que me va a almacenar en el Local Storage el tipo de tema, si es de dìa o de noche//
+
+function saveCurrentThemeLS() {
+  theme = document.getElementById("changeTheme").getAttribute("href");
+
+  if (theme == dayTheme) {
+    localStorage.setItem("theme", 1);
+  } else {
+    localStorage.setItem("theme", 2);
+  }
+} //Se define la funciòn que va a mostrar el tema en el momento que se carga la pagina//
+
+
+window.onload = function () {
+  if (localStorage.getItem("theme") == 2) {
+    document.getElementById('changeTheme').href = nightTheme;
+  } else {
+    document.getElementById('changeTheme').href = dayTheme;
+  }
+
+  imagenDiaNoche();
+};
+
+function imagenDiaNoche() {
+  if (localStorage.getItem("theme") == 2) {
+    document.getElementById('imageGifNight').style.display = "block";
+    document.getElementById('imageGif').style.display = "none";
+  } else {
+    document.getElementById('imageGifNight').style.display = "none";
+    document.getElementById('imageGif').style.display = "block";
+  }
+}

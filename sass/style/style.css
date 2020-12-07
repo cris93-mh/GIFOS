@@ -44,12 +44,10 @@
   height: 300px;
   margin: 1px;
   background: #E1DDDD;
-  -webkit-box-shadow: inset -2px -2px 0 0 #BABABA, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #BABABA, inset 2px 2px 0 0 #FFFFFF;
 }
 
 .text-finish {
-  width: 100%;
+  width: 289px;
   height: 16px;
   display: none;
   font-family: 'ChakraPetch-Bold';
@@ -61,14 +59,15 @@
   letter-spacing: 0;
   background-image: -webkit-gradient(linear, right top, left top, from(#F1BBEC), to(#3873E3));
   background-image: linear-gradient(270deg, #F1BBEC 0%, #3873E3 100%);
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
   margin-top: -5px;
   border: 1px solid #B4B4B4;
 }
 
 .trends-contain-Gif:hover {
-  border: 2px solid #B4B4B4;
   width: 294px;
-  height: 315px;
+  height: 320px;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
   background: #E6E6E6;
@@ -490,19 +489,74 @@
 }
 
 .Principalvideo #gifContainer .upGifos img {
-  width: 36px;
+  width: 48px;
   height: 48px;
   margin-left: 391px;
   margin-top: 101px;
 }
 
 .Principalvideo #gifContainer .upGifos .upGifosTitle {
-  margin-left: 291px;
-  font-family: 'ChakraPetch-Bold';
-  font-size: 19px;
-  color: #110034;
-  line-height: 23px;
+  margin-left: 290px;
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  font-size: 16px;
+  color: #110038;
+  line-height: 22px;
   letter-spacing: 0;
+}
+
+.Principalvideo #gifContainer .upGifos .time-left {
+  font-family: 'ChakraPetch-Bold';
+  font-size: 18px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 22px;
+}
+
+.Principalvideo #gifContainer .upGifos .progressGif {
+  width: 380px;
+  height: 24px;
+  -webkit-transition: all 8s ease;
+  transition: all 8s ease;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  margin-left: 200px;
+}
+
+.Principalvideo #gifContainer .upGifos .GifLoading {
+  width: 436px;
+  height: 21px;
+  background-color: #F7C9F3;
+}
+
+.Principalvideo #gifContainer .StopGifo a {
+  text-decoration: none;
+  color: #110038;
+}
+
+.Principalvideo .UpGifo {
+  width: 794px;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 9px;
+  margin-left: 4px;
+  height: 24px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  font-size: 14px;
+  color: #FAFAFA;
+  letter-spacing: 0;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .containermyGuifos .MyGuifos {
@@ -536,25 +590,24 @@ header {
 
 header p {
   font-family: 'Chakra Petch';
-  font-size: 14px;
-  color: #FCFCFC;
+  font-size: 13px;
+  color: #FAFAFA;
   margin: 0;
 }
 
 .light-initial {
-  width: 100%;
+  width: 104%;
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-#arrowReturn {
-  margin-right: -105px;
-  margin-left: 80px;
+#imageGif {
+  width: 102px;
+  height: 64px;
 }
 
-#imageGif {
-  width: 100%;
-  height: 100%;
+#imageGifNight {
+  display: none;
 }
 
 .main {
@@ -572,11 +625,6 @@ header p {
   display: flex;
 }
 
-.main .content .menu-section .img-logo {
-  width: 104.6px;
-  height: 66px;
-}
-
 .main .content .createGifs {
   width: 440px;
   height: 40px;
@@ -591,7 +639,7 @@ header p {
   width: 125px;
   background: #F7C9F3;
   cursor: pointer;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'ChakraPetch-Regular';
   font-size: 17px;
   color: #100134;
   text-align: center;
@@ -605,7 +653,7 @@ header p {
 }
 
 .main .content .createGifs .create:hover {
-  border: 1.5px dotted #100134;
+  border: 1.5px dotted #110034;
 }
 
 .main .content .createGifs button {
@@ -652,7 +700,7 @@ header p {
 }
 
 .main .content .createGifs .Menucontainer .Menucontainerunfolded div {
-  width: 40px;
+  width: 38px;
   border: 1.5px solid #100134;
   background: #F7C9F3;
   display: -webkit-box;
@@ -677,7 +725,7 @@ header p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 55px 147px;
+  margin: 55px 152px;
   width: 170px;
   background: #E6E6E6;
   -webkit-box-shadow: inset -2.5px -2.5px 0 0 #E0D1DD, inset 2.5px 2.5px 0 0 #FAFAFA;
@@ -704,6 +752,7 @@ header p {
   -webkit-box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
           box-shadow: inset -1px -1px 0 0 #E0D1DD, inset 1px 1px 0 0 #FAFAFA;
   font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
   text-align: center;
   color: #100134;
   display: block;
@@ -756,8 +805,8 @@ header p {
 #containersearch {
   width: 1210px;
   margin-top: -60px;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
-          box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
+  -webkit-box-shadow: inset -2px -2px 0 0 #A09C9C, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #A09C9C, inset 2px 2px 0 0 #FAFAFA;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,11 +846,6 @@ header p {
   background-image: linear-gradient(270deg, #F7C6F3 0%, #3B78EB 100%);
 }
 
-#containersearch .outline {
-  background-image: -webkit-gradient(linear, right top, left top, from(#EA3FF9), to(#262AEE));
-  background-image: linear-gradient(270deg, #EA3FF9 0%, #262AEE 100%);
-}
-
 #containersearch .lightform {
   -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
           box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
@@ -812,7 +856,7 @@ header p {
 }
 
 #containersearch form .form {
-  width: 98.4%;
+  width: 96.4%;
   height: 72px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -886,9 +930,8 @@ header p {
 }
 
 #containersearch div button {
-  border: 1px solid #48289B;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #1E4796, inset 2.5px 2.5px 0 0 #FAFAFA;
-          box-shadow: inset -2.5px -2.5px 0 0 #1E4796, inset 2.5px 2.5px 0 0 #FAFAFA;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FAFAFA;
 }
 
 #containersearch .alliedbutton {
@@ -897,13 +940,7 @@ header p {
   display: flex;
 }
 
-#containersearch .contalliedbutton {
-  background: #DFDBDB;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
-          box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
-}
-
-#containersearch .contalliedbutton .lightform:focus #alliedbtn {
+#containersearch .lightform:focus #alliedbtn {
   display: block;
 }
 
@@ -958,31 +995,9 @@ header p {
 }
 
 #alliedbtn .alliedbutton {
-  background: #FAFAFA;
-}
-
-.alliedTags {
-  width: 1410px;
-  padding-top: 12px;
-  top: 280px;
-  position: absolute;
-  z-index: 2;
-}
-
-.alliedTags .lookTags {
-  width: auto;
-  height: 36px;
-  margin-right: 10px;
-  padding: 9px;
-  line-height: 20px;
-  background: #3873E3;
-  border: 1.5px solid #48289B;
-  -webkit-box-shadow: inset -2.5px -2.5px 0 0 #3873E3, inset 2.5px 2.5px 0 0 #FAFAFA;
-          box-shadow: inset -2.5px -2.5px 0 0 #3873E3, inset 2.5px 2.5px 0 0 #FAFAFA;
-  font-family: 'Chakra Petch', sans-serif;
-  font-size: 16px;
-  color: #FAFAFA;
-  letter-spacing: 0;
+  background: #F0F0F0;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
 .search-container {
@@ -1023,34 +1038,37 @@ header p {
 }
 
 .containsearch .text-end {
-  width: 100%;
-  height: 28px;
+  width: 289px;
+  height: 16px;
   display: none;
-  font-family: 'ChakraPetch-Bold';
-  font-size: 13px;
-  color: #fafafa;
+  font-family: "ChakraPetch-Bold";
+  font-size: 12px;
+  color: #FAFAFA;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  letter-spacing: 0px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#f1bbec), to(#3873e3));
-  background-image: linear-gradient(270deg, #f1bbec 0%, #3873e3 100%);
-  margin: -5px 0px 0px;
-  padding: 0px;
+  letter-spacing: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F1BBEC), to(#3873E3));
+  background-image: linear-gradient(270deg, #F1BBEC 0%, #3873E3 100%);
+  margin-top: -5px;
+  margin-bottom: 3px;
+  border: 1px solid #B4B4B4;
 }
 
 .containsearch .trends-container-Gif:hover {
   border: 2px solid #B4B4B4;
   width: 294px;
   height: 315px;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
   background: #E6E6E6;
 }
 
 .containsearch .trends-container-Gif:hover .text-end {
   display: block;
   border: 1px solid #B4B4B4;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
 }
 
 .suggestions .principalsug {
@@ -1111,10 +1129,10 @@ header p {
 }
 
 .containersugge .container-conteGif img.dismiss-button {
-  width: 20px;
-  height: 20px;
-  right: -90%;
-  bottom: 31px;
+  width: 16px;
+  height: 14px;
+  right: -92%;
+  bottom: 22px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1130,16 +1148,16 @@ header p {
 }
 
 .containersugge .container-conteGif .gif_img {
-  margin-top: -18px;
+  margin-top: -10px;
 }
 
 .containersugge .container-conteGif p {
   margin: 0;
   padding: 0;
-  height: 30px;
+  height: 24px;
   border: 0;
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   color: #FAFAFA;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -1203,10 +1221,10 @@ header p {
   margin-right: 10px;
   background: #4180F6;
   border: 1px solid #4C2F99;
-  -webkit-box-shadow: inset -2px -2px 0 0 #294F98, inset 2px 2px 0 0 #FAFAFA;
-          box-shadow: inset -2px -2px 0 0 #294F98, inset 2px 2px 0 0 #FAFAFA;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FAFAFA;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FAFAFA;
   font-family: 'ChakraPetch-Regular';
-  font-size: 15px;
+  font-size: 17px;
   color: #FAFAFA;
   line-height: 0px;
 }
@@ -1217,8 +1235,9 @@ header p {
   height: 35px;
   margin-top: 113px;
   margin-bottom: 22px;
-  -webkit-box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #E6BBE2;
-          box-shadow: inset -3px -3px 0 0 #E1DDDD, inset 2.5px 2.5px 0 0 #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #E6BBE2;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #E6BBE2;
+  border: 1px solid #E6BBE2;
   background: #FAFAFA;
 }
 

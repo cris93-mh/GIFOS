@@ -322,20 +322,64 @@
         }
         .upGifos {
             img {
-                width: 36px;
+                width: 48px;
                 height: 48px;
                 margin-left: 391px;
                 margin-top: 101px;
             }
             .upGifosTitle {
-                margin-left: 291px;
-                font-family: 'ChakraPetch-Bold';
-                font-size: 19px;
-                color: #110034;
-                line-height: 23px;
+                margin-left: 290px;
+                font-family: 'ChakraPetch';
+                font-weight: bold;
+                font-size: 16px;
+                color: #110038;
+                line-height: 22px;
                 letter-spacing: 0;
             }
+            .time-left {
+                font-family: 'ChakraPetch-Bold';
+                font-size: 18px;
+                color: #110038;
+                letter-spacing: 0;
+                text-align: center;
+                line-height: 22px;
+            }
+            .progressGif {
+                width: 380px;
+                height: 24px;
+                transition: all 8s ease;
+                transition-timing-function: linear;
+                margin-left: 200px;
+            }
+            .GifLoading {
+                width: 436px;
+                height: 21px;
+                background-color: #F7C9F3;
+            }
         }
+        .StopGifo {
+            a {
+                text-decoration: none;
+                color: #110038;
+            }
+        }
+    }
+    .UpGifo {
+        width: 794px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 9px;
+        margin-left: 4px;
+        height: 24px;
+        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+        font-family: 'ChakraPetch';
+        font-weight: bold;
+        font-size: 14px;
+        color: #FAFAFA;
+        letter-spacing: 0;
+        margin-top: 5px;
+        margin-left: 5px;
     }
 }
 .containermyGuifos {

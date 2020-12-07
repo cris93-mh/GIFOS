@@ -20,8 +20,20 @@ async function suggestion(query, cantidad) {
     }catch (e){ 
         return e;
     } 
-}
+};
 
+
+
+document.getElementById('Menucontainerunfolded').addEventListener('click',()=> {
+    console.log('se ejecuto la funcion expandir botones');
+    
+    if(document.getElementById('containerdrop').style.display =="block"){
+        document.getElementById('containerdrop').style.display ="none";
+        
+    }else {
+        document.getElementById('containerdrop').style.display ="block";
+    }
+});
 
 //Creacion de Gifos en la secciòn de sugerencias//
 
@@ -33,6 +45,7 @@ suggestion('random',4)
         for(let i = 0; i<data.length; i++) {
         let GiftTitle = document.createElement('p');
         GiftTitle.textContent = data[i].title;//Se llama la variable que contiene un pàrrafo(p), para que luego en el p me traiga del data aleatorio en dicho pàrrafo para el tìtulo del GIFT en sugerencias.
+        GiftTitle.innerHTML = '#' + data[i].title;
         let BtnverMas = document.createElement('button');
         let textBtnverMas = document.createTextNode('Ver màs...');
         let query = data[i].title;
@@ -40,8 +53,9 @@ suggestion('random',4)
         BtnverMas.onclick = function () {
             document.getElementById('trends-container').innerHTML = "";                        
             document.getElementById('principaltrends').innerHTML = `Resultados para: ${query}`
+            document.getElementById('suggestions').style.display = "none";
 
-            busqueda(query, 12);
+            filter(query, 16);
         };
         BtnverMas.appendChild(textBtnverMas);
                 
@@ -126,36 +140,22 @@ function activeButton() {
 document.getElementById('buttonsearch').addEventListener('click', (event)=> {
     event.preventDefault();
     document.getElementById('trends-container').innerHTML = "";
-    let querySearch = document.getElementById('input-search').value;
+    let query = document.getElementById('input-search').value;
     document.getElementById('main-trends').style.display = "block";
     document.getElementById('suggestions').style.display = "none";
     document.getElementById('search-container').style.display = "none";
-
-    busqueda(querySearch, 16);
-});
-
-//Definimos la funciòn que nos va a ocultar los botones que filtran luego de hacer click en alguno y luego de ello nos va a mostrar los GIFS en el elemento search-container//
-
-document.getElementsByClassName('alliedbutton').addEventListener('click', ()=> {
     document.getElementById('alliedbtn').style.display = "none";
-    document.getElementById('search-container').style.display = "block";
+    document.getElementById('principaltrends').innerHTML = `Resultados para: ${query}`
+    filter(query, 16);
 });
+
 
 //Ahora vamos a crear la Funciòn que va a permitir ver màs elementos al darle click en el ver màs de las sugerencias//
 
-function verMas(query) {
-    busqueda(query, 16);
-}
-
-let seeMore = document.getElementById('seeMore');
-seeMore.addEventListener('click', ()=> {
-
-})
 
 
 
 
-//---
 function showResults() {
     
     let search = document.getElementById("search").value.trim();
@@ -257,8 +257,7 @@ function filter(query) {
     .then((data) => {
         let containerGif = document.getElementById('containsearch');
         let seeMore = document.getElementById('containerbtn');
-        
-        //console.log(json.data); // imprimimos solo el atributo data del Json 
+
         console.log(data); // imprimimos el Json completo
         
         seeMore.innerHTML = "";
@@ -302,18 +301,59 @@ document.getElementsByClassName('alliedbutton').addEventListener=()=> {
 };
 
 
+//Ahora se define las funciones que van a permitir cambiar los estilos o temas de la página, de día y de noche//
 
-//Se define la funciòn para cambiar el estilo de dìa y de noche//
+//se define el tema de dia y de noche//
 
-document.getElementById('Menucontainerunfolded').addEventListener('click',()=> {
-    
-    if(document.getElementById('containerdrop').style.display =="block"){
-        document.getElementById('containerdrop').style.display ="none";
-        
-    }else {
-        document.getElementById('containerdrop').style.display ="block";
-    }
+let changeNight = document.getElementById('sayNight');
+let changeDay =document.getElementById('sayDay');
+let dayTheme ="./sass/style/dist/style.css";
+let nightTheme ="./sass/style/dist/themenight.css";
+
+changeNight.addEventListener('click', ()=> {
+    document.getElementById('changeTheme').href = nightTheme;  
+    saveCurrentThemeLS();
+    imagenDiaNoche();
+
 });
 
+changeDay.addEventListener('click', ()=> {
+    document.getElementById('changeTheme').href = dayTheme;   
+    saveCurrentThemeLS();
+    imagenDiaNoche();
+
+});
+
+//Se define la funciòn que me va a almacenar en el Local Storage el tipo de tema, si es de dìa o de noche//
+
+function saveCurrentThemeLS() {
+    theme = document.getElementById("changeTheme").getAttribute("href");
+    if (theme == dayTheme) {
+      localStorage.setItem("theme", 1);
+    } else {
+      localStorage.setItem("theme", 2);
+    }
+}
+//Se define la funciòn que va a mostrar el tema en el momento que se carga la pagina//
+
+window.onload = function(){
+    if (localStorage.getItem("theme") == 2) {
+        document.getElementById('changeTheme').href = nightTheme;       
+    }else{
+        document.getElementById('changeTheme').href = dayTheme;            
+    }
+    imagenDiaNoche();
+}
+
+function imagenDiaNoche(){
+    if (localStorage.getItem("theme") == 2) {
+        document.getElementById('imageGifNight').style.display = "block";
+        document.getElementById('imageGif').style.display = "none";       
+    }else{
+        document.getElementById('imageGifNight').style.display = "none";
+        document.getElementById('imageGif').style.display = "block";
+    }
+
+}
 
 
