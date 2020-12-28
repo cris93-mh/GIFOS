@@ -1,13 +1,28 @@
 "use strict";
 
 var API_KEY = '5c44dQP47Sp08444UvPPyAnTcqoReYrf';
+var searchInput = document.getElementById('input-search');
 var buttonsearch = document.getElementById("buttonsearch");
 var divcontainersugge = document.getElementsByClassName('divcontainersugge')[0];
 var gif_img = document.getElementsByClassName('gif_img');
 var tenden_conte_Gif = document.getElementsByClassName('trends-contain-Gif');
-var divGif = document.getElementsByClassName('containersugge')[0]; //SUGGESTION//
+var divGif = document.getElementsByClassName('containersugge')[0];
+var changeNight = document.getElementById('sayNight');
+var changeDay = document.getElementById('sayDay');
+var dayTheme = "./sass/style/dist/style.css";
+var nightTheme = "./sass/style/dist/themenight.css"; //SUGGESTION//
 
 var arraySuggestion = [];
+
+function imagenDiaNoche() {
+  if (localStorage.getItem("theme") == 2) {
+    document.getElementById('imageGifNight').style.display = "block";
+    document.getElementById('imageGif').style.display = "none";
+  } else {
+    document.getElementById('imageGifNight').style.display = "none";
+    document.getElementById('imageGif').style.display = "block";
+  }
+}
 
 function suggestion(query, cantidad) {
   var apiGifos, response;
@@ -44,7 +59,8 @@ function suggestion(query, cantidad) {
 }
 
 ;
-document.getElementById('Menucontainerunfolded').addEventListener('click', function () {
+
+document.getElementById('Menucontainerunfolded').onclick = function () {
   console.log('se ejecuto la funcion expandir botones');
 
   if (document.getElementById('containerdrop').style.display == "block") {
@@ -52,7 +68,8 @@ document.getElementById('Menucontainerunfolded').addEventListener('click', funct
   } else {
     document.getElementById('containerdrop').style.display = "block";
   }
-}); //Creacion de Gifos en la secciòn de sugerencias//
+}; //Creacion de Gifos en la secciòn de sugerencias//
+
 
 suggestion('random', 4).then(function (data) {
   var _loop = function _loop(i) {
@@ -123,10 +140,43 @@ busqueda("rabbits", 4); //Definimos la funciòn para habilitar el botòn de bùs
 
 function activeButton() {
   document.getElementById('buttonsearch').disabled = false;
-  document.getElementById('buttonsearch').style.background = '#F7C9F3';
-  console.log("botón de búsqueda habilitado");
-} //Definimos la funciòn que nos va a permitir realizar las bùsquedas y va a realizar las bùsquedas de lo que sea que busquemos//
 
+  if (localStorage.getItem("theme") == 2) {
+    document.getElementById('buttonsearch').style.background = '#EE3EFE';
+    document.getElementById('Searchtext').style.color = '#100134';
+    document.getElementById('fas fa-search').style.color = '#FAFAFA';
+  } else {
+    document.getElementById('buttonsearch').style.background = '#F7C9F3';
+    document.getElementById('Searchtext').style.color = '#100134';
+    document.getElementById('fas fa-search').style.color = '#100134';
+  }
+
+  console.log("botón de búsqueda habilitado");
+  cleanButton();
+} //Definimos la funciòn que va a permitir que cuando se borre el texto del input va a tomar el color normal nuevamente//
+
+
+function cleanButton() {
+  if (searchInput.value == "" && localStorage.getItem("theme") == 2) {
+    document.getElementById('buttonsearch').style.background = '#B4B4B4';
+    document.getElementById('Searchtext').style.color = '#8F8F8F';
+    document.getElementById('fas fa-search').style.color = '#8F8F8F';
+  } else if (searchInput.value == "" && localStorage.getItem("theme") == 1) {
+    document.getElementById('buttonsearch').style.background = '#E6E6E6';
+    document.getElementById('Searchtext').style.color = '#A09696';
+    document.getElementById('fas fa-search').style.color = '#CDC3C3';
+  } else if (searchInput.value != "" && localStorage.getItem("theme") == 2) {
+    document.getElementById('buttonsearch').style.background = '#EE3EFE';
+    document.getElementById('Searchtext').style.color = '#100134';
+    document.getElementById('fas fa-search').style.color = '#FAFAFA';
+  } else if (searchInput.value != "" && localStorage.getItem("theme") == 1) {
+    document.getElementById('buttonsearch').style.background = '#F7C9F3';
+    document.getElementById('Searchtext').style.color = '#100134';
+    document.getElementById('fas fa-search').style.color = '#100134';
+  }
+}
+
+; //Definimos la funciòn que nos va a permitir realizar las bùsquedas y va a realizar las bùsquedas de lo que sea que busquemos//
 
 document.getElementById('buttonsearch').addEventListener('click', function (event) {
   event.preventDefault();
@@ -261,19 +311,17 @@ document.getElementsByClassName('alliedbutton').addEventListener = function () {
 //se define el tema de dia y de noche//
 
 
-var changeNight = document.getElementById('sayNight');
-var changeDay = document.getElementById('sayDay');
-var dayTheme = "./sass/style/dist/style.css";
-var nightTheme = "./sass/style/dist/themenight.css";
 changeNight.addEventListener('click', function () {
   document.getElementById('changeTheme').href = nightTheme;
   saveCurrentThemeLS();
   imagenDiaNoche();
+  cleanButton();
 });
 changeDay.addEventListener('click', function () {
   document.getElementById('changeTheme').href = dayTheme;
   saveCurrentThemeLS();
   imagenDiaNoche();
+  cleanButton();
 }); //Se define la funciòn que me va a almacenar en el Local Storage el tipo de tema, si es de dìa o de noche//
 
 function saveCurrentThemeLS() {
@@ -288,21 +336,14 @@ function saveCurrentThemeLS() {
 
 
 window.onload = function () {
+  changeTheme();
+  imagenDiaNoche();
+};
+
+function changeTheme() {
   if (localStorage.getItem("theme") == 2) {
     document.getElementById('changeTheme').href = nightTheme;
   } else {
     document.getElementById('changeTheme').href = dayTheme;
-  }
-
-  imagenDiaNoche();
-};
-
-function imagenDiaNoche() {
-  if (localStorage.getItem("theme") == 2) {
-    document.getElementById('imageGifNight').style.display = "block";
-    document.getElementById('imageGif').style.display = "none";
-  } else {
-    document.getElementById('imageGifNight').style.display = "none";
-    document.getElementById('imageGif').style.display = "block";
   }
 }

@@ -10,6 +10,7 @@ body {
     box-sizing: border-box;
     transition: .5s ease all;
     background-color: #110034;
+    width: 100%;
 }
 header {
     display: flex;
@@ -25,8 +26,8 @@ header {
 }
 
 .light-initial {
-    width: 105%;
-    background-image: linear-gradient(270deg, #EA3FF9 0%, #2E32FB 100%);
+    width: 101.3%;
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
 #imageGifNight {
@@ -50,7 +51,7 @@ header {
             height: 40px;
             top: 75px;
             display: flex;
-            margin-left: 54.7%;
+            margin-left: 52.4%;
 
             .create {
                 width: 125px;
@@ -123,7 +124,7 @@ header {
                 .containerdrop {
                     display: none;
                     flex-direction: column;
-                    margin: 55px 151px;
+                    margin: 55px 203px;
                     width: 170px;
                     background: #B4B4B4;
                     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
@@ -275,13 +276,12 @@ header {
         height: 38px;
         margin: auto 5px;
         box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
-        font-size: 19px;
+        font-size: 17px;
         line-height: 18px;
-        letter-spacing: 0;
-        background-color: #B4B4B4;
-        height: 36px;
-        border: 1px solid #808080;
+        border: 1.5px solid #808080;
         align-self: flex-end;
+        letter-spacing: 0;
+        background: #B4B4B4;
     }
 
     .buttonsearch:active {
@@ -289,6 +289,12 @@ header {
         color: #100134;
         border: 1.5px solid #100134;
         box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+    }
+    .Searchtext {
+        color: #8F8F8F;
+    }
+    .fas.fa-search {
+        color: #8F8F8F;
     }
 
     div button {
@@ -382,24 +388,24 @@ header {
         }
     }
         .text-end {
-            width: 100%;
-            height: 28px;
+            width: 290px;
+            height: 16px;
             display: none;
             font-family: 'ChakraPetch-Bold';
-            font-size: 13px;
-            color: rgb(250, 250, 250);
+            font-size: 12px;
+            color: #FAFAFA;
             align-self: center;
             letter-spacing: 0px;
-            background-image: linear-gradient(270deg, rgb(241, 187, 236) 0%, rgb(56, 115, 227) 100%);
+            background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+            box-shadow: inset -2px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
             margin: -5px 0px 0px;
             padding: 0px;
         }
         .trends-container-Gif:hover {
-            border: 2px solid #B4B4B4;
+            border: 1px solid #B4B4B4;
             width: 294px;
             height: 315px;
-            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
-            background: #E6E6E6;
+            background: #B4B4B4;
             .text-end {
                 display: block;
                 border: 1px solid #B4B4B4;
@@ -529,6 +535,7 @@ header {
         height: 49px;
         padding: 9px;
         margin-right: 10px;
+        background: #4180F6;
         background-color: #2E32FB;
         border: 1px solid #4C2F99;
         font-family: 'ChakraPetch-Regular';
@@ -559,6 +566,7 @@ header {
 
 //Secciòn de Tendecias//
 
+
 .trends {
     .trends-principaltrends {
         width: 1216px;
@@ -581,7 +589,7 @@ header {
 }
 
     .trends-container {
-        width: 100%;
+        width: 96.5%;
         height: 500px;
         display: grid;
         row-gap: 18px;
@@ -627,9 +635,6 @@ header {
 
 // Secciòn de Crear los Gifos Nocturnos//
 
-.create {
-    background-color: #110038;
-}
 
 .img-logo {
     display: flex;
@@ -655,18 +660,18 @@ header {
         margin-bottom: 32px;
         display: flex;
         flex-direction: column;
-        background: #E1DCDC;
+        background: #B4B4B4;
         box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
         .Title {
             padding-top: 10px;
             padding-left: 6px;
             margin: 3px;
             margin-top: 1px;
-            background-image: linear-gradient(270deg, #F7C6F3 0%, #3B78EB 100%);
+            background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
             b {
                 margin-top: 2px;
                 font-family: 'ChakraPetch';
-                font-size: 15px;
+                font-size: 16px;
                 color: #FAFAFA;
                 letter-spacing: 0;
             }
@@ -724,13 +729,14 @@ header {
                 letter-spacing: 0;
                 text-align: center;
                 line-height: 36px;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             }
             .start {
                 width: 146px;
                 height: 38px;
-                background: #F7C9F3;
+                background: #EE3EFE;
                 font-family: 'ChakraPetch';
-
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             }
         }
     }
@@ -741,7 +747,7 @@ header {
     margin-top: -3%;
     margin-left: 19%;
     display: none;
-    background: #E1DCDC;
+    background: #B4B4B4;
     .videoContainer{
         width: 772px;
         height: 434px;
@@ -762,10 +768,10 @@ header {
         margin-left: 4px;
         #Stylcheck {
                 height: 24px;
-                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
                 font-family: 'ChakraPetch';
                 font-weight: bold;
-                font-size: 14px;
+                font-size: 16px;
                 color: #FAFAFA;
                 letter-spacing: 0;
                 margin-top: 5px;
@@ -774,10 +780,10 @@ header {
         #stylcapture {
                 display:none;
                 height: 24px;
-                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
                 font-family: 'ChakraPetch';
                 font-weight: bold;
-                font-size: 14px;
+                font-size: 16px;
                 color: #FAFAFA;
                 letter-spacing: 0;
                 margin-top: 5px;
@@ -794,19 +800,21 @@ header {
         margin-top: 11px;
         margin-right: 18px;
         .Capturegifs {
-            background: #F7C9F3;
+            background: #EE3EFE;
             border: 1.5px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             width: 142px;
             height: 34px;
-            font-size: 15px;
+            font-size: 18px;
             font-family: 'ChakraPetch-Regular';
             line-height: 17px;
             letter-spacing: 0;
             text-align: center;
         }
         .cameraCapture{
-            background: #F7C9F3;
+            background: #EE3EFE;
             border: 1.5px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             width: 37px;
             height: 31px;
             font-size: 15px;
@@ -835,9 +843,10 @@ header {
             font-size: 16px;
             background: #FF6161;
             border: 1.5px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FAFAFA;
             margin-top: 5px;
             span {
-                color: #FAFAFA;
+                color: #110034;
             }
         }
         .recordButton {
@@ -845,6 +854,7 @@ header {
             height: 36px;
             background: #FF6161;
             border: 1px solid #110034;
+            box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FAFAFA;
             margin-left: 460px;
             margin-top: 5px;
         }
@@ -852,7 +862,7 @@ header {
     #time {
         width: 124px;
         height: 36px;
-        background: #FFFFFF;
+        background: #FAFAFA;
         margin-top: -34px;
         margin-left: 38px;
         border: 1px solid #979797;
@@ -872,12 +882,13 @@ header {
             width: 144px;
             height: 36px;
             margin-right: 15px;
-            background: #F7C9F3;
+            background: #EE3EFE;
             line-height: 18px;
             font-family: 'ChakraPetch-Regular';
             font-size: 16px;
             color: #110034;
             border: 1px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             letter-spacing: 0;
             text-align: center;
         }
@@ -889,6 +900,7 @@ header {
             line-height: 18px;
             border-style: solid;
             border: 1px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             font-family: 'ChakraPetch-Regular';
             font-size: 16px;
             letter-spacing: 0;
@@ -906,7 +918,7 @@ header {
         .frontBar {
             width: 240px;
             height: 24px;
-            background: #F7C9F3;
+            background: #B4B4B4;
             box-shadow: inset 0.5px 2px 0 0 #FAFAFA, inset -0.5px -2px 0 0 #110034;
             margin-top: 10px;
             display: flex;
@@ -914,7 +926,7 @@ header {
                 display: flex;
                 width: 20px;
                 height: 20px;
-                background: #F7C9F3;
+                background: #EE3EFE;
                 border: 1px solid #110034;
                 box-shadow: inset -1px -1px 0 0 #A0899F, inset 1px 1px 0 0 #FAFAFA;
                 margin-top: 1px;
@@ -925,13 +937,17 @@ header {
                     margin-left: 8px;
                 }
             }
+            .BarLoading {
+                background: #EE3EFE;
+                height: 22px;
+            }
         }
         #time2 {
             width: 124px;
             height: 36px;
             background: #FFFFFF;
             margin-top: -3px;
-            margin-right: 5px;
+            margin-right: 29px;
             border: 1px solid #979797;
             line-height: 32px;
             text-align: center;
@@ -954,28 +970,80 @@ header {
         }
         .upGifos {
             img {
-                width: 36px;
+                width: 48px;
                 height: 48px;
                 margin-left: 391px;
                 margin-top: 101px;
             }
             .upGifosTitle {
-                margin-left: 291px;
-                font-family: 'ChakraPetch-Bold';
-                font-size: 19px;
-                color: #110034;
-                line-height: 23px;
+                margin-left: 290px;
+                font-family: 'ChakraPetch';
+                font-weight: bold;
+                font-size: 16px;
+                color: #110038;
+                line-height: 22px;
                 letter-spacing: 0;
             }
+            .time-left {
+                font-family: 'ChakraPetch-Bold';
+                font-size: 18px;
+                color: #110038;
+                letter-spacing: 0;
+                text-align: center;
+                line-height: 22px;
+            }
+            .progressGif {
+                width: 380px;
+                height: 24px;
+                transition: all 8s ease;
+                transition-timing-function: linear;
+                margin-left: 200px;
+            }
+            .GifLoading {
+                width: 436px;
+                height: 21px;
+                background-color: #EE3EFE;
+            }
         }
+        .StopGif {
+            margin-left: 669px;
+            margin-top: 162px;
+            background: #F0E5EE;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+            text-decoration: none;
+            font-family: 'ChakraPetch-Regular';
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 32px;
+            width: 105px;
+            a {
+                text-decoration: none;
+                color: #110038;
+            }
+        }
+    }
+    .UpGifo {
+        width: 794px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 9px;
+        margin-left: 4px;
+        height: 24px;
+        background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+        font-family: 'ChakraPetch';
+        font-weight: bold;
+        font-size: 16px;
+        color: #FAFAFA;
+        letter-spacing: 0;
+        margin-top: 5px;
+        margin-left: 5px;
+        padding-top: 4px;
     }
 }
 .containermyGuifos {
     .MyGuifos {
         display: none;
     }
-}
-
-.create {
-    background: #110038;
 }

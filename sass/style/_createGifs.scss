@@ -1,4 +1,7 @@
 
+body {
+    width: 100%;
+}
 .img-logo {
     display: flex;
     #image-Gif {
@@ -34,7 +37,7 @@
             b {
                 margin-top: 2px;
                 font-family: 'ChakraPetch';
-                font-size: 15px;
+                font-size: 16px;
                 color: #FAFAFA;
                 letter-spacing: 0;
             }
@@ -76,15 +79,16 @@
             padding-bottom: 30px;
             button {
                 margin: 5px;
-                border: 1px solid;
                 font-size: 17px;
+
             }
             a {
                 margin: 5px;
-                border: 1px solid #100134;
                 font-size: 17px;
                 background: #FAFAFA;
                 color: #100134;
+                border: 1px solid;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
                 width: 146px;
                 height: 36px;
                 font-family: 'ChakraPetch';
@@ -98,6 +102,8 @@
                 height: 38px;
                 background: #F7C9F3;
                 font-family: 'ChakraPetch';
+                border: 1px solid #100134;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
 
             }
         }
@@ -164,6 +170,7 @@
         .Capturegifs {
             background: #F7C9F3;
             border: 1.5px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             width: 142px;
             height: 34px;
             font-size: 15px;
@@ -175,6 +182,7 @@
         .cameraCapture{
             background: #F7C9F3;
             border: 1.5px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             width: 37px;
             height: 31px;
             font-size: 15px;
@@ -203,6 +211,7 @@
             font-size: 16px;
             background: #FF6161;
             border: 1.5px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             margin-top: 5px;
             span {
                 color: #FAFAFA;
@@ -213,6 +222,7 @@
             height: 36px;
             background: #FF6161;
             border: 1px solid #110034;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             margin-left: 460px;
             margin-top: 5px;
         }
@@ -246,6 +256,7 @@
             font-size: 16px;
             color: #110034;
             border: 1px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             letter-spacing: 0;
             text-align: center;
         }
@@ -257,6 +268,7 @@
             line-height: 18px;
             border-style: solid;
             border: 1px solid #100134;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
             font-family: 'ChakraPetch-Regular';
             font-size: 16px;
             letter-spacing: 0;
@@ -274,7 +286,7 @@
         .frontBar {
             width: 240px;
             height: 24px;
-            background: #F7C9F3;
+            background: #A09C9C;
             box-shadow: inset 0.5px 2px 0 0 #FAFAFA, inset -0.5px -2px 0 0 #110034;
             margin-top: 10px;
             display: flex;
@@ -293,13 +305,17 @@
                     margin-left: 8px;
                 }
             }
+            .BarLoading {
+                background: #F7C9F3;
+                height: 22px;
+            }
         }
         #time2 {
             width: 124px;
             height: 36px;
             background: #FFFFFF;
             margin-top: -3px;
-            margin-right: 5px;
+            margin-right: 29px;
             border: 1px solid #979797;
             line-height: 32px;
             text-align: center;
@@ -350,14 +366,26 @@
                 transition: all 8s ease;
                 transition-timing-function: linear;
                 margin-left: 200px;
+                background: #999999;
+                box-shadow: -2px -2px -3px 0px;
             }
             .GifLoading {
-                width: 436px;
                 height: 21px;
                 background-color: #F7C9F3;
             }
         }
-        .StopGifo {
+        .StopGif {
+            margin-left: 669px;
+            margin-top: 162px;
+            background: #F0E5EE;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+            text-decoration: none;
+            font-family: 'ChakraPetch-Regular';
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 32px;
+            width: 105px;
             a {
                 text-decoration: none;
                 color: #110038;
@@ -380,6 +408,7 @@
         letter-spacing: 0;
         margin-top: 5px;
         margin-left: 5px;
+        padding-top: 4px;
     }
 }
 .containermyGuifos {

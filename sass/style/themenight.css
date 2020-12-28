@@ -7,6 +7,7 @@ body {
   -webkit-transition: .5s ease all;
   transition: .5s ease all;
   background-color: #110034;
+  width: 100%;
 }
 
 header {
@@ -27,9 +28,9 @@ header p {
 }
 
 .light-initial {
-  width: 105%;
-  background-image: -webkit-gradient(linear, right top, left top, from(#EA3FF9), to(#2E32FB));
-  background-image: linear-gradient(270deg, #EA3FF9 0%, #2E32FB 100%);
+  width: 101.3%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
 #imageGifNight {
@@ -59,7 +60,7 @@ header p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 54.7%;
+  margin-left: 52.4%;
 }
 
 .main .content .createGifs .create {
@@ -149,7 +150,7 @@ header p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 55px 151px;
+  margin: 55px 203px;
   width: 170px;
   background: #B4B4B4;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
@@ -333,14 +334,13 @@ header p {
   margin: auto 5px;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 18px;
-  letter-spacing: 0;
-  background-color: #B4B4B4;
-  height: 36px;
-  border: 1px solid #808080;
+  border: 1.5px solid #808080;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  letter-spacing: 0;
+  background: #B4B4B4;
 }
 
 #containersearch .buttonsearch:active {
@@ -349,6 +349,14 @@ header p {
   border: 1.5px solid #100134;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+}
+
+#containersearch .Searchtext {
+  color: #8F8F8F;
+}
+
+#containersearch .fas.fa-search {
+  color: #8F8F8F;
 }
 
 #containersearch div button {
@@ -462,29 +470,29 @@ header p {
 }
 
 .containsearch .text-end {
-  width: 100%;
-  height: 28px;
+  width: 290px;
+  height: 16px;
   display: none;
   font-family: 'ChakraPetch-Bold';
-  font-size: 13px;
-  color: #fafafa;
+  font-size: 12px;
+  color: #FAFAFA;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   letter-spacing: 0px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#f1bbec), to(#3873e3));
-  background-image: linear-gradient(270deg, #f1bbec 0%, #3873e3 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  -webkit-box-shadow: inset -2px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -2px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FAFAFA;
   margin: -5px 0px 0px;
   padding: 0px;
 }
 
 .containsearch .trends-container-Gif:hover {
-  border: 2px solid #B4B4B4;
+  border: 1px solid #B4B4B4;
   width: 294px;
   height: 315px;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
-  background: #E6E6E6;
+  background: #B4B4B4;
 }
 
 .containsearch .trends-container-Gif:hover .text-end {
@@ -642,6 +650,7 @@ header p {
   height: 49px;
   padding: 9px;
   margin-right: 10px;
+  background: #4180F6;
   background-color: #2E32FB;
   border: 1px solid #4C2F99;
   font-family: 'ChakraPetch-Regular';
@@ -692,7 +701,7 @@ header p {
 }
 
 .trends-container {
-  width: 100%;
+  width: 96.5%;
   height: 500px;
   display: -ms-grid;
   display: grid;
@@ -750,10 +759,6 @@ header p {
   display: block;
 }
 
-.create {
-  background-color: #110038;
-}
-
 .img-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -789,7 +794,7 @@ header p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #E1DCDC;
+  background: #B4B4B4;
   -webkit-box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
           box-shadow: inset -2.5px -2.5px 0 0 #A09C9C, inset 2.5px 2.5px 0 0 #FAFAFA;
 }
@@ -799,14 +804,14 @@ header p {
   padding-left: 6px;
   margin: 3px;
   margin-top: 1px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C6F3), to(#3B78EB));
-  background-image: linear-gradient(270deg, #F7C6F3 0%, #3B78EB 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
 .GeneralCreate .ContainerCreate .Title b {
   margin-top: 2px;
   font-family: 'ChakraPetch';
-  font-size: 15px;
+  font-size: 16px;
   color: #FAFAFA;
   letter-spacing: 0;
 }
@@ -880,13 +885,17 @@ header p {
   letter-spacing: 0;
   text-align: center;
   line-height: 36px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
 }
 
 .GeneralCreate .ContainerCreate .ButtonsClass .start {
   width: 146px;
   height: 38px;
-  background: #F7C9F3;
+  background: #EE3EFE;
   font-family: 'ChakraPetch';
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
 }
 
 .Principalvideo {
@@ -895,7 +904,7 @@ header p {
   margin-top: -3%;
   margin-left: 19%;
   display: none;
-  background: #E1DCDC;
+  background: #B4B4B4;
 }
 
 .Principalvideo .videoContainer {
@@ -928,11 +937,11 @@ header p {
 
 .Principalvideo .Titlevideo #Stylcheck {
   height: 24px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   font-family: 'ChakraPetch';
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   color: #FAFAFA;
   letter-spacing: 0;
   margin-top: 5px;
@@ -942,11 +951,11 @@ header p {
 .Principalvideo .Titlevideo #stylcapture {
   display: none;
   height: 24px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   font-family: 'ChakraPetch';
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   color: #FAFAFA;
   letter-spacing: 0;
   margin-top: 5px;
@@ -970,11 +979,13 @@ header p {
 }
 
 .Principalvideo .Gifscreen .Capturegifs {
-  background: #F7C9F3;
+  background: #EE3EFE;
   border: 1.5px solid #100134;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
   width: 142px;
   height: 34px;
-  font-size: 15px;
+  font-size: 18px;
   font-family: 'ChakraPetch-Regular';
   line-height: 17px;
   letter-spacing: 0;
@@ -982,8 +993,10 @@ header p {
 }
 
 .Principalvideo .Gifscreen .cameraCapture {
-  background: #F7C9F3;
+  background: #EE3EFE;
   border: 1.5px solid #100134;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
   width: 37px;
   height: 31px;
   font-size: 15px;
@@ -1021,11 +1034,13 @@ header p {
   font-size: 16px;
   background: #FF6161;
   border: 1.5px solid #100134;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FAFAFA;
   margin-top: 5px;
 }
 
 .Principalvideo .containerReady .gifReady .recordGif span {
-  color: #FAFAFA;
+  color: #110034;
 }
 
 .Principalvideo .containerReady .gifReady .recordButton {
@@ -1033,6 +1048,8 @@ header p {
   height: 36px;
   background: #FF6161;
   border: 1px solid #110034;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FAFAFA;
   margin-left: 460px;
   margin-top: 5px;
 }
@@ -1040,7 +1057,7 @@ header p {
 .Principalvideo .containerReady #time {
   width: 124px;
   height: 36px;
-  background: #FFFFFF;
+  background: #FAFAFA;
   margin-top: -34px;
   margin-left: 38px;
   border: 1px solid #979797;
@@ -1068,12 +1085,14 @@ header p {
   width: 144px;
   height: 36px;
   margin-right: 15px;
-  background: #F7C9F3;
+  background: #EE3EFE;
   line-height: 18px;
   font-family: 'ChakraPetch-Regular';
   font-size: 16px;
   color: #110034;
   border: 1px solid #100134;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
   letter-spacing: 0;
   text-align: center;
 }
@@ -1086,6 +1105,8 @@ header p {
   line-height: 18px;
   border-style: solid;
   border: 1px solid #100134;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
   font-family: 'ChakraPetch-Regular';
   font-size: 16px;
   letter-spacing: 0;
@@ -1105,7 +1126,7 @@ header p {
 .Principalvideo #previewGif .readyButton .frontBar {
   width: 240px;
   height: 24px;
-  background: #F7C9F3;
+  background: #B4B4B4;
   -webkit-box-shadow: inset 0.5px 2px 0 0 #FAFAFA, inset -0.5px -2px 0 0 #110034;
           box-shadow: inset 0.5px 2px 0 0 #FAFAFA, inset -0.5px -2px 0 0 #110034;
   margin-top: 10px;
@@ -1120,7 +1141,7 @@ header p {
   display: flex;
   width: 20px;
   height: 20px;
-  background: #F7C9F3;
+  background: #EE3EFE;
   border: 1px solid #110034;
   -webkit-box-shadow: inset -1px -1px 0 0 #A0899F, inset 1px 1px 0 0 #FAFAFA;
           box-shadow: inset -1px -1px 0 0 #A0899F, inset 1px 1px 0 0 #FAFAFA;
@@ -1136,12 +1157,17 @@ header p {
   margin-left: 8px;
 }
 
+.Principalvideo #previewGif .readyButton .frontBar .BarLoading {
+  background: #EE3EFE;
+  height: 22px;
+}
+
 .Principalvideo #previewGif .readyButton #time2 {
   width: 124px;
   height: 36px;
   background: #FFFFFF;
   margin-top: -3px;
-  margin-right: 5px;
+  margin-right: 29px;
   border: 1px solid #979797;
   line-height: 32px;
   text-align: center;
@@ -1166,26 +1192,93 @@ header p {
 }
 
 .Principalvideo #gifContainer .upGifos img {
-  width: 36px;
+  width: 48px;
   height: 48px;
   margin-left: 391px;
   margin-top: 101px;
 }
 
 .Principalvideo #gifContainer .upGifos .upGifosTitle {
-  margin-left: 291px;
-  font-family: 'ChakraPetch-Bold';
-  font-size: 19px;
-  color: #110034;
-  line-height: 23px;
+  margin-left: 290px;
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  font-size: 16px;
+  color: #110038;
+  line-height: 22px;
   letter-spacing: 0;
+}
+
+.Principalvideo #gifContainer .upGifos .time-left {
+  font-family: 'ChakraPetch-Bold';
+  font-size: 18px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 22px;
+}
+
+.Principalvideo #gifContainer .upGifos .progressGif {
+  width: 380px;
+  height: 24px;
+  -webkit-transition: all 8s ease;
+  transition: all 8s ease;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  margin-left: 200px;
+}
+
+.Principalvideo #gifContainer .upGifos .GifLoading {
+  width: 436px;
+  height: 21px;
+  background-color: #EE3EFE;
+}
+
+.Principalvideo #gifContainer .StopGif {
+  margin-left: 669px;
+  margin-top: 162px;
+  background: #F0E5EE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+  text-decoration: none;
+  font-family: 'ChakraPetch-Regular';
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 32px;
+  width: 105px;
+}
+
+.Principalvideo #gifContainer .StopGif a {
+  text-decoration: none;
+  color: #110038;
+}
+
+.Principalvideo .UpGifo {
+  width: 794px;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 9px;
+  margin-left: 4px;
+  height: 24px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  font-size: 16px;
+  color: #FAFAFA;
+  letter-spacing: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding-top: 4px;
 }
 
 .containermyGuifos .MyGuifos {
   display: none;
-}
-
-.create {
-  background: #110038;
 }
 /*# sourceMappingURL=themenight.css.map */

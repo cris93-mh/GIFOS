@@ -11,7 +11,9 @@
 
 <body class="create">
     <header class="light-initial">
-        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+        <div class="light-obscure">
+            <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+        </div>
     </header>
     <div class="main">
         <div class="content">
@@ -68,10 +70,7 @@
                         <div class="readyButton" id="readyButton">
                             <div class="time" id="time2">
                             </div>
-                            <div class="frontBar">
-                                <span class="forward">
-                                    <img  class ="forwardContainer"  src="./images/forward.svg">
-                                </span>
+                            <div class="frontBar" id="frontBar">
                             </div>
                             <button class="repeatGif">
                                 <a href="indexCreate.html">Repetir Captura</a>  
@@ -118,7 +117,7 @@
                                 </p>
                             </div>
                             <div class="ButtonsClass">
-                                <a class="cancel" href="index.html">Cancelar</a>
+                                <a class="cancel" id="Cancel"  href="index.html">Cancelar</a>
                                 <button class="start" id="start" >Comenzar</button>
                                 <!--<button id="start">Start Recording</button> -->
 
@@ -130,6 +129,6 @@
                 </div>
 
 </body>
-
+<script src="./js/main.js"></script>
 <script src="./js/creatGifs.js"></script>
 </html>

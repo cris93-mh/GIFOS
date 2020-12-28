@@ -30,7 +30,7 @@ header {
 }
 
 .light-initial {
-    width: 104%;
+    width: 100%;
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
@@ -42,6 +42,7 @@ header {
 #imageGifNight {
     display: none;
 }
+
 
 .main {
     margin: 0px 110px;
@@ -59,7 +60,7 @@ header {
             height: 40px;
             top: 75px;
             display: flex;
-            margin-left: 55%;
+            margin-left: 52.8%;
 
             .create {
                 width: 125px;
@@ -136,7 +137,7 @@ header {
                 .containerdrop {
                     display: none;
                     flex-direction: column;
-                    margin: 55px 152px;
+                    margin: 55px 203px;
                     width: 170px;
                     background: #E6E6E6;
                     box-shadow: inset -2.5px -2.5px 0 0 #E0D1DD, inset 2.5px 2.5px 0 0 #FAFAFA;
@@ -296,10 +297,11 @@ header {
         margin: auto 5px;
         box-shadow: inset -1px -1px 0 0 #A09C9C, inset 1px 1px 0 0 #FAFAFA;
         font-size: 17px;
-        line-height: 16px;
+        line-height: 18px;
         height: 36px;
         border: 1.5px solid #908686;
         align-self: flex-end;
+        background: #E6E6E6;
     }
 
     .buttonsearch:active {
@@ -307,6 +309,13 @@ header {
         color: #100134;
         border: 1.5px solid #100134;
         box-shadow: inset -1px -1px 0 0 #A09C9C, inset 1px 1px 0 0 #FAFAFA;
+    }
+    .Searchtext {
+        color: #A09696;
+        
+    }
+    .fas.fa-search {
+        color: #CDC3C3;
     }
 
     div button {
@@ -376,7 +385,7 @@ header {
     margin-top: -25px;
 }
 .containsearch {
-    width: 100%;
+    width: 96.4%;
     display: grid;
     row-gap: 18px;
     column-gap: 4px;
@@ -571,6 +580,41 @@ header {
         font-family: 'Chakra Petch', sans-serif;
         font-size: 14px;
         color: #100134;
+    }
+}
+
+.ButtonsClass {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: -3%;
+    padding-bottom: 30px;
+    button {
+        margin: 5px;
+        border: 1px solid;
+        font-size: 17px;
+    }
+    a {
+        margin: 5px;
+        border: 1px solid #100134;
+        font-size: 17px;
+        background: #FAFAFA;
+        color: #100134;
+        width: 146px;
+        height: 36px;
+        font-family: 'ChakraPetch';
+        text-decoration: none;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 36px;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+    }
+    .start {
+        width: 146px;
+        height: 38px;
+        background: #EE3EFE;
+        font-family: 'ChakraPetch';
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
     }
 }
 

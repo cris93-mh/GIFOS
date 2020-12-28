@@ -7,6 +7,7 @@
     <link rel="stylesheet" id="changeTheme" href="./sass/style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
     <link rel="" href="indexCreate.html">
+    <script src="https://kit.fontawesome.com/4411ab949c.js" crossorigin="anonymous"></script>
     
     
 </head>
@@ -53,8 +54,11 @@
         
                 <form class="lightform">
                     <div class="form">
-                        <input autocomplete="yes" type="text" onkeyup="activeButton()" onfocus="showHastag()" name="search" id="input-search" placeholder="Busca gifs, hashtags, temas, busca lo que quieras… ">
-                        <button class="buttonsearch" id="buttonsearch" disabled="true"> <img src="./images/lupa_inactive.svg" alt="lupa" id="lens">Buscar</button>
+                        <input autocomplete="off" type="text" onkeyup="activeButton()" onfocus="showHastag()" name="search" id="input-search" placeholder="Busca gifs, hashtags, temas, busca lo que quieras… ">
+                        <button class="buttonsearch" id="buttonsearch" disabled="true">
+                            <i class="fas fa-search" id="fas fa-search"></i>
+                            <span class="Searchtext" id="Searchtext">Buscar</span>
+                        </button>
                     </div>
                 </form>
                     <div class="allied" id="alliedbtn">

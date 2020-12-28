@@ -1,24 +1,10 @@
+//Se definen las funciones que van ejecutar la creaciòn de los GIFOS//
+
+
 var video = document.querySelector('#video');
 var videoContainer = document.querySelector('#video-container');
 var recorder; // globally accessible
-
-let dayTheme ="./sass/style/dist/style.css";
-let nightTheme ="./sass/style/dist/themenight.css";
-
-
-
-
-function imagenDiaNoche(){
-  if (localStorage.getItem("theme") == 2) {
-      document.getElementById('imageGifNight').style.display = "block";
-      document.getElementById('imageGif').style.display = "none";       
-  }else{
-      document.getElementById('imageGifNight').style.display = "none";
-      document.getElementById('imageGif').style.display = "block";
-  }
-
-}
-
+let progressBar = document.getElementById('GifLoading');
 
 function captureCamera(stream) {
 
@@ -110,6 +96,21 @@ function getTime() {
 
 
 document.getElementById('recordGif').addEventListener("click",()=> {
+  document.getElementById('frontBar').innerHTML = `
+  <span class="forward" id="forward">
+    <img  class ="forwardContainer"  src="./images/forward.svg">
+  </span>
+  <div class="BarLoading" id="BarLoading" style="width:0;"></div>
+  `
+  function ProgressBar(){
+    let progressLoading = document.getElementById('BarLoading');
+    setTimeout(() => {
+      document.getElementById('forward').style.cssText = 'transition: none;'
+      progressLoading.style.cssText = 'transition: all 2s ease;width:100%;';
+    }, 1000);
+  };
+  ProgressBar();
+
   video.srcObject.getTracks().forEach(function (track) {
     track.stop();
   });
@@ -130,15 +131,43 @@ document.getElementById('recordGif').addEventListener("click",()=> {
 
     // Creamos el formulario para enviarlo por el body a giphy
 
+    let form = new FormData();
+    form.append("file", recorder.getBlob(), "myGif.gif");
+    
     document.getElementById("Gifscreen").addEventListener("click", () => {
       uploadGif(form);
     });
   });
 });
 
+
+window.onload = function() {
+  imagenDiaNoche();
+  changeTheme();
+  document.getElementById('upGif').onclick = function() {
+      document.getElementById('previewGif').style.display = 'none';
+      document.getElementById('Stylcheck').style.display = 'none';
+      document.getElementById("Titlevideo").innerHTML = `
+      <p class='UpGifo' id='UpGifo'>Subiendo Guifo</p>
+      <img class='closeGif' src='./images/button3.svg'> `
+      let form = new FormData();
+      form.append("file", recorder.getBlob(), "myGif.gif");
+      uploadGif(form);
+      videoContainer.style.display='block'; 
+      videoContainer.style.display='block'; 
+      videoContainer.style.display='block'; 
+      var hideContCreateGifs = document.getElementById('ContainerCreate');
+      hideContCreateGifs.style.display='none';
+      this.disabled = true;
+      captureCamera(video.srcObject);
+  };
+};
+
+
 //Ahora vamos a definir la funciòn para subir el GIF y luego para descargarlo
 
 function uploadGif(gif) {
+  console.log('Se ejecuta la funcion de subir el gifo');
   document.getElementById('gifContainer').innerHTML = `
   <div class='upGifos'>
     <img src="./images/globe_img.png">
@@ -147,32 +176,19 @@ function uploadGif(gif) {
       <div class="GifLoading" id="GifLoading" style="width:0;"></div>
     </div>
     <p class='time-left'>Tiempo restante: <span style='text-decoration: line-through'>38 años</span> algunos segundos</p>
-  </div>
-  `;
+    <button class='StopGif'>
+      <a href='indexCreate.html'>Cancelar</a>
+    </button>
+  </div>`;
   function ProgressLoad(){
+    console.log('Se carga la barrita de la subida del GIFO');
     let progressBar = document.getElementById('GifLoading');
     setTimeout(() => {
-      progressBar.style.cssText = 'transition: all 2s ease;width:100%;';    
+      progressBar.style.cssText = 'transition: all 2s ease;width:99%;';
     }, 1000);
   };
   ProgressLoad();
 
-  function stopGif(){
-    let btnStop = document.getElementById('StopGifo');
-    btnStop.style.cssText = 'background: #FAFAFA;border: 1.5px solid #100134;width: 142px;height: 34px;font-size: 18px;font-family: "ChakraPetch-Regular";line-height: 17px;letter-spacing: 0;text-align: center;margin-top: 158px;margin-left: 631px;';
-    console.log("Boton de parado del gif",btnStop);
-    if (localStorage.getItem("theme") == 2) {
-        document.getElementById('changeTheme').href = nightTheme;       
-    }else{
-        document.getElementById('changeTheme').href = dayTheme;
-    }
-  
-  }
-  stopGif();
-
-
-  
-  /*
   fetch(
     "https://upload.giphy.com/v1/gifs?api_key=5c44dQP47Sp08444UvPPyAnTcqoReYrf",
     {
@@ -198,52 +214,33 @@ function uploadGif(gif) {
         })
         .then(data => {
           localStorage.setItem(
-            `mygif-${data.data.id}`,
+            `MyGuifos-${data.data.id}`,
             JSON.stringify(data.data)
           );
-          let alertGif = document.createElement('div');
-          alertGif.className = 'alert-gif';
-          alertGif.innerHTML = `
-          <p class='title-modal'> Guifo subido con éxito! <span style='float: right'><img id='closeModal' src="./images/close.svg"></span></p>
-          <div class='content-modal'>
-            <img class='gif-modal' src='${data.data.images.original.url}'>
-            <div class='gif-modal-btns'>
-              <button>Copiar Enlace Guifo</button>
-              <button>Descargar Guifo</button>
-            </div>
-          <div>
-          `;
-          document.body.append(alertGif);
-          //document.getElementById('closeModal').addEventListener('click', () => {
+
+          setTimeout(() => {
+
+            document.getElementById('gifContainer').innerHTML = `
+            <p class='GifoFinishTit'> Guifo subido con éxito! <span style='float: right'><img id='GifoFinishTit' src="./images/button3.svg"></span></p>
+            <div class='FinishGifo'>
+              <img class='GifoContainer' src='${data.data.images.original.url}'>
+              <div class='GifoFinishButton'>
+                <button>Copiar Enlace Guifo</button>
+                <button>Descargar Guifo</button>
+                <button>Listo</button>
+              </div>
+            <div>`;
+
+          }, 1001);
+        
+          document.body.append(GifoFinish);
+          document.getElementById('GifoFinishTit').addEventListener('click', () => {
             
-           // window.location.href = "./my-gifos.html";
-         // });
+           window.location.href = "./MyGuifos.html";
+          });
         });
     });
-    */
 }
+  
 
 
-
-
-
-
-
-window.onload = function(){
-  document.getElementById('upGif').onclick = function() {
-    document.getElementById('previewGif').style.display = 'none';
-    document.getElementById('Stylcheck').style.display = 'none';
-    document.getElementById("Titlevideo").innerHTML = `
-    <p class='UpGifo' id='UpGifo'>Subiendo Guifo</p>
-    <img class='closeGif' src='./images/button3.svg'> `
-    let form = new FormData();
-    form.append("file", recorder.getBlob(), "myGif.gif");
-    uploadGif(form);
-    videoContainer.style.display='block'; 
-    var hideContCreateGifs = document.getElementById('ContainerCreate');
-    hideContCreateGifs.style.display='none';
-    this.disabled = true;
-    captureCamera(video.srcObject);
-  };
-  imagenDiaNoche();
-}
