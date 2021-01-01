@@ -437,7 +437,7 @@ header p {
 }
 
 .containsearch {
-  width: 100%;
+  width: 96%;
   display: -ms-grid;
   display: grid;
   row-gap: 18px;

@@ -1026,3 +1026,61 @@ header p {
   font-family: "ChakraPetch";
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
 }
+
+.Principalvideo .Titlevideo .StylFinish {
+  height: 24px;
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: "ChakraPetch";
+  font-weight: bold;
+  font-size: 16px;
+  color: #FAFAFA;
+  letter-spacing: 0;
+  margin-top: 1px;
+}
+.Principalvideo .Titlevideo .closeGifFinish {
+  margin-top: -36px;
+  margin-left: 779px;
+}
+
+.GifoFinishButton {
+  display: flex;
+  flex-direction: column;
+  margin-left: 430px;
+  margin-top: -200px;
+}
+.GifoFinishButton .CreateGifoText {
+  font-family: "ChakraPetch";
+  font-weight: bold;
+  font-size: 16px;
+  color: #110034;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.FinishGifo {
+  width: 721px;
+  height: 391px;
+  background: #E6E6E6;
+}
+.FinishGifo .CopyGifo, .FinishGifo .DownloadGifo {
+  width: 256px;
+  height: 36px;
+  background: #FFF4FD;
+  border: 1px solid #110034;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+  margin-top: 10px;
+  font-family: "ChakraPetch-Regular";
+  font-size: 16px;
+}
+.FinishGifo .ReadyGifo {
+  width: 144px;
+  height: 36px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  margin-top: 300px;
+  margin-left: 184px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #110034;
+}

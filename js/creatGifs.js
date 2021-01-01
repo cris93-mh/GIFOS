@@ -5,6 +5,8 @@ var video = document.querySelector('#video');
 var videoContainer = document.querySelector('#video-container');
 var recorder; // globally accessible
 let progressBar = document.getElementById('GifLoading');
+let GifoComplete = document.getElementById('GifoContainerFinish');
+var preview;
 
 function captureCamera(stream) {
 
@@ -47,13 +49,11 @@ document.getElementById('start').onclick = function() {
 document.getElementById("Capturegifs").addEventListener('click',()=>{
   console.log('Se ingreó en recordinGifs()');
     recording = true;
-    console.log("%%%%%%%",video.srcObject);
     recorder = RecordRTC(video.srcObject, { //Almacenamos en la variable
       type: "gif",
       frameRate: 1,
       quality: 10,
       onGifRecordingStarted: function () {
-        console.log("begined");
       }
     });
     recorder.startRecording();
@@ -220,24 +220,31 @@ function uploadGif(gif) {
 
           setTimeout(() => {
 
-            document.getElementById('gifContainer').innerHTML = `
-            <p class='GifoFinishTit'> Guifo subido con éxito! <span style='float: right'><img id='GifoFinishTit' src="./images/button3.svg"></span></p>
-            <div class='FinishGifo'>
-              <img class='GifoContainer' src='${data.data.images.original.url}'>
+            document.getElementById("Titlevideo").innerHTML = `
+            <p class='StylFinish' id='StylFinish'>Guifo subido con èxito</p>
+            <img class='closeGifFinish' src='./images/button3.svg'> `
+            console.log(gif);
+            document.getElementById('principalVideoBody').innerHTML = ` 
+               
+            <div class='FinishGifo' id='FinishGifo'>
+              <img class='GifoContainerFinish' id='GifoContainerFinish' src='${data.data.images.original.url}'>
               <div class='GifoFinishButton'>
-                <button>Copiar Enlace Guifo</button>
-                <button>Descargar Guifo</button>
-                <button>Listo</button>
+                <span class='CreateGifoText'>Guifo creado con èxito</span>
+                <button class='CopyGifo'>Copiar Enlace Guifo</button>
+                <a href='${preview.src}' download='Gifo'>
+                <button class='DownloadGifo'>Descargar Guifo</button>
+                </a>
+                <button class='ReadyGifo'>Listo</button>
               </div>
             <div>`;
-
+            document.getElementById('GifoContainerFinish').style.cssText = 'width:371px;height:196px;margin-top: 30px;margin-left: 20px;';
+            document.getElementById('FinishGifo').style.background = '#E6E6E6;';
           }, 1001);
         
-          document.body.append(GifoFinish);
-          document.getElementById('GifoFinishTit').addEventListener('click', () => {
-            
-           window.location.href = "./MyGuifos.html";
-          });
+          //document.getElementById('GifoFinishTit').addEventListener('click', () => {
+          //  
+          // window.location.href = "./MyGuifos.html";
+          //});
         });
     });
 }

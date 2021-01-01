@@ -6,6 +6,8 @@ var videoContainer = document.querySelector('#video-container');
 var recorder; // globally accessible
 
 var progressBar = document.getElementById('GifLoading');
+var GifoComplete = document.getElementById('GifoContainerFinish');
+var preview;
 
 function captureCamera(stream) {
   console.log('Entro en capture camara');
@@ -42,15 +44,12 @@ document.getElementById('start').onclick = function () {
 document.getElementById("Capturegifs").addEventListener('click', function () {
   console.log('Se ingreó en recordinGifs()');
   recording = true;
-  console.log("%%%%%%%", video.srcObject);
   recorder = RecordRTC(video.srcObject, {
     //Almacenamos en la variable
     type: "gif",
     frameRate: 1,
     quality: 10,
-    onGifRecordingStarted: function onGifRecordingStarted() {
-      console.log("begined");
-    }
+    onGifRecordingStarted: function onGifRecordingStarted() {}
   });
   recorder.startRecording();
   getTime();
@@ -177,12 +176,15 @@ function uploadGif(gif) {
     }).then(function (data) {
       localStorage.setItem("MyGuifos-".concat(data.data.id), JSON.stringify(data.data));
       setTimeout(function () {
-        document.getElementById('gifContainer').innerHTML = "\n            <p class='GifoFinishTit'> Guifo subido con \xE9xito! <span style='float: right'><img id='GifoFinishTit' src=\"./images/button3.svg\"></span></p>\n            <div class='FinishGifo'>\n              <img class='GifoContainer' src='".concat(data.data.images.original.url, "'>\n              <div class='GifoFinishButton'>\n                <button>Copiar Enlace Guifo</button>\n                <button>Descargar Guifo</button>\n                <button>Listo</button>\n              </div>\n            <div>");
-      }, 1001);
-      document.body.append(GifoFinish);
-      document.getElementById('GifoFinishTit').addEventListener('click', function () {
-        window.location.href = "./MyGuifos.html";
-      });
+        document.getElementById("Titlevideo").innerHTML = "\n            <p class='StylFinish' id='StylFinish'>Guifo subido con \xE8xito</p>\n            <img class='closeGifFinish' src='./images/button3.svg'> ";
+        console.log(gif);
+        document.getElementById('principalVideoBody').innerHTML = " \n               \n            <div class='FinishGifo' id='FinishGifo'>\n              <img class='GifoContainerFinish' id='GifoContainerFinish' src='".concat(data.data.images.original.url, "'>\n              <div class='GifoFinishButton'>\n                <span class='CreateGifoText'>Guifo creado con \xE8xito</span>\n                <button class='CopyGifo'>Copiar Enlace Guifo</button>\n                <a href='").concat(preview.src, "' download='Gifo'>\n                <button class='DownloadGifo'>Descargar Guifo</button>\n                </a>\n                <button class='ReadyGifo'>Listo</button>\n              </div>\n            <div>");
+        document.getElementById('GifoContainerFinish').style.cssText = 'width:371px;height:196px;margin-top: 30px;margin-left: 20px;';
+        document.getElementById('FinishGifo').style.background = '#E6E6E6;';
+      }, 1001); //document.getElementById('GifoFinishTit').addEventListener('click', () => {
+      //  
+      // window.location.href = "./MyGuifos.html";
+      //});
     });
   });
 }
