@@ -1047,3 +1047,94 @@ header {
         display: none;
     }
 }
+
+.GifoFinishButton {
+    display: flex;
+    flex-direction: column;
+    margin-left: 430px;
+    margin-top: -200px;
+    .CreateGifoText {
+        font-family: 'ChakraPetch';
+        font-weight: bold;
+        font-size: 18px;
+        color: #110034;
+        letter-spacing: 0;
+        line-height: 22px;
+    }
+}
+.FinishGifo {
+    width: 721px;
+    height: 391px;
+    margin-left: 23%;
+    margin-top: -6%;
+    background: #B4B4B4;
+    .TitlevideoFinish {
+        height: 24px;
+        background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FE 100%);
+        font-family: 'ChakraPetch';
+        font-weight: bold;
+        font-size: 17px;
+        color: #FAFAFA;
+        letter-spacing: 0;
+        margin-top: 5px;
+    }
+    .closeGifFinish {
+        margin-left: 703px;
+        margin-top: -27px;
+        margin-bottom: 17px;
+    }
+    .CopyGifo {
+        width: 256px;
+        height: 36px;
+        background: #FFF4FD;
+        border: 1px solid #110034;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+        margin-top: 30px;
+        font-family: 'ChakraPetch-Regular';
+        font-size: 16px;
+    }
+    .DownloadGifo {
+        width: 256px;
+        height: 36px;
+        background: #FFF4FD;
+        border: 1px solid #110034;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
+        margin-top: 10px;
+        font-family: 'ChakraPetch-Regular';
+        font-size: 16px;
+    }
+    .ReadyGifo {
+        width: 144px;
+        height: 36px;
+        background: #EE3EFE;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        margin-top: 115px;
+        margin-left: 100px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #110034;
+        .readyGifoBye {
+            text-decoration: none;
+            color: #110034;
+        }
+    }
+}
+.galery {
+    width: 1200px;
+    height: 32px;
+    margin-top: 110px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    background: #FAFAFA;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    .myGifos {
+        margin: 0;
+        padding: 7px;
+        font-family: 'ChakraPetch-Regular';
+        font-size: 16px;
+        color: #110038;
+        letter-spacing: 0;
+    }
+}
