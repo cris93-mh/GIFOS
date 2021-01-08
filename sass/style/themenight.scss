@@ -1093,7 +1093,7 @@ header {
         font-family: 'ChakraPetch-Regular';
         font-size: 16px;
     }
-    .DownloadGifo {
+    .downloadGifo {
         width: 256px;
         height: 36px;
         background: #FFF4FD;
@@ -1136,5 +1136,27 @@ header {
         font-size: 16px;
         color: #110038;
         letter-spacing: 0;
+    }
+    .pintGifos {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        row-gap: 10px;
+        column-gap: 5px;
+        .myGifosCont {
+            width: 285px;
+            height: 295px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            img {
+                width: 285px;
+                height: 295px;
+                margin: 13px;
+                margin-left: -1px;
+                background: #E6E6E6;
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+            }
+        }
     }
 }

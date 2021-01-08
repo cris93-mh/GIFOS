@@ -1,6 +1,6 @@
 "use strict";
 
-var API_KEY = '5c44dQP47Sp08444UvPPyAnTcqoReYrf';
+var API_KEY = 'x4qXAjjRXaIgG0YjMdT9G8iHTFEKR1qG';
 var searchInput = document.getElementById('input-search');
 var buttonsearch = document.getElementById("buttonsearch");
 var divcontainersugge = document.getElementsByClassName('divcontainersugge')[0];

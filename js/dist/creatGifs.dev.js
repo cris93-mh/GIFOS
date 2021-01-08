@@ -122,7 +122,7 @@ document.getElementById('recordGif').addEventListener("click", function () {
       uploadGif(form);
     });
   });
-}); //Se define la funcion que va a mostrar os GIFOS creados//
+}); //Se define la funcion que va a mostrar los GIFOS creados//
 
 function getMisGifos() {
   var idsMyGuifos, arrayData, i, response, data, gifosData;
@@ -175,6 +175,8 @@ function getMisGifos() {
   }, null, null, [[2, 19]]);
 }
 
+;
+
 window.onload = function () {
   imagenDiaNoche();
   changeTheme();
@@ -196,6 +198,7 @@ window.onload = function () {
   };
 
   document.getElementById('myGifos').style.display = 'none';
+  document.getElementById('galery').style.display = 'none';
 }; //Ahora vamos a crear la funciòn que va a permitir copiar el GIFO//
 
 
@@ -210,7 +213,18 @@ function GifoCopy() {
   copyLink.style.display = 'none';
 }
 
-; //Ahora vamos a definir la funciòn para subir el GIF y luego para descargarlo
+; //Ahora vamos a crear la funciòn que va a permitir la descarga del GIF//
+
+function downloadGif() {
+  console.log('Se ejecuta la funcion de descargar el GIFO');
+  var linkGifo = document.createElement('a');
+  linkGifo.href = URL.createObjectURL(recorder.getBlob());
+  linkGifo.setAttribute('download', 'gifo');
+  document.body.appendChild(linkGifo);
+  linkGifo.click();
+  linkGifo.remove();
+} //Ahora vamos a definir la funciòn para subir el GIF//
+
 
 function uploadGif(gif) {
   console.log('Se ejecuta la funcion de subir el gifo');
@@ -226,7 +240,7 @@ function uploadGif(gif) {
 
   ;
   ProgressLoad();
-  fetch("https://upload.giphy.com/v1/gifs?api_key=5c44dQP47Sp08444UvPPyAnTcqoReYrf", {
+  fetch("https://upload.giphy.com/v1/gifs?api_key=".concat(API_KEY), {
     method: "POST",
     body: gif
   }).then(function (response) {
@@ -238,11 +252,10 @@ function uploadGif(gif) {
     }
   }).then(function (data) {
     console.log(data);
-    fetch("https://api.giphy.com/v1/gifs/".concat(data.data.id, "?&api_key=5c44dQP47Sp08444UvPPyAnTcqoReYrf")).then(function (response) {
+    fetch("https://api.giphy.com/v1/gifs/".concat(data.data.id, "?&api_key=").concat(API_KEY)).then(function (response) {
       return response.json();
     }).then(function (data) {
       if (!localStorage.getItem("ContMyGifos")) {
-        console.log('SE HA ENTRADO AL ARRAY');
         localStorage.setItem("ContMyGifos", "[]");
       }
 
@@ -256,17 +269,83 @@ function uploadGif(gif) {
           });
         });
         preview.src = data.data.images.original.url;
-        console.log(gif);
-        document.getElementById('principalVideoBody').innerHTML = "\n               \n            <div class='FinishGifo' id='FinishGifo'>\n              <p class='TitlevideoFinish' id='TitlevideoFinish'>Guifo subido con \xE8xito\n              <img class='closeGifFinish' src='./images/button3.svg'>\n              </p>\n              <img class='GifoContainerFinish' id='GifoContainerFinish' src='".concat(preview.src, "'>\n              <div class='GifoFinishButton'>\n                <p class='CreateGifoText'>Guifo creado con \xE8xito</span>\n                <input type='text' id='copylink' style=\"display:none;\">\n                <button class='CopyGifo' onclick=\"GifoCopy()\" id='CopyGifo'>Copiar Enlace Guifo</button>\n                <a href='").concat(preview.src, "' download='Gifo'>\n                <button class='DownloadGifo'>Descargar Guifo</button>\n                </a>\n                <button class='ReadyGifo' id='ReadyGifo'>\n                  <a class='readyGifoBye'  href='indexCreate.html'>Listo<a/>\n                </button>\n              </div>\n            <div>");
+        document.getElementById('principalVideoBody').innerHTML = "               \n              <div class='FinishGifo' id='FinishGifo'>\n                <p class='TitlevideoFinish' id='TitlevideoFinish'>Guifo subido con \xE8xito\n                <img class='closeGifFinish' src='./images/button3.svg'>\n                </p>\n                <img class='GifoContainerFinish' id='GifoContainerFinish' src='".concat(preview.src, "'>\n                <div class='GifoFinishButton'>\n                  <p class='CreateGifoText'>Guifo creado con \xE8xito</span>\n                  <input type='text' id='copylink' style=\"display:none;\">\n                  <button class='CopyGifo' onclick=\"GifoCopy()\" id='CopyGifo'>Copiar Enlace Guifo</button>\n                  <button class='downloadGifo' onclick=\"downloadGif()\" id='downloadGifo'>Descargar Guifo</button>\n                  <button class='ReadyGifo' id='ReadyGifo'>\n                    <a class='readyGifoBye'  href='indexCreate.html'>Listo<a/>\n                  </button>\n                </div>\n              <div>");
         document.getElementById('GifoContainerFinish').style.cssText = 'width:371px;height:196px;margin-top: 30px;margin-left: 20px;';
         document.getElementById('FinishGifo').style.background = '#E6E6E6;';
         document.getElementById('video-container').style.display = 'none';
+        document.getElementById('galery').style.display = 'block';
         document.getElementById('myGifos').style.display = 'block';
       }, 1001);
-      /*document.getElementById('GifoFinishTit').addEventListener('click', () => {
-        
-        window.location.href = "./MyGuifos.html";
-      });*/
+    });
+  });
+} //Ahora vamos a definir la funciòn que va a permitir ver los gifos guardados//
+
+
+function seeGifos() {
+  console.log('Se ejecuta la funciòn que va a permitir mostrar los gifs');
+  document.getElementById('containersearch').style.display = 'none';
+  document.getElementById('suggestions').style.display = 'none';
+  document.getElementById('main-trends').style.display = 'none';
+  document.getElementById('galery').style.display = 'block';
+  document.getElementById('myGifos').style.display = 'block';
+
+  function getMisGifos() {
+    var idsMyGuifos, arrayData, i, response, data, gifosData;
+    return regeneratorRuntime.async(function getMisGifos$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            idsMyGuifos = JSON.parse(localStorage.getItem("ContMyGifos"));
+            arrayData = [];
+            _context2.prev = 2;
+            i = 0;
+
+          case 4:
+            if (!(i < idsMyGuifos.length)) {
+              _context2.next = 16;
+              break;
+            }
+
+            _context2.next = 7;
+            return regeneratorRuntime.awrap(fetch("https://api.giphy.com/v1/gifs/".concat(idsMyGuifos[i], "?api_key=").concat(API_KEY)));
+
+          case 7:
+            response = _context2.sent;
+            _context2.next = 10;
+            return regeneratorRuntime.awrap(response.json());
+
+          case 10:
+            data = _context2.sent;
+            gifosData = data.data;
+            arrayData.push(gifosData);
+
+          case 13:
+            i++;
+            _context2.next = 4;
+            break;
+
+          case 16:
+            return _context2.abrupt("return", arrayData);
+
+          case 19:
+            _context2.prev = 19;
+            _context2.t0 = _context2["catch"](2);
+            return _context2.abrupt("return", _context2.t0);
+
+          case 22:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, null, null, [[2, 19]]);
+  }
+
+  ;
+  getMisGifos().then(function (data) {
+    return data.forEach(function (element) {
+      pintGifos.innerHTML += "\n        <div class=\"myGifosCont\">                \n          <img class=\"imageMyGifos\" src=\"".concat(element.images.original.url, "\" alt=\"\">                \n        </div>");
     });
   });
 }
+
+;
