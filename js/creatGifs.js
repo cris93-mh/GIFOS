@@ -8,6 +8,7 @@ let progressBar = document.getElementById('GifLoading');
 let GifoComplete = document.getElementById('GifoContainerFinish');
 var preview;
 let pintGifos = document.getElementById('pintGifos');
+let pintGifoContainer = document.getElementById('pintGifoContainer');
 
 function captureCamera(stream) {
 
@@ -37,13 +38,13 @@ function stopRecordingCallback() {
 }
 
 
-document.getElementById('start').onclick = function() {
-    videoContainer.style.display='block'; 
-    var hideContCreateGifs = document.getElementById('ContainerCreate');
-    hideContCreateGifs.style.display='none';
-    this.disabled = true;
-    captureCamera(video.srcObject);
-};
+document.getElementById('start').addEventListener('click', ()=> {
+  videoContainer.style.display='block'; 
+  var hideContCreateGifs = document.getElementById('ContainerCreate');
+  hideContCreateGifs.style.display='none';
+  this.disabled = true;
+  captureCamera(video.srcObject);
+});
 
 
 // CON ESTA FUNCIÒN COMENZAMOS LA CAPTURA DE GIF
@@ -108,7 +109,7 @@ document.getElementById('recordGif').addEventListener("click",()=> {
     setTimeout(() => {
       document.getElementById('forward').style.cssText = 'transition: none;'
       progressLoading.style.cssText = 'transition: all 2s ease;width:100%;';
-    }, 1000);
+    }, 2000);
   };
   ProgressBar();
 
@@ -163,6 +164,7 @@ async function getMisGifos() {
 
 
 window.onload = function() {
+  
   imagenDiaNoche();
   changeTheme();
   document.getElementById('upGif').onclick = function() {
@@ -184,6 +186,8 @@ window.onload = function() {
   };
   document.getElementById('myGifos').style.display = 'none';
   document.getElementById('galery').style.display = 'none';
+  document.getElementById('principalGalery').style.display = 'none';
+  
 };
 
 //Ahora vamos a crear la funciòn que va a permitir copiar el GIFO//
@@ -233,7 +237,7 @@ function uploadGif(gif) {
     let progressBar = document.getElementById('GifLoading');
     setTimeout(() => {
       progressBar.style.cssText = 'transition: all 2s ease;width:99%;';
-    }, 1000);
+    }, 2000);
   };
   ProgressLoad();
 
@@ -308,48 +312,24 @@ function uploadGif(gif) {
             document.getElementById('video-container').style.display = 'none';
             document.getElementById('galery').style.display = 'block';
             document.getElementById('myGifos').style.display = 'block';
-          }, 1001);
+          }, 2001);
         });
     });
 }
 
 //Ahora vamos a definir la funciòn que va a permitir ver los gifos guardados//
 
-function seeGifos() {
-  console.log('Se ejecuta la funciòn que va a permitir mostrar los gifs');
-    document.getElementById('containersearch').style.display = 'none';
-    document.getElementById('suggestions').style.display = 'none';
-    document.getElementById('main-trends').style.display = 'none';
-    document.getElementById('galery').style.display = 'block';
-    document.getElementById('myGifos').style.display = 'block';
-
-    async function getMisGifos() {
-      let idsMyGuifos = JSON.parse(localStorage.getItem("ContMyGifos")); 
-      let  arrayData= [];
-        try{
-          for(let i=0;i<idsMyGuifos.length;i++){
-          const response = await fetch(`https://api.giphy.com/v1/gifs/${idsMyGuifos[i]}?api_key=${API_KEY}`)
-          let data = await response.json();
-          let gifosData = data.data;      
-          arrayData.push(gifosData); 
-          }      
-          return arrayData;
-        }catch(e){
-        return e;
-        }  
-  };
-  getMisGifos().then(data => 
-
-    data.forEach(element => {
-      pintGifos.innerHTML += `
-        <div class="myGifosCont">                
-          <img class="imageMyGifos" src="${element.images.original.url}" alt="">                
-        </div>`;  
-                  
-    })
-  )
-};
-
-  
-
-
+async function seeGifos() {
+  document.getElementById('ContainerMyGifos').style.display = 'block';
+  let pintGifoContainer = document.getElementById('pintGifoContainer');
+  const data = await getMisGifos();
+  data.forEach(async (element) => {
+    pintGifoContainer.style.cssText = 'display:grid;grid-template-columns: repeat(4, 25%);row-gap:10px;column-gap:5px;';
+    pintGifoContainer.innerHTML += `
+      <div class="myGifosFinish" style="width:285px;height:295px;display: flex;flex-direction: row;flex-wrap: wrap;position: relative;" >                
+        <img class="imageMyGifos" style="width: 285px;height: 295px;margin: 13px;margin-left: -1px;background: #E6E6E6;box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;" src="${element.images.original.url}" alt="">                
+      </div>`
+  });
+  document.getElementById('MainContainer').style.display = 'none';
+  document.getElementById('containersearch').style.display = 'none';
+}

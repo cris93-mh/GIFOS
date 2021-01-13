@@ -196,7 +196,7 @@ header p {
   color: #FAFAFA;
 }
 
-.main .content .createGifs .MyGuifos {
+.main .content .createGifs .myGuifos {
   text-decoration: none;
   cursor: pointer;
   width: 80px;
@@ -209,11 +209,11 @@ header p {
   letter-spacing: 0;
 }
 
-.main .content .createGifs .MyGuifos span {
+.main .content .createGifs .myGuifos span {
   text-decoration: underline;
 }
 
-.main .content .createGifs .MyGuifos:hover {
+.main .content .createGifs .myGuifos:hover {
   border: 1.5px dotted #100134;
 }
 

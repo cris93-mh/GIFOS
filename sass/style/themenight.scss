@@ -167,7 +167,7 @@ header {
                 }
             }
 
-            .MyGuifos {
+            .myGuifos {
                 text-decoration: none;
                 cursor: pointer;
                 width: 80px;
@@ -184,7 +184,7 @@ header {
                 }
             }
 
-            .MyGuifos:hover {
+            .myGuifos:hover {
                 border: 1.5px dotted #100134;
             }
         }
@@ -1045,6 +1045,7 @@ header {
 .containermyGuifos {
     .MyGuifos {
         display: none;
+        
     }
 }
 
