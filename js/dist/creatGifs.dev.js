@@ -201,7 +201,7 @@ window.onload = function () {
 
   document.getElementById('myGifos').style.display = 'none';
   document.getElementById('galery').style.display = 'none';
-  document.getElementById('principalGalery').style.display = 'none';
+  document.getElementById('titleMyGifos').style.display = 'none';
 }; //Ahora vamos a crear la funciòn que va a permitir copiar el GIFO//
 
 
@@ -290,20 +290,23 @@ function seeGifos() {
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
+          document.getElementById('MainContainer').style.display = 'none';
+          document.getElementById('containersearch').style.display = 'none';
+          document.getElementById('fatherContainerGifo').style.display = 'block';
           document.getElementById('ContainerMyGifos').style.display = 'block';
           pintGifoContainer = document.getElementById('pintGifoContainer');
-          _context3.next = 4;
+          _context3.next = 7;
           return regeneratorRuntime.awrap(getMisGifos());
 
-        case 4:
+        case 7:
           data = _context3.sent;
           data.forEach(function _callee(element) {
             return regeneratorRuntime.async(function _callee$(_context2) {
               while (1) {
                 switch (_context2.prev = _context2.next) {
                   case 0:
-                    pintGifoContainer.style.cssText = 'display:grid;grid-template-columns: repeat(4, 25%);row-gap:10px;column-gap:5px;';
-                    pintGifoContainer.innerHTML += "\n      <div class=\"myGifosFinish\" style=\"width:285px;height:295px;display: flex;flex-direction: row;flex-wrap: wrap;position: relative;\" >                \n        <img class=\"imageMyGifos\" style=\"width: 285px;height: 295px;margin: 13px;margin-left: -1px;background: #E6E6E6;box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;\" src=\"".concat(element.images.original.url, "\" alt=\"\">                \n      </div>");
+                    pintGifoContainer.style.cssText = 'display:grid;grid-template-columns: repeat(4, 25%);row-gap:10px;column-gap:4px;';
+                    pintGifoContainer.innerHTML += "\n      <div class=\"myGifosFinish\" style=\"width:285px;height:295px;display: flex;flex-direction: row;flex-wrap: wrap;position: relative;\" >                \n        <img class=\"imageMyGifos\" style=\"width: 300px;height: 295px;margin: 13px;margin-left: -1px;background: #E6E6E6;box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;\" src=\"".concat(element.images.original.url, "\" alt=\"\">                \n      </div>");
 
                   case 2:
                   case "end":
@@ -312,10 +315,8 @@ function seeGifos() {
               }
             });
           });
-          document.getElementById('MainContainer').style.display = 'none';
-          document.getElementById('containersearch').style.display = 'none';
 
-        case 8:
+        case 9:
         case "end":
           return _context3.stop();
       }

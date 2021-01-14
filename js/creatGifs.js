@@ -186,7 +186,7 @@ window.onload = function() {
   };
   document.getElementById('myGifos').style.display = 'none';
   document.getElementById('galery').style.display = 'none';
-  document.getElementById('principalGalery').style.display = 'none';
+  document.getElementById('titleMyGifos').style.display = 'none';
   
 };
 
@@ -320,16 +320,17 @@ function uploadGif(gif) {
 //Ahora vamos a definir la funciòn que va a permitir ver los gifos guardados//
 
 async function seeGifos() {
+  document.getElementById('MainContainer').style.display = 'none';
+  document.getElementById('containersearch').style.display = 'none';
+  document.getElementById('fatherContainerGifo').style.display = 'block';
   document.getElementById('ContainerMyGifos').style.display = 'block';
   let pintGifoContainer = document.getElementById('pintGifoContainer');
   const data = await getMisGifos();
   data.forEach(async (element) => {
-    pintGifoContainer.style.cssText = 'display:grid;grid-template-columns: repeat(4, 25%);row-gap:10px;column-gap:5px;';
+    pintGifoContainer.style.cssText = 'display:grid;grid-template-columns: repeat(4, 25%);row-gap:10px;column-gap:4px;';
     pintGifoContainer.innerHTML += `
       <div class="myGifosFinish" style="width:285px;height:295px;display: flex;flex-direction: row;flex-wrap: wrap;position: relative;" >                
-        <img class="imageMyGifos" style="width: 285px;height: 295px;margin: 13px;margin-left: -1px;background: #E6E6E6;box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;" src="${element.images.original.url}" alt="">                
+        <img class="imageMyGifos" style="width: 300px;height: 295px;margin: 13px;margin-left: -1px;background: #E6E6E6;box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;" src="${element.images.original.url}" alt="">                
       </div>`
   });
-  document.getElementById('MainContainer').style.display = 'none';
-  document.getElementById('containersearch').style.display = 'none';
 }
