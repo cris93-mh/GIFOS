@@ -144,11 +144,11 @@ function activeButton() {
   if (localStorage.getItem("theme") == 2) {
     document.getElementById('buttonsearch').style.background = '#EE3EFE';
     document.getElementById('Searchtext').style.color = '#100134';
-    document.getElementById('fas fa-search').style.color = '#FAFAFA';
+    document.getElementById('fas-fa-search').style.color = '#FAFAFA';
   } else {
     document.getElementById('buttonsearch').style.background = '#F7C9F3';
     document.getElementById('Searchtext').style.color = '#100134';
-    document.getElementById('fas fa-search').style.color = '#100134';
+    document.getElementById('fas-fa-search').style.color = '#100134';
   }
 
   console.log("botón de búsqueda habilitado");
@@ -160,19 +160,19 @@ function cleanButton() {
   if (searchInput.value == "" && localStorage.getItem("theme") == 2) {
     document.getElementById('buttonsearch').style.background = '#B4B4B4';
     document.getElementById('Searchtext').style.color = '#8F8F8F';
-    document.getElementById('fas fa-search').style.color = '#8F8F8F';
+    document.getElementById('fas-fa-search').style.color = '#8F8F8F';
   } else if (searchInput.value == "" && localStorage.getItem("theme") == 1) {
     document.getElementById('buttonsearch').style.background = '#E6E6E6';
     document.getElementById('Searchtext').style.color = '#A09696';
-    document.getElementById('fas fa-search').style.color = '#CDC3C3';
+    document.getElementById('fas-fa-search').style.color = '#CDC3C3';
   } else if (searchInput.value != "" && localStorage.getItem("theme") == 2) {
     document.getElementById('buttonsearch').style.background = '#EE3EFE';
     document.getElementById('Searchtext').style.color = '#100134';
-    document.getElementById('fas fa-search').style.color = '#FAFAFA';
+    document.getElementById('fas-fa-search').style.color = '#FAFAFA';
   } else if (searchInput.value != "" && localStorage.getItem("theme") == 1) {
     document.getElementById('buttonsearch').style.background = '#F7C9F3';
     document.getElementById('Searchtext').style.color = '#100134';
-    document.getElementById('fas fa-search').style.color = '#100134';
+    document.getElementById('fas-fa-search').style.color = '#100134';
   }
 }
 

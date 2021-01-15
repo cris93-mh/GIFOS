@@ -12,14 +12,15 @@
     
 </head>
 <body>
+
     <div class="ThemeNight">
-    <header class="light-initial">
-        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
-    </header>
+        <header class="light-initial">
+            <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+        </header>
     
-    <!--Secciòn de Crear Gifos, elegir tèmas y mis gifos-->
-    <div class="main">
-        <div class="content">
+        <!--Secciòn de Crear Gifos, elegir tèmas y mis gifos-->
+        <div class="main">
+            <div class="content">
             <section class="menu-section">
                 <div class="img-logo">
                     <img src="./images/gifOF_logo.png" onclick="location.reload()" id="imageGif" alt="Gifos" style="cursor: cell;">
@@ -31,7 +32,8 @@
                         <div class="Menucontainer" id="main-section">
                             <div class="Menucontainerunfolded" id="Menucontainerunfolded">
                                 <button id="choosetopic" class="choosestyle">Elegir tema</button>
-                                <div id="choosetopicagain" class="choosetopicagain_arrow blackBotones"><img src="./images/dropdown.svg"></div>
+                                <div id="choosetopicagain" class="choosetopicagain_arrow blackBotones"><img src="./images/dropdown.svg" alt="">
+                                </div>
                             </div>
         
                             <div class="containerdrop" id="containerdrop">
@@ -55,15 +57,16 @@
                 <form class="lightform">
                     <div class="form">
                         <input autocomplete="off" type="text" onkeyup="activeButton()" onfocus="showHastag()" name="search" id="input-search" placeholder="Busca gifs, hashtags, temas, busca lo que quieras… ">
-                        <button class="buttonsearch" id="buttonsearch" disabled="true">
-                            <i class="fas fa-search" id="fas fa-search"></i>
+                        <button class="buttonsearch" id="buttonsearch">
+                            <i class="fas fa-search" id="fas-fa-search">
+                            </i>
                             <span class="Searchtext" id="Searchtext">Buscar</span>
                         </button>
                     </div>
                 </form>
                     <div class="allied" id="alliedbtn">
                         <button class="alliedbutton" onclick='filter(this.value)' value='Animales salvajes' id="alliedbutton">#animales salvajes</button>
-                        <button class="alliedbutton" onclick='filter(this.value)' value= 'Dragon Ball Z'id="alliedbutton2">#Dragon Ball Z</button>
+                        <button class="alliedbutton" onclick='filter(this.value)' value= 'Dragon Ball Z' id="alliedbutton2">#Dragon Ball Z</button>
                         <button class="alliedbutton" onclick='filter(this.value)' value= 'Divertido' id="alliedbutton3">#Divertido</button>
                     </div>
                     <div class="containerbtn" id="containerbtn">
@@ -109,9 +112,10 @@
         <div class="search-container" id="search-container">
             <div class="containsearch" id="containsearch"></div>
         </div>
-</div>
-    <script src="./js/main.js"></script>
-    <script src="./js/creatGifs.js"></script>
+            </div>
+            <script src="./js/main.js"></script>
+            <script src="./js/creatGifs.js"></script>
+        </div>
     </div>
 </body>
 </html>

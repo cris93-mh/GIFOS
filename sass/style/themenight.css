@@ -433,7 +433,7 @@ header p {
 }
 
 .search-container {
-  margin-top: -25px;
+  margin-top: -17px;
 }
 
 .containsearch {
@@ -1426,5 +1426,26 @@ header p {
   background: #E6E6E6;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FAFAFA;
+}
+
+.fatherContainerGifo {
+  width: 1240px;
+  height: 32px;
+  margin-top: 110px;
+  margin-bottom: 20px;
+  margin-left: -7px;
+  background: #FAFAFA;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+.fatherContainerGifo .titleMyGifos {
+  margin: 0;
+  padding: 7px;
+  font-family: 'ChakraPetch-Regular';
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
 }
 /*# sourceMappingURL=themenight.css.map */

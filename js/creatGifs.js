@@ -194,7 +194,7 @@ window.onload = function() {
 
 function GifoCopy() {
   console.log(preview.src);
-  alert('Se va a copiar el GIFO');
+  alert('Se va a copiar el enlace del GIFO');
   let copyLink = document.getElementById('copylink');
   copyLink.style.display = 'block';
   copyLink.select();

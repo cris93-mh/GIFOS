@@ -265,7 +265,6 @@ body {
             height: 36px;
             margin-right: 12px;
             margin-left: 82px;
-            line-height: 18px;
             border-style: solid;
             border: 1px solid #100134;
             box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FAFAFA;
@@ -273,11 +272,6 @@ body {
             font-size: 16px;
             letter-spacing: 0;
             text-align: center;
-            a {
-                text-decoration: none;
-                color: #110034;
-                
-            }
         }
         .repeatGif:hover {
             border: 1px dotted #100134;
