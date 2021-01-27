@@ -1,11 +1,10 @@
 const API_KEY = 'x4qXAjjRXaIgG0YjMdT9G8iHTFEKR1qG';
 let searchInput = document.getElementById('input-search');
-let buttonsearch = document.getElementById("buttonsearch")
+let buttonsearch = document.getElementById("buttonsearch");
 let divcontainersugge = document.getElementsByClassName('divcontainersugge')[0];
 let gif_img = document.getElementsByClassName('gif_img')
 let tenden_conte_Gif = document.getElementsByClassName('trends-contain-Gif')
 let divGif = document.getElementsByClassName('containersugge')[0];
-
 let changeNight = document.getElementById('sayNight');
 let changeDay =document.getElementById('sayDay');
 let dayTheme ="./sass/style/dist/style.css";
@@ -115,7 +114,7 @@ function busqueda(query,cantidad) {
     .then((data) => {
             
         //console.log(json.data); // imprimimos solo el atributo data del Json 
-        console.log(data); // imprimimos el Json completo
+        //console.log(data); // imprimimos el Json completo
         
            
         for(let i = 0; i< data.data.length; i++){     
@@ -146,13 +145,14 @@ busqueda("rabbits",4);
 
 function activeButton() {
     
-    document.getElementById('buttonsearch').disabled = false;
+    console.log('se ejecuto la funcion de activar los botones');
+    
     if (localStorage.getItem("theme") == 2) {
         document.getElementById('buttonsearch').style.background = '#EE3EFE';
         document.getElementById('Searchtext').style.color = '#100134';
         document.getElementById('fas-fa-search').style.color = '#FAFAFA';
     }else{
-        document.getElementById('buttonsearch').style.background = '#F7C9F3';
+        
         document.getElementById('Searchtext').style.color = '#100134';
         document.getElementById('fas-fa-search').style.color = '#100134';
     }
@@ -162,6 +162,8 @@ function activeButton() {
 
 }
 
+
+
 //Definimos la funciòn que va a permitir que cuando se borre el texto del input va a tomar el color normal nuevamente//
 
 
@@ -169,14 +171,18 @@ function cleanButton() {
     
     
     if(searchInput.value == "" && localStorage.getItem("theme") == 2) {
-        document.getElementById('buttonsearch').style.background = '#B4B4B4';
+        document.getElementById('buttonsearch').style.background = '#C1C1C1';
+        document.getElementById('buttonsearch').style.border = 'none';
         document.getElementById('Searchtext').style.color = '#8F8F8F';
         document.getElementById('fas-fa-search').style.color = '#8F8F8F';
+        document.getElementById('alliedbtn').style.display = 'none';
         
     }else if(searchInput.value == "" && localStorage.getItem("theme") == 1) {
-        document.getElementById('buttonsearch').style.background = '#E6E6E6';
+        document.getElementById('buttonsearch').style.background = '#DADADA';
+        document.getElementById('buttonsearch').style.border = 'none';
         document.getElementById('Searchtext').style.color = '#A09696';
         document.getElementById('fas-fa-search').style.color = '#CDC3C3';
+        document.getElementById('alliedbtn').style.display = 'none';
         
 
     }else if(searchInput.value != "" && localStorage.getItem("theme") == 2) {
@@ -209,12 +215,6 @@ document.getElementById('buttonsearch').addEventListener('click', (event)=> {
 });
 
 
-//Se define la funciòn de busqueda para el botòn buscar//
-
-function showHastag() {
-    let showHastag = document.getElementById('alliedbtn')
-    showHastag.style.display='block';
-}
 
 
 //Creamos la funciòn que va a ocultar los botones de showHastag y va a mostrar los botones de la bùsqueda segùn a lo que se de click
@@ -247,8 +247,7 @@ function filter(query) {
         }
             
         for(let i = 0; i< data.data.length; i++){
-            //console.log('titulos'); 
-           //console.log(data.data[i].title);
+
             let hide = document.getElementById('suggestions');  
             hide.style.display='none';
             let conceal = document.getElementById('main-trends');
@@ -268,6 +267,48 @@ function filter(query) {
     document.getElementById('randomHeader').innerHTML = `Resultados para: ${query}`;
 }
 
+//Se define la funcion que permite al borrar en el input los elementos de los tres botyones tambien se elimininen//
+
+/*document.getElementById('input-search').addEventListener('keydown', ()=> { 
+    console.log('se ejecuta la funcion de limpiar el boton');
+    let elements = document.querySelector('allied');
+    let searchInput = document.getElementById('input-search');
+    if((searchInput.value.trim() !== "")){
+     elements.style.visibility = 'visible';
+    }
+    else{
+     elements.style.visibility = 'hidden';
+    }
+
+});*/
+//Se define la funciòn de busqueda para el botòn buscar//
+
+function showHastag(query) {
+    console.log(query);
+    query=document.getElementById('input-search').value.trim();
+    console.log(query);
+    let showHastag = document.getElementById('alliedbtn');
+    showHastag.style.display='block';
+    fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${query}&limit=3&offset=5&rating=G&lang=en`)
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => { 
+        console.log(data.data);
+        if(data.data.length>0){
+             for(let i=0; i<3;i++){
+                showHastag.children[i].innerHTML = data.data[i].title;
+             }        
+        } 
+    
+
+
+    })
+    
+
+}
+
+
 //Se definen los eventos que van a limpiar la barra de bùsquedas para consultar de nuevo cualquiera de los tres botones//
 
 document.getElementsByClassName('alliedbutton').addEventListener=()=> {
@@ -276,6 +317,26 @@ document.getElementsByClassName('alliedbutton').addEventListener=()=> {
     console.log(query);
 };
 
+//Definimos la función que me va a permitir deshabilitar completamente el botón de Buscar cuando el input esté vacío//
+
+function disableButtonSearch() {
+    let searchInput = document.getElementById('input-search');
+    let buttonsearch = document.getElementById("buttonsearch");
+    
+  
+  
+    if (searchInput.value.trim() !== "") {
+      console.log(searchInput.value)
+      buttonsearch.removeAttribute('disabled');
+      
+      
+    } else {
+        buttonsearch.setAttribute('disabled', 'true')
+      
+    }
+    
+    console.log('Ya no puede buscar nada, se deshabilitó el botón...');
+}  
 
 //Ahora se define las funciones que van a permitir cambiar los estilos o temas de la página, de día y de noche//
 
@@ -312,8 +373,10 @@ function saveCurrentThemeLS() {
 //Se define la funciòn que va a mostrar el tema en el momento que se carga la pagina//
 
 window.onload = function() {
+    disableButtonSearch();
     changeTheme();
     imagenDiaNoche();
+    cleanButton();
     
 }
 

@@ -669,7 +669,7 @@ header p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 52.8%;
+  margin-left: 59.8%;
 }
 
 .main .content .createGifs .create {
@@ -762,7 +762,7 @@ header p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 55px 203px;
+  margin: 55px 133px;
   width: 170px;
   background: #E6E6E6;
   -webkit-box-shadow: inset -2.5px -2.5px 0 0 #E0D1DD, inset 2.5px 2.5px 0 0 #FAFAFA;

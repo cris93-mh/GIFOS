@@ -26,7 +26,7 @@
                     <img src="./images/gifOF_logo.png" onclick="location.reload()" id="imageGif" alt="Gifos" style="cursor: cell;">
                     <img src="./images/gifOF_logo_dark.png" onclick="location.reload()" id="imageGifNight" alt="Gifos" style="cursor: cell;">
                 </div>
-                <div class="createGifs">
+                <div class="createGifs" style="margin-left: 60.1%;">
                         <a href="indexCreate.html" id="create" class="create">Crear Gifos</a>
                     
                         <div class="Menucontainer" id="main-section">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
         
-                            <div class="containerdrop" id="containerdrop">
+                            <div class="containerdrop" style="margin: 55px 50px;" id="containerdrop">
                                 <ul class="droplist">
                                     <li class="list" id="sayDay"><span>S</span>aylor day</li>
                                     <li class="list" id="sayNight">Saylor night</li>   
@@ -49,15 +49,15 @@
                 </div>
             </section>
             <section>
-                <div class="search" id="containersearch">
+                <div class="search" id="containersearch" >
                     <div class="principalsearch" id="prinsearch">
                     <p>Buscar</p>
                     </div>
         
                 <form class="lightform">
                     <div class="form">
-                        <input autocomplete="off" type="text" onkeyup="activeButton()" onfocus="showHastag()" name="search" id="input-search" placeholder="Busca gifs, hashtags, temas, busca lo que quieras… ">
-                        <button class="buttonsearch" id="buttonsearch">
+                        <input autocomplete="on"  type="text" onkeyup="activeButton()" onkeydown ="showHastag()" onkeydown="cleanSearch()" name="search" id="input-search" onchange="disableButtonSearch()" placeholder="Busca gifs, hashtags, temas, busca lo que quieras… ">
+                        <button class="buttonsearch"  disabled="true" id="buttonsearch">
                             <i class="fas fa-search" id="fas-fa-search">
                             </i>
                             <span class="Searchtext" id="Searchtext">Buscar</span>
@@ -65,9 +65,9 @@
                     </div>
                 </form>
                     <div class="allied" id="alliedbtn">
-                        <button class="alliedbutton" onclick='filter(this.value)' value='Animales salvajes' id="alliedbutton">#animales salvajes</button>
-                        <button class="alliedbutton" onclick='filter(this.value)' value= 'Dragon Ball Z' id="alliedbutton2">#Dragon Ball Z</button>
-                        <button class="alliedbutton" onclick='filter(this.value)' value= 'Divertido' id="alliedbutton3">#Divertido</button>
+                        <button class="alliedbutton"  onclick="filter(this.innerText)"># Resultado de búsqueda sugerido</button>
+                        <button class="alliedbutton"  onclick="filter(this.innerText)"># Un resultado de búsqueda similar</button>
+                        <button class="alliedbutton"  onclick="filter(this.innerText)"># Un resultado mas</button>
                     </div>
                     <div class="containerbtn" id="containerbtn">
                     </div>
@@ -103,14 +103,14 @@
                         <p class="principaltrends" id="principaltrends">Tendencias:</p>
                     </div>
         
-                    <div class="trends-container" id="trends-container">
+                    <div class="trends-container" style="width: 109%;" id="trends-container">
                     </div>
     
                 </div>
             </section>
         </section>
         <div class="search-container" id="search-container">
-            <div class="containsearch" id="containsearch"></div>
+            <div class="containsearch" style="width:107.4%;" id="containsearch"></div>
         </div>
             </div>
             <script src="./js/main.js"></script>

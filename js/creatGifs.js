@@ -1,3 +1,5 @@
+
+
 //Se definen las funciones que van ejecutar la creaciòn de los GIFOS//
 
 
